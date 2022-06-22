@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+    .my-table-spacing {
+        border-spacing: theme("spacing.3");
+    }
+}
+
+@layer utilities {
+    p a {
+        color: #668A99
+    }
+    .profile-card {
+        width: 1119px;
+        height: 111px;
+    }
+    .width-static {
+        position: static;
+        width: 610px;
+        height: 320px
+    }
+    .button-side {
+        position: absolute;
+        right: 0;
+        margin-right: 2.4rem
+    }
+    .card-width {
+        width: 554px;
+        height: 583px;
+        margin-bottom: 1.6rem;
+        margin-right: 1.6rem;
+    }
+    .image-style {
+        width: 100px;
+        height: 100px;
+    }
+    .section-style {
+        height: auto;
+        margin-top: -2rem
+    }
+}

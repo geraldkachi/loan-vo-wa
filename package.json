@@ -1,0 +1,47 @@
+{
+    "name": "arvo-admin",
+    "version": "1.0.0",
+    "license": "MIT",
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "@ant-design/charts": "^1.3.5",
+        "@ant-design/flowchart": "^1.0.9",
+        "@ant-design/graphs": "^1.1.0",
+        "@ant-design/plots": "^1.0.9",
+        "@soywod/pin-field": "^0.2.2",
+        "arvara": "git+ssh://git@github.com:Olivermead-Investment-Ltd/package-arvara.git",
+        "arvara-icons": "git+ssh://git@github.com:Olivermead-Investment-Ltd/package-arvara-icons.git",
+        "arvo-types": "git+ssh://git@github.com:Olivermead-Investment-Ltd/package-types.git",
+        "date-fns": "^2.28.0",
+        "dotenv": "^16.0.0",
+        "moment": "^2.29.1",
+        "react": "^17.0.2",
+        "react-date-picker": "^8.4.0",
+        "react-dom": "^17.0.2",
+        "react-pin-field": "^2.0.0-beta.3",
+        "react-query": "^3.34.14",
+        "react-router-dom": "^6.2.1",
+        "zustand": "^3.6.9"
+    },
+    "devDependencies": {
+        "@types/react": "^17.0.33",
+        "@types/react-dom": "^17.0.10",
+        "@types/react-router-dom": "^5.3.3",
+        "@typescript-eslint/eslint-plugin": "^5.29.0",
+        "@typescript-eslint/parser": "^5.29.0",
+        "@vitejs/plugin-react": "^1.0.7",
+        "autoprefixer": "^10.4.2",
+        "eslint": "^8.18.0",
+        "eslint-plugin-react": "^7.30.0",
+        "file-loader": "^6.2.0",
+        "postcss": "^8.4.5",
+        "prettier": "2.7.1",
+        "tailwindcss": "^3.0.15",
+        "typescript": "^4.4.4",
+        "vite": "^2.7.2"
+    }
+}
