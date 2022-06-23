@@ -26,17 +26,14 @@
         margin-right: 2.4rem
     }
     .card-width {
-        width: 554px;
+        width: 454px;
         height: 583px;
-        margin-bottom: 1.6rem;
-        margin-right: 1.6rem;
+        margin: auto;
+        padding-top: 5rem
     }
     .image-style {
         width: 100px;
         height: 100px;
     }
-    .section-style {
-        height: auto;
-        margin-top: -2rem
-    }
+    .section-style {}
 }

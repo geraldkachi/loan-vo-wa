@@ -8,6 +8,7 @@ import { allowLogin } from '../../server';
 import Card from '../../components/cards/Card';
 import { useState, FC, useEffect } from 'react';
 import useAuth from '../../components/hooks/useAuth';
+import { Navbar } from '../../components/navbar/Navbar';
 import RegisterForm from '../../components/forms/RegisterForm';
 
 const Register: FC = () => {
@@ -15,8 +16,8 @@ const Register: FC = () => {
 	const isAuthenticated = useAuth(state => state.isAuthenticated);
 	return (
 		<>
-    <img src={Logo} className='ml-10 mt-3'/>
-			<section className="gradient-form section-style">
+    <Navbar transparent />
+			<section className="gradient-form section-style h-fit">
 				<div className="grid grid-flow-col">
 					<div className="bg-white mx-auto my-64 items-center ">
 						<h1 className="text-5xl text-blue w-80 font-bold">
@@ -42,8 +43,8 @@ const Register: FC = () => {
 							</p>
 						</div>
 					</div>
-					<div className="bg-blue section-style">
-						<div className="md:p-12 md:mx-6 card-width">
+					<div className="bg-blue h-screen">
+						<div className="card-width">
 							<Card
 								title="Register"
 								subTitle="Get started in creating an account"

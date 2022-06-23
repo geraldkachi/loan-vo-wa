@@ -124,7 +124,7 @@ const Login: FC = () => {
 							</div>
 						</div>
 						<div className="bg-blue h-screen">
-							<div className="md:p-12 md:mx-6 card-width">
+							<div className="card-width">
 								<Card
 									title="Login"
 									subTitle="Get started in creating an account"
