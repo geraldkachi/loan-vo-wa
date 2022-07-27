@@ -1,95 +1,22 @@
 import { Button } from 'arvara';
 import { useMutation } from 'react-query';
 import { allowLogin } from '../../server';
-import Card from '../../components/cards/Card';
-import { useState, FC, useEffect } from 'react';
-import OtpForm from '../../components/forms/OtpForm';
-import LoginForm from '../../components/forms/LoginForm';
-import AuthModal from '../../components/modals/AuthModal';
-import ForgetPasswordForm from '../../components/forms/ForgetPasswordForm';
-import useAuth from '../../components/hooks/useAuth';
-import PlayStore from '../../images/playstore.svg';
-import AppleStore from '../../images/apple.png';
-import Join1 from '../../images/join1.png';
 import Join2 from '../../images/join2.png';
 import Join3 from '../../images/join3.png';
-import Logo from '../../images/logo.png';
+import Join1 from '../../images/join1.png';
+import { useState, FC, useEffect } from 'react';
+import PlayStore from '../../images/playstore.svg';
+// import useAuth from '../../components/hooks/useAuth';
 import {Navbar} from '../../components/navbar/Navbar';
+import LoginForm from '../../components/forms/LoginForm';
+import Card from '../../components/cards/Card';
 
 const Login: FC = () => {
 	const mutation = useMutation(allowLogin);
-	const isAuthenticated = useAuth(state => state.isAuthenticated);
-	const [showOtpModal, setShowOtpModal] = useState(false);
-	const [showSendCodeModal, setShowSendCodeModal] = useState(false);
-	const [forgetPassword, setForgetPassword] = useState<boolean>(false);
-
-	const toggleSendCode = () => {
-		setForgetPassword(false);
-		setShowSendCodeModal(true);
-	};
-
-	const toggleOtpModal = () => {
-		setShowOtpModal(!showOtpModal);
-	};
-
-	useEffect(() => {
-		console.log('STATE', isAuthenticated);
-		if (isAuthenticated) {
-			window.location.href = '/dashboard';
-		}
-	}, []);
-
-	useEffect(() => {
-		if (mutation.data) {
-			localStorage.setItem('email', mutation.data.email);
-			toggleOtpModal();
-		}
-	}, [mutation.data]);
 
 	document.body.style.overflow = 'hidden';
 	return (
 		<div className="bg">
-			{showOtpModal && (
-				<AuthModal
-					show={showOtpModal}
-					closeModal={setShowOtpModal}
-					title="OTP Verification"
-					subTitle={`Enter the otp you received on 08099****12`}
-				>
-					<OtpForm setShowOtpModal={toggleOtpModal} />
-				</AuthModal>
-			)}
-
-			{/*forgot password modal*/}
-			{forgetPassword && (
-				<AuthModal
-					show={forgetPassword}
-					closeModal={setForgetPassword}
-					title="Forget Password"
-					subTitle="Enter your registered email address"
-					type="sad"
-				>
-					<ForgetPasswordForm toggle={toggleSendCode} />
-				</AuthModal>
-			)}
-
-			{/*open mail modal*/}
-			{showSendCodeModal && (
-				<AuthModal
-					show={showSendCodeModal}
-					closeModal={setShowSendCodeModal}
-					title="Code Sent"
-					subTitle="Check your email for one-time code to reset your password"
-					type="sad"
-				>
-					<div className="mt-8">
-						<Button type="button" className="w-full mt-10">
-							Open Mail
-						</Button>
-					</div>
-				</AuthModal>
-			)}
-			{/*Login section*/}
 			<Navbar transparent />
 				<section className="h-full gradient-form md:h-screen">
 					<div className="grid grid-flow-col">
@@ -107,12 +34,6 @@ const Login: FC = () => {
 								<Button type="button" className="bg-black">
 									Apple Store
 								</Button>
-								{/* <div className="w-36 h-12 bg-black text-white text-base flex justify-center items-center rounded-2xl">
-								<img src={PlayStore} /> &nbsp; Google Play
-							</div>
-							<div className="w-36 h-12 bg-black text-white text-base flex justify-center items-center rounded-2xl">
-              <img src={AppleStore}/> &nbsp; App Store
-							</div> */}
 							</div>
 							<div className="flex md:mt-6 justify-center whitespace-nowrap">
 								Join <img src={Join1} className="image-style md:-mt-6 -ml-6" />
@@ -133,7 +54,7 @@ const Login: FC = () => {
 									<a
 										href="#"
 										className="flex justify-center text-grey-slate text-base md:p-8"
-										onClick={() => setForgetPassword(true)}
+										// onClick={() => setForgetPassword(true)}
 									>
 										Forgot Password?
 									</a>

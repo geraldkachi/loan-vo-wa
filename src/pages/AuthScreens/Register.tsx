@@ -5,15 +5,13 @@ import Join1 from '../../images/join1.png';
 import Join2 from '../../images/join2.png';
 import Join3 from '../../images/join3.png';
 import { allowLogin } from '../../server';
-import Card from '../../components/cards/Card';
 import { useState, FC, useEffect } from 'react';
-import useAuth from '../../components/hooks/useAuth';
 import { Navbar } from '../../components/navbar/Navbar';
 import RegisterForm from '../../components/forms/RegisterForm';
+import Card from '../../components/cards/Card';
 
 const Register: FC = () => {
 	const mutation = useMutation(allowLogin);
-	const isAuthenticated = useAuth(state => state.isAuthenticated);
 	return (
 		<>
     <Navbar transparent />
