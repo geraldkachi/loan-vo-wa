@@ -1,4 +1,6 @@
-import { Spinner } from 'arvara';
+// import { Spinner } from 'arvara';
+
+const Spinner = ({}:any) => null
 
 const LoadingScreen = () => {
   return (

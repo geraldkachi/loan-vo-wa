@@ -2,6 +2,10 @@ import React, { ChangeEvent, useState } from "react";
 import { Input, Button, Checkbox } from "arvara";
 import PasswordMe from "../shared/Password";
 
+// const Input = ({}: any) => null
+// const Button = ({}: any) => null
+// const Checkbox = ({}: any) => null
+
 interface Props {
   // mutation: any;
 }
@@ -39,28 +43,28 @@ const RegisterForm = (props: Props) => {
     <>
     {/* {mutation.error && <p>{mutation.error.message}</p>} */}
     <form onSubmit={onFinish}>
-      <Input 
+      <Input
         label="First Name"
         placeholder="Enter your first name"
         onChange={handleEmail}
         value={firstName}
         className="mt-5"
       />
-      <Input 
+      <Input
         label="Last Name"
         placeholder="Enter your last name"
         onChange={handleEmail}
         value={lastName}
         className="mt-5"
       />
-      <Input 
+      <Input
         label="Email Address"
         placeholder="Enter your email address"
         onChange={handleEmail}
         value={email}
         className="mt-5"
       />
-      <Input 
+      <Input
         label="Phone Number"
         placeholder="Enter your phone number"
         onChange={handleEmail}
