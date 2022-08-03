@@ -1,5 +1,6 @@
-import { AIeyebol, AIeyeslashbol } from "arvara-icons";
-
+// import { AIeyebol, AIeyeslashbol } from "arvara-icons";
+const AIeyebol = ({}: any) => null
+ const AIeyeslashbol  = ({}: any) => null
 interface Props {
   showPassword: boolean;
   setShowPassword: (password: boolean) => void;

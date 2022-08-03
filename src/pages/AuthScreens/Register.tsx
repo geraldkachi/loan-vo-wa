@@ -9,21 +9,22 @@ import { useState, FC, useEffect } from 'react';
 import { Navbar } from '../../components/navbar/Navbar';
 import RegisterForm from '../../components/forms/RegisterForm';
 import Card from '../../components/cards/Card';
+import { Link } from 'react-router-dom';
 
 const Register: FC = () => {
 	const mutation = useMutation(allowLogin);
 	return (
 		<>
-    <Navbar transparent />
-			<section className="gradient-form section-style h-fit">
-				<div className="grid grid-flow-col">
-					<div className="bg-white mx-auto my-64 items-center ">
+			<section className="gradient-form section-style h-screen max-h-max">
+				<Navbar transparent />
+				<div className="grid lg:grid-flow-col ">
+					<div className="hidelogin bg-white m-auto my-64 items-center max-h-screen">
 						<h1 className="text-5xl text-blue w-80 font-bold">
 							{' '}
 							Get loans in minutes{' '}
 						</h1>
 						<p className="text-sm">Up to NGN 500,000 in your Arvo wallet</p>
-						<div className="grid grid-flow-col md:mt-5">
+						<div className="grid lg:grid-flow-col md:mt-5">
 							<Button type="button" className="bg-black">
 								Google Play
 							</Button>
@@ -41,19 +42,20 @@ const Register: FC = () => {
 							</p>
 						</div>
 					</div>
-					<div className="bg-blue h-screen">
-						<div className="card-width">
+					<div className="bg-blue flex items-center px-2 justify-center h-screen overflow-y-scroll">
+						<div className="m-auto w-[556px]">
 							<Card
+								className='mx-5'
 								title="Register"
 								subTitle="Get started in creating an account"
 							>
 								<RegisterForm />
 								<p className="flex justify-center md:p-2">
 									Have an account?{' '}
-									<a href="#" className="text-blue text-base">
+									<Link to="/" className="text-blue text-base">
 										{' '}
 										&nbsp; Login
-									</a>
+									</Link>
 								</p>
 							</Card>
 						</div>

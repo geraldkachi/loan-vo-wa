@@ -1,6 +1,10 @@
-import { useState } from "react";
+import React, { ChangeEvent, useState } from "react";
 import { Input, Button, Checkbox } from "arvara";
 import PasswordMe from "../shared/Password";
+
+// const Input = ({}: any) => null
+// const Button = ({}: any) => null
+// const Checkbox = ({}: any) => null
 
 interface Props {
   // mutation: any;
@@ -15,15 +19,15 @@ const RegisterForm = (props: Props) => {
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
 
-  const handlePassword = (event) => {
-    setPassword(event.target.value);
+  const handlePassword = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPassword(e.target.value);
   };
 
-  const handleEmail = (event) => {
-    setEmail(event.target.value);
+  const handleEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value);
   };
 
-  const onFinish = (e) => {
+  const onFinish = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const values = {
       phoneNumber,
@@ -39,28 +43,28 @@ const RegisterForm = (props: Props) => {
     <>
     {/* {mutation.error && <p>{mutation.error.message}</p>} */}
     <form onSubmit={onFinish}>
-      <Input 
+      <Input
         label="First Name"
         placeholder="Enter your first name"
         onChange={handleEmail}
         value={firstName}
         className="mt-5"
       />
-      <Input 
+      <Input
         label="Last Name"
         placeholder="Enter your last name"
         onChange={handleEmail}
         value={lastName}
         className="mt-5"
       />
-      <Input 
+      <Input
         label="Email Address"
         placeholder="Enter your email address"
         onChange={handleEmail}
         value={email}
         className="mt-5"
       />
-      <Input 
+      <Input
         label="Phone Number"
         placeholder="Enter your phone number"
         onChange={handleEmail}
