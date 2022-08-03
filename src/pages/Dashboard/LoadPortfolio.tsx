@@ -1,8 +1,8 @@
 import { Card } from "arvara";
 import { AIdocumenttextbol, AImoneysbol } from "arvara-icons";
-import { BarChart } from "../../components/chart/BarChart";
-import { LineChart } from "../../components/chart/LineCharts";
-import { RadialBarChart } from "../../components/chart/RadiaBarChart";
+// import { BarChart } from "../../components/chart/BarChart";
+// import { LineChart } from "../../components/chart/LineCharts";
+// import { RadialBarChart } from "../../components/chart/RadiaBarChart";
 import {
   barChartData,
   barChartData2,
@@ -54,20 +54,20 @@ const LoadPortfolio = () => {
       </div>
       <div className="flex flex-row mt-8">
         <div className="w-2/3">
-          <LineChart geometry={geometryData} />
+          {/* <LineChart geometry={geometryData} /> */}
         </div>
         <div className="w-80 ml-5">
           {/*<Card type="card">*/}
-          <RadialBarChart
+          {/* <RadialBarChart
             data={radialBarChartData}
-            color={["#F46036", "#2E63EA", "#02C39A"]}
-          />
+            color={["#F46036", "#2E63EA", "#02C39A"]} */}
+          {/* /> */}
           {/*</Card>*/}
         </div>
       </div>
       <div className="flex flex-row mt-8">
-        <BarChart data={barChartData} color={["#02C39A", "#F46036"]} />
-        <BarChart data={barChartData2} color={["#2E63EA", "#02C39A"]} />
+        {/* <BarChart data={barChartData} color={["#02C39A", "#F46036"]} />
+        <BarChart data={barChartData2} color={["#2E63EA", "#02C39A"]} /> */}
       </div>
     </>
   );

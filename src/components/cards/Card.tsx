@@ -2,13 +2,14 @@ interface Props {
   title?: string;
   subTitle?: string;
   children?: any;
+  className?: string
 }
 
 const Card = (props: Props) => {
-  const { title, children, subTitle } = props;
+  const { title, children, subTitle, className } = props;
   return (
     <>
-      <div className="rounded-3xl bg-white border-slate-100 drop-shadow-lg">
+      <div className={`${className} rounded-3xl bg-white border-slate-100 drop-shadow-lg`}>
         <div className="p-8 md:p-12 my-10 rounded-lg">
           <h1 className="font-bold text-3xl mt-6">
             {title}

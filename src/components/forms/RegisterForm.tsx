@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { ChangeEvent, useState } from "react";
 import { Input, Button, Checkbox } from "arvara";
 import PasswordMe from "../shared/Password";
 
@@ -15,15 +15,15 @@ const RegisterForm = (props: Props) => {
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
 
-  const handlePassword = (event) => {
-    setPassword(event.target.value);
+  const handlePassword = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPassword(e.target.value);
   };
 
-  const handleEmail = (event) => {
-    setEmail(event.target.value);
+  const handleEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value);
   };
 
-  const onFinish = (e) => {
+  const onFinish = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const values = {
       phoneNumber,

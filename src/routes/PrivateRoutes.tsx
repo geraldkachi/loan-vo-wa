@@ -8,6 +8,8 @@ import {
 
 // import loader component
 import LoadingScreen from "../components/shared/LoadingScreen";
+import Dashboard from "../pages/Dashboard/Dashboard";
+import Home from "../pages/Home/Home";
 
 const Loading = () => <LoadingScreen />;
 
@@ -24,10 +26,12 @@ const PrivateRoutes = (props: Props) => {
     <BrowserRouter>
       <Suspense fallback={<Loading />}>
         <Routes>
-          <Route path="/" element={<Login />} />
+          {/* <Route path="/" element={<Login />} />
           <Route path="/register" element={<Register />} />
           {/* 404 page */}
-          <Route path="*" element={<Navigate to="/" />} />
+          {/* <Route path="/dash" element={<Dashboard />} /> */} 
+          <Route path="/home" element={<Home />} />
+          {/* <Route path="*" element={<Navigate to="/" />} /> */}
         </Routes>
       </Suspense>
     </BrowserRouter>

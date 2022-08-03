@@ -6,6 +6,8 @@ import './App.css';
 import 'arvara/lib/styles.css';
 import 'arvara/src/index.css';
 
+// document.body.style.overflow = 'hidden';
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
