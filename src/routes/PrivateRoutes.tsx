@@ -27,9 +27,9 @@ const PrivateRoutes = ({ isAuthenticated }: Props) => {
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          {/* 404 page
-          {/* <Route path="/dash" element={<Dashboard />} /> */}
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/" element={<Home />} />
+          {/* 404 page */}
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Suspense>
