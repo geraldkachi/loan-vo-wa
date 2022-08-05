@@ -87,8 +87,8 @@ const FormDetails = () => {
                     </div>
                 </div>
 
-                <div className="flex  h-screen bg-blue">
-                    <Card className="p-5  rounded-3xl shadow-lg">
+                <div className="flex  h-screen w-full items-stretch">
+                    <Card className="p-5 max-w-2xl mx-auto rounded-3xl shadow-lg">
                         <form onSubmit={onFinish}>
                             <Input
                                 label="Full Name"

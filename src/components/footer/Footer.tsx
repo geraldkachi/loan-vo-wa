@@ -9,11 +9,11 @@ import LinkedinIcon from '../../assets/home/Linkedin.svg'
 const Footer = () => {
     return (
         <section className="bg-[#043144] text-white px-5 pt-10">
-            <footer className="py-8 max-w-[1300px] mx-auto">
+            <footer className="py-8 max-w-[1300px] mx-auto text-center">
                 <div className="flex items-center justify-center">
                     <ArvoIcon />
                 </div>
-                <div className="flex items-center justify-center my-5">
+                <div className="flex items-center justify-center my-8">
                     <p>Arvo as a licensed fintech payment institution headquartered in Lagos is positioned to re-define and reposition digital banking infrastructure,<br /> payments & services for millennials and x-generation.</p>
                 </div>
 
@@ -43,7 +43,7 @@ const Footer = () => {
                         <img src={LinkedinIcon} alt="linkdin" />
                     </div>
                 </div>
-                <div className="opacity-60">
+                <div className="opacity-60 text-center">
                     <span>Powered by Olivermead Investment Ltd.</span>
                 </div>
             </footer>

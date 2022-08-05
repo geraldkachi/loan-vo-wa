@@ -14,9 +14,10 @@ const Navbar = ({ }: any) => {
   return (
     <section className=''>
       <div className='px-5 pt-5 flex flex-wrap items-center justify-between mx-auto max-w-[1200px]'>
-        <div className=' md:flex items-center justify-between'>
+        <div className=' md:flex items-center justify-between '>
           <h1 className='text-3xl font-bold mr-4'><ArvoIcon /></h1>
-          <div className=' items-center hidden lg:flex'>
+          {/* <div className=' items-center hidden lg:flex'> */}
+          <div className=' items-center hidelogin lg:flex'>
             <Link to="#" className='px-4 text-sm flex'>Why Arvo?</Link>
             <Link to="#" className='px-4 text-sm flex'>Products &#8896;</Link>
             <Link to="#" className='px-4 text-sm flex'>FAQs</Link>
@@ -25,13 +26,17 @@ const Navbar = ({ }: any) => {
           </div>
         </div>
         <div className=' items-center flex gap-1'>
-          <div className='hidden lg:flex gap-4'>
-            <Button className='p-2 bg-green-500'>Sign In</Button>
-            <Button className='p-2 bg-green-500 text-sm'>Create Account</Button>
+          {/* <div className='hidden lg:flex gap-4'> */}
+          <div className='hidelogin lg:flex gap-4'>
+            <Button className='bg-green-500'>Sign In</Button>
+            <Button className='bg-green-500 text-sm'>Create Account</Button>
           </div>
-          <div onClick={handleNav} className='block lg:hidden text-black'>
+          <div onClick={handleNav} className=' hidelogin text-black'>
+          {/* <div onClick={handleNav} className='block lg:hidden text-black'> */}
             {/* {nav ? <AiOutlineClose size={20}/> : <AiOutlineMenu size={20} />} */}
+            <div className='hideOnlyonNavMobile md:hidden'>
             {nav ? "close" : "Press to open"}
+            </div>
           </div>
         </div>
 
