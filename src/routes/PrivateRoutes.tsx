@@ -7,9 +7,9 @@ import {
 } from "react-router-dom";
 
 // import loader component
-import LoadingScreen from "../components/shared/LoadingScreen";
-import Dashboard from "../pages/Dashboard/Dashboard";
 import Home from "../pages/Home/Home";
+import Dashboard from "../pages/Dashboard/Dashboard";
+import LoadingScreen from "../components/shared/LoadingScreen";
 
 const Loading = () => <LoadingScreen />;
 
@@ -27,8 +27,8 @@ const PrivateRoutes = ({ isAuthenticated }: Props) => {
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/" element={<Home />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           {/* 404 page */}
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
