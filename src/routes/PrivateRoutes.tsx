@@ -40,7 +40,7 @@ const PrivateRoutes = ({ isAuthenticated }: Props) => {
           {/* <Route element={<RequiredRoute />}> */}
             {/* routes outside the sidebar or dashboard here */}
             <Route path="/" element={<Layout />}>
-              <Route index element={<Dashboard />} />
+              <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/loan" element={<Load />} />
               <Route path="/transactions" element={<Transactions />} />
               <Route path="/account" element={<Account />} />

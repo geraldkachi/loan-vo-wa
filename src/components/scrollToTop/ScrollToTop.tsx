@@ -1,6 +1,10 @@
-import { useEffect, useState } from 'react'
+import {  ReactNode, useEffect, useState } from 'react'
 import "./styles.css"
-const ScrollToTop = () => {
+interface scrollTopProps {
+  children?: ReactNode;
+  className?: string;
+}
+const ScrollToTop = ({children, className}: scrollTopProps) => {
   const [scrollShowTopButton, setScrollShowTopButton] = useState(false)
 
   const scrollTop = () => {
@@ -23,7 +27,7 @@ const ScrollToTop = () => {
 
 
   return <>
-    {scrollShowTopButton && <div className='top-btn-position top-btn-style' onClick={scrollTop}>ScrollToTop</div>}
+    {scrollShowTopButton && <div className={`top-btn-position top-btn-style text-white ${className}`} onClick={scrollTop}>{children}</div>}
   </>
 }
 

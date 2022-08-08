@@ -1,0 +1,27 @@
+.testimoinal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    width: 30rem;
+    height: 12rem;
+    border-radius: 7px;
+}
+
+
+.swiper {
+    width: 100%;
+    height: 60%;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width: 800px) {
+    .swiper-slide {
+        display: block;
+    }
+}

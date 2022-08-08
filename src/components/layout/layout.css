@@ -1,13 +1,17 @@
 .layout {
     color: #668A99;
     overflow: hidden;
+    display: inline-flex;
 }
 
 .layout__content {
-    padding-left: 240px;
+    /* padding-left: 240px; */
     padding-top: 30px;
     /* background-color: var(--second-bg); */
     min-height: 100vh;
+    flex: 1;
+    flex-grow: 1;
+    flex-basis: 100%;
 }
 
 .layout__content-main {
@@ -16,12 +20,12 @@
 
 @media only screen and (max-width: 1200px) {
     .layout__content {
-        padding-left: 90px;
+        /* padding-left: 90px; */
     }
 }
 
 @media only screen and (max-width: 800px) {
     .layout__content {
-        padding-left: 90px;
+        /* padding-left: 90px; */
     }
 }

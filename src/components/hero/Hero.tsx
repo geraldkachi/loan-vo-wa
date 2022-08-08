@@ -12,9 +12,9 @@ const Hero = () => {
                 <h1 className='text-5xl my-3'>Get Loan in {'\n'}
                     <span className='block'>Minutes</span></h1>
                 <p className='text-xl my-5'>Arvo offers easy and convenient financial services<br /> on the go for everyone</p>
-                <Button>Create Account</Button>
+                <Button clasName="bg-[#065373] p-5">Create Account</Button>
                 {/* Google app */}
-                <div className="flex md:mt-5">
+                <div className="flex items-center md:mt-5">
                     <Button type="button" size='md' className="">Google Play</Button>
                     &nbsp;
                     <Button type="button" size='md' className="">Apple Store</Button>

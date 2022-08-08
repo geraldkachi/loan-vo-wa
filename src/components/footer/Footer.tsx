@@ -24,7 +24,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="flex items-center justify-between text-white mx-auto max-w-[800px]">
+                <div className="flex items-center flex-wrap justify-center gap-10 lg:justify-between text-white mx-auto max-w-[800px]">
                     <Link to="#">Why Arvo?</Link>
                     <Link to="#">Blog</Link>
                     <Link to="#">Contact Us</Link>
@@ -34,7 +34,7 @@ const Footer = () => {
 
                 <hr className="opacity-10 my-10" />
                 {/* tail */}
-                <div className="flex items-center justify-between">
+                <div className="flex flex-wrap items-center justify-center lg:justify-between">
                     <p>© 2022 Arvofinance. All rights reserved</p>
                     <div className="flex items-center gap-5 my-5">
                         <img src={FacebookIcon} alt="facebook" />
@@ -43,7 +43,7 @@ const Footer = () => {
                         <img src={LinkedinIcon} alt="linkdin" />
                     </div>
                 </div>
-                <div className="opacity-60 text-center">
+                <div className="opacity-60 text-center my-5">
                     <span>Powered by Olivermead Investment Ltd.</span>
                 </div>
             </footer>

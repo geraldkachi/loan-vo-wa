@@ -13,7 +13,7 @@ import HomeLogoIcon from '../../assets/sidebar/HomeLogoIcon'
 import LogOutIcon from '../../assets/sidebar/LogOutIcon'
 
 const Menus = [
-    { route: "/", title: "Home" },
+    { route: "/dashboard", title: "Home" },
     { route: "/loan", title: "Loan" },
     { route: "/transactions", title: "Transactions" },
     { route: "/account", title: "Account" },
@@ -44,13 +44,11 @@ const Sidebar = () => {
 
     return (
         <section>
-            <div className={`${open ? "w-60" : "w-20"} flex flex-col justify-between transition-all ease-in-out  top-0 left-0 bg-[#065373] text-white p-5 h-screen pt-8 relative duration-300`}>
+            <div className={` ${open ? "w-60" : "w-20"} flex flex-col justify-between transition-all ease-in-out  top-0 left-0 bg-[#065373] text-white p-5 h-screen pt-8 relative duration-300`}>
 
-                <div className="pt-6 mx-auto">
-                    <div className="flex gap-x-4 items-center pb-10 px-3 mx-auto justify-between">
-
-                        <MenuIcon onClick={() => setOpen(!open)} className={`cursor-pointer duration-500 ${open && "rotate-[360deg]"}`}
-                        />
+                <div className={`${open ? "pt-6 mx-auto" : "m-0"}`}>
+                    <div className="inline-flex items-center pb-10 gap-4">
+                        <MenuIcon onClick={() => setOpen(!open)} className={`cursor-pointer duration-500 ${open && "rotate-[360deg]"}`}/>
                         <HomeLogoIcon className={`${!open && "scale-0"}`} />
                     </div>
                     {Menus.map((Menu, index) => {

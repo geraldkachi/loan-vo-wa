@@ -1,9 +1,35 @@
 // import { div } from "arvara/lib"
+import { Pagination } from "swiper"
+import { Swiper, SwiperSlide } from "swiper/react"
 import FaceCard1 from "../../assets/home/facecard.svg"
+// import "swioer/css/pagination"
+// import "swiper"
+import "./testimoinal.css"
 
-const OurCustomer = () => {
+export const clients = [
+    {
+        img: FaceCard1,
+        name: "Tobi Oluwaseyi",
+        star: "stars",
+        review: "It's a really nice app with a quick disbursement process. I honestly recommend this app for urgent and quick loan applications."
+    },
+    {
+        img: FaceCard1,
+        name: "Tobi Oluwaseyi",
+        star: "stars",
+        review: "It's a really nice app with a quick disbursement process. I honestly recommend this app for urgent and quick loan applications."
+    },
+    {
+        img: FaceCard1,
+        name: "Tobi Oluwaseyi",
+        star: "stars",
+        review: "It's a really nice app with a quick disbursement process. I honestly recommend this app for urgent and quick loan applications."
+    },
+]
+
+const OurCustomer = ({faqs}: any) => {
     return (
-        <section className="px-5 pt-10 pb-20 bg-[#043144]">
+        <div ref={faqs} className="px-5 pt-10 pb-20 bg-[#043144]">
             <div className="max-w-7xl mx-auto mt-10 text-white">
                 <div className="my-5 text-center">
                     <h1 className="text-[40px] my-5">What Our 2M+ Customers Are Saying</h1>
@@ -47,7 +73,6 @@ const OurCustomer = () => {
                                 <div className="flex items-center gap-2">
                                     <img src={FaceCard1} alt="FaceCard1" />
                                     <p>Tobi Oluwaseyi</p>
-                                    <p>Tobi Oluwaseyi</p>
                                 </div>
                                 <p>stars</p>
                             </div>
@@ -65,8 +90,38 @@ const OurCustomer = () => {
                     <div className="h-3 w-3 bg-white rounded-full"></div>
                     <div className="h-3 w-3 bg-white rounded-full"></div>
                 </div>
+
+                {/* <>
+                        <Swiper
+                            modules={[Pagination]}
+                            slidesPerView={1}
+                            pagination={{ clickable: true }}
+                            grabCursor={true}
+                            spaceBetween={20}
+                        >
+                            {clients.map((client, index) => {
+                                return (
+                                    <SwiperSlide key={index}>
+                                        <div className="testimoinal p-5 rounded-2xl bg-[#2C5262]">
+                                            <div className=" mb-5 flex items-center justify-between">
+                                                <div className="flex items-center gap-2">
+                                                    <img src={client.img} alt="FaceCard1" />
+                                                    <p>{client.name}</p>
+                                                </div>
+                                                <p>{client.star}</p>
+                                            </div>
+
+                                            <div className="text-left">
+                                                It's a really nice app with a quick disbursement process. I honestly recommend this app for urgent and quick loan applications.
+                                            </div>
+                                        </div>
+                                    </SwiperSlide>
+                                )
+                            })}
+                        </Swiper>
+                    </> */}
             </div>
-        </section>
+        </div>
     )
 }
 

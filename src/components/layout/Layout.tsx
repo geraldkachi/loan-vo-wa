@@ -1,9 +1,9 @@
+import "./layout.css"
 import { useEffect } from "react"
 import { Outlet } from "react-router-dom"
 import Sidebar from "../sidebar/Sidebar"
 import TopNav from "../topnav/Topnav"
 
-import "./layout.css"
 
 
 const Layout = () => {
