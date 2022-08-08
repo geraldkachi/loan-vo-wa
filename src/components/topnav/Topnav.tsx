@@ -41,13 +41,13 @@ interface Props {
 }
 
 const renderNotificationItem = (item: any, index: number) => (
-    <div className="flex m-5" key={index}>
+    <div className="flex p-5  hover:bg-opacity-5 hover:bg-black hover:rounded-xl" key={index}>
         {/* <i className={item.icon}></i> */}
         <img src={item.icon} />
         <div>
-            <div className="text-[#141C1F] font-bold">{item.heading}</div>
+            <div className="text-[#141C1F] text-sm font-bold">{item.heading}</div>
             <span className="text-xs">{item.content}</span>
-            <span className="text-xs mt-3 block">{item.time}</span>
+            <span className="text-xs mt-2 block">{item.time}</span>
         </div>
     </div>
 )
@@ -61,35 +61,37 @@ const renderNotifyIcon = (user: any) => (
         <div className="topnav__right-user__image">
             <img src={user.image} alt="users" />
         </div>
-
     </div>
 )
-
-const TopNav = () => {
+interface TopNavProps {
+ title?: string
+ titleUser?: string
+ icon?: boolean
+}
+const TopNav = ({title, titleUser, icon}: TopNavProps) => {
     return (
         <section>
             <div className="flex items-center justify-between p-5">
 
                 <div>
                     <div className="flex items-center gap-5">
-                        {/* <span className="text-base">{pageBane} </span> */}
-                        {/* <span className="text-base">Hello Lord Gerald Kachi </span> */}
-                        <HelloIcon className="inline-block ml-3" />
+                        <span className="text-base">{titleUser} </span>
+                        {icon && <HelloIcon className="inline-block ml-3" />}
                     </div>
-                    <h1 className="text-3xl font-bold">Welcome Back!</h1>
+                    <h1 className="text-3xl font-semibold text-[#000000]">{title}</h1>
                 </div>
 
                 <div className="flex items-center gap-5">
                     <div className="notification w-12 h-12 cursor-pointer rounded-full border border-[#C0C2C2] flex items-center justify-center">
-                        {/* <NotificationIcon /> */}
                         <Dropdown
-                            icon={NotificationIcon}
                             // badge="12"
-                            customToggle={() => renderNotifyIcon(current_user)}
+                            // customToggle={() => renderNotifyIcon(current_user)}
                             contentData={notifications}
                             renderItems={(item: any, index: number) => renderNotificationItem(item, index)}
-                            // renderFooter={() => <Link to="#">View All</Link>}
-                        />
+                        // renderFooter={() => <Link to="#">View All</Link>}
+                        >
+                        <NotificationIcon />
+                        </Dropdown>
                     </div>
 
                     <Link to="/account">

@@ -1,6 +1,6 @@
 import "./layout.css"
 import { Outlet } from "react-router-dom"
-import TopNav from "../topnav/Topnav"
+// import TopNav from "../topnav/Topnav"
 import Sidebar from "../sidebar/Sidebar"
 
 
@@ -13,7 +13,7 @@ const Layout = () => {
         {/* <Sideb /> */}
         <Sidebar />
         <div className="layout__content">
-          <TopNav />
+          {/* <TopNav /> */}
           <div className="layout__content-main">
             <Outlet />
           </div>

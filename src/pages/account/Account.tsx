@@ -1,8 +1,9 @@
+import TopNav from "../../components/topnav/Topnav"
 
 const Account = () => {
   return (
     <section>
-        <div className="account">account</div>
+      <TopNav title="Account!" />
     </section>
   )
 }

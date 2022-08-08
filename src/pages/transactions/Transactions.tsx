@@ -1,7 +1,11 @@
+import TopNav from "../../components/topnav/Topnav"
 
 const Transactions = () => {
   return (
-    <div>Transactions</div>
+    <div>
+      <TopNav title="Transactions!" />
+
+    </div>
   )
 }
 

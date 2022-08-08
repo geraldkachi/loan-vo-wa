@@ -1,7 +1,11 @@
+import TopNav from "../../components/topnav/Topnav"
 
 const Load = () => {
   return (
-    <div>Load</div>
+    <section>
+                <TopNav title="Loan!"/>
+
+    </section>
   )
 }
 

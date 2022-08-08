@@ -1,6 +1,7 @@
 import React from "react";
 import { Avatar, Button, Tab } from "arvara";
 import LoadPortfolio from "./LoadPortfolio";
+import TopNav from "../../components/topnav/Topnav";
 
 const Dashboard = () => {
   const Ava = () => {
@@ -8,6 +9,8 @@ const Dashboard = () => {
   };
   return (
     <section className="">
+      <TopNav title="Welcome Back!" titleUser="Hello Lord Gerald Kachi" icon/>
+
       <div className="flex flex-col items-center">
         <div className="grid md:grid-cols-4 gap-4">
           <div className=" col-span-2">
@@ -19,7 +22,7 @@ const Dashboard = () => {
             </div>
           </div>
           <div className="col-span-1">
-          <div className="card shadow-xl bg-blue-3 text-white">
+            <div className="card shadow-xl bg-blue-3 text-white">
               <div className="flex items-center gap-20 justify-between">
                 <p>Wallet Balance</p>
                 <div className="flex items-center gap-3"><p>0090123499</p> </div>
@@ -28,7 +31,7 @@ const Dashboard = () => {
             </div>
           </div>
           <div className="col-span-1">
-          <div className="card shadow-xl bg-blue-3 text-white">
+            <div className="card shadow-xl bg-blue-3 text-white">
               <div className="flex items-center gap-20 justify-between">
                 <p>Wallet Balance</p>
                 <div className="flex items-center gap-3"><p>0090123499</p> </div>
