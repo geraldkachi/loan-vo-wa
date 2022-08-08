@@ -1,8 +1,7 @@
 import "./layout.css"
-import { useEffect } from "react"
 import { Outlet } from "react-router-dom"
-import Sidebar from "../sidebar/Sidebar"
 import TopNav from "../topnav/Topnav"
+import Sidebar from "../sidebar/Sidebar"
 
 
 
@@ -11,6 +10,7 @@ const Layout = () => {
   return (
     <>
       <section className={`layout`}>
+        {/* <Sideb /> */}
         <Sidebar />
         <div className="layout__content">
           <TopNav />

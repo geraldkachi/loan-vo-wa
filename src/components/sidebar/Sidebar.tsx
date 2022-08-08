@@ -43,13 +43,14 @@ const Sidebar = () => {
     // ${width < 1200 ? "w-20" : "w-60"}
 
     return (
-        <section>
+        <section className={`sidebar`}>
             <div className={` ${open ? "w-60" : "w-20"} flex flex-col justify-between transition-all ease-in-out  top-0 left-0 bg-[#065373] text-white p-5 h-screen pt-8 relative duration-300`}>
 
                 <div className={`${open ? "pt-6 mx-auto" : "m-0"}`}>
+                {/* <div className={`${open ? "pt-6 mx-auto" : "m-0"}`}> */}
                     <div className="inline-flex items-center pb-10 gap-4">
                         <MenuIcon onClick={() => setOpen(!open)} className={`cursor-pointer duration-500 ${open && "rotate-[360deg]"}`}/>
-                        <HomeLogoIcon className={`${!open && "scale-0"}`} />
+                        <HomeLogoIcon className={`${!open && "scale-0 hidden"}`} />
                     </div>
                     {Menus.map((Menu, index) => {
                         const activeItem = Menu.route.includes(location.pathname);
@@ -65,7 +66,7 @@ const Sidebar = () => {
                         ]
                         return (
                             <Link to={Menu.route} key={index}
-                                className={`${activeItem && "bg-white rounded-3xl text-[#065373]"} flex items-center rounded-md p-2 cursor-pointer my-4  text-sm space-x-3
+                                className={`${activeItem && "bg-white rounded-2xl text-[#065373]"} flex items-center rounded-md p-2 cursor-pointer my-4  text-sm space-x-3
                                 `}
                             // ${Menu?.gap ? "mt-9" : "mt-2"} ${index === 0 && "bg-light-white"}
                             >
@@ -93,47 +94,3 @@ const Sidebar = () => {
 }
 
 export default Sidebar
-
-{/* <div className="block ml-5 mt-2">
-{width > 1200 && (
-  <p className="p-3 sidebar_header inline-block">LOGO</p>
-)}
-<div className={width > 1200 ? `lg:float-right p-5` : "ml-1"}>
-  <AImenu1Outlin />
-</div> */}
-
-// return (
-//     <div className="sidebar">
-//         <div>
-//             <div className="sidebar__logo">
-//                 {/* <img src={""} alt="company logo" /> */}
-//                 <Link to="/"><CompanyLogo /></Link>
-//                 <Link to="/" style={{ textDecoration: 'none', color: 'black', marginLeft: '8px' }}>Admin@skippy.com</Link>
-//                 <div className='h-10' />
-//             </div>
-//             <div className="btwNav">
-//                 {sidebar_items.map((item: any, i: number) => {
-//                     const activeItem = sidebar_items.findIndex((item: any) => item.route === location.pathname)
-//                     return (
-//                         <Link to={item.route} key={i}>
-//                             <div className="sidebar__item">
-//                                 <div className={`sidebar__item-inner ${i === activeItem && "active"}`}>
-//                                     <i>{iconArr[i]}</i>
-//                                     <span>{item.display_name}</span>
-//                                 </div>
-//                             </div>
-//                         </Link>
-//                     )
-//                 })}
-//             </div>
-//         </div>
-
-//         <div className="logout" onClick={() => handleLogout()}>
-//         {/* <h4>Name: {name}</h4> */}
-//             <Link to="">
-//                 <LogoutIcon />
-//                 <span className="logout">Logout</span>
-//             </Link>
-//         </div>
-//     </div>
-// )
