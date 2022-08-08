@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import { useRef } from 'react'
 import "./dropdown.css"
 
 const clickOutSideRef = (content_ref: any, toggle_ref: any) => {

@@ -5,24 +5,34 @@ import Dropdown from "../DropDown/DropDown"
 
 const notifications = [
     {
-        "icon": "bx bx-error",
-        "content": "Curabitur id eros quis nunc suscipit blandit"
+        "heading": "Bill Payment",
+        "icon": NotificationIcon,
+        "content": "₦5,000 was deducted for DSTV subscription",
+        "time": "36 mins ago"
     },
     {
-        "icon": "bx bx-package",
-        "content": "Duis malesuada justo eu sapien elementum, in semper diam posuere"
+        "heading": "Withdrawal",
+        "icon": NotificationIcon,
+        "content": "₦30,000 withdrawal was made from your wallet",
+        "time": "36 mins ago"
     },
     {
-        "icon": "bx bx-cart",
-        "content": "Donec at nisi sit amet tortor commodo porttitor pretium a erat"
+        "heading": "Withdrawal",
+        "icon": NotificationIcon,
+        "content": "₦5,000 was deducted for DSTV subscription",
+        "time": "36 mins ago"
     },
     {
-        "icon": "bx bx-error",
-        "content": "In gravida mauris et nisi"
+        "heading": "Withdrawal",
+        "icon": NotificationIcon,
+        "content": "₦50,000 was deposited into your wallet",
+        "time": "36 mins ago"
     },
     {
-        "icon": "bx bx-cart",
-        "content": "Curabitur id eros quis nunc suscipit blandit"
+        "heading": "Withdrawal",
+        "icon": NotificationIcon,
+        "content": "Congratulations, you can now have access to all our loan offers",
+        "time": "36 mins ago"
     }
 ]
 
@@ -31,14 +41,19 @@ interface Props {
 }
 
 const renderNotificationItem = (item: any, index: number) => (
-    <div className="notification-item" key={index}>
-        <i className={item.icon}></i>
-        <span>{item.content}</span>
+    <div className="flex m-5" key={index}>
+        {/* <i className={item.icon}></i> */}
+        <img src={item.icon} />
+        <div>
+            <div className="text-[#141C1F] font-bold">{item.heading}</div>
+            <span className="text-xs">{item.content}</span>
+            <span className="text-xs mt-3 block">{item.time}</span>
+        </div>
     </div>
 )
 
 const current_user = {
-    image: <NotificationIcon />
+    image: NotificationIcon
 }
 
 const renderNotifyIcon = (user: any) => (
@@ -68,12 +83,12 @@ const TopNav = () => {
                     <div className="notification w-12 h-12 cursor-pointer rounded-full border border-[#C0C2C2] flex items-center justify-center">
                         {/* <NotificationIcon /> */}
                         <Dropdown
-                            // icon={<NotificationIcon />}
+                            icon={NotificationIcon}
                             // badge="12"
                             customToggle={() => renderNotifyIcon(current_user)}
                             contentData={notifications}
                             renderItems={(item: any, index: number) => renderNotificationItem(item, index)}
-                            renderFooter={() => <Link to="#">View All</Link>}
+                            // renderFooter={() => <Link to="#">View All</Link>}
                         />
                     </div>
 
