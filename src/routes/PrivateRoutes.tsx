@@ -9,7 +9,7 @@ import Layout from "../components/layout/Layout";
 
 // import loader component
 import Home from "../pages/Home/Home";
-import Load from "../pages/load/Load";
+import Loan from "../pages/loan/Loan";
 import RequiredRoute from "./RequiredRoute";
 import Account from "../pages/account/Account";
 import Beneficiaries from "../pages/Beneficiaries";
@@ -41,7 +41,7 @@ const PrivateRoutes = ({ isAuthenticated }: Props) => {
           <Route element={<RequiredRoute />}>
             <Route path="/" element={<Layout />}>
               <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/loan" element={<Load />} />
+              <Route path="/loan" element={<Loan />} />
               <Route path="/transactions" element={<Transactions />} />
               <Route path="/account" element={<Account />} />
               <Route path="/debit-card" element={<DebitCard />} />
