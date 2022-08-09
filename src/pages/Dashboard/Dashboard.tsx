@@ -11,17 +11,18 @@ const Dashboard = () => {
     <section className="">
       <TopNav title="Welcome Back!" titleUser="Hello Lord Gerald Kachi" icon/>
 
-      <div className="flex flex-col items-center">
-        <div className="grid md:grid-cols-4 gap-4">
-          <div className=" col-span-2">
+      <div className="flex md:flex-col items-center">
+        <div className="grid md:grid-cols-5 gap-4">
+          <div className=" col-span-5">
             <div className="card shadow-xl bg-blue-3 text-white">
               <div className="flex items-center justify-between">
                 <p>Wallet Balance</p>
                 <div className="flex items-center gap-3"><p>0090123499</p> </div>
+
               </div>
             </div>
           </div>
-          <div className="col-span-1">
+          <div className="col-span-4">
             <div className="card shadow-xl bg-blue-3 text-white">
               <div className="flex items-center gap-20 justify-between">
                 <p>Wallet Balance</p>
