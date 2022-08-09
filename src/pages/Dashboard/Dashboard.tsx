@@ -1,6 +1,8 @@
-import { Button, Card } from 'arvara';
-import Bvn from '../../assets/homeDashboard/bvnDetails.svg';
+import { Avatar, Button, Card } from 'arvara';
+import Male from '../../assets/homeDashboard/male.svg';
+import Female from '../../assets/homeDashboard/female.svg';
 import Star from '../../assets/homeDashboard/Looper-2.svg';
+import Bvn from '../../assets/homeDashboard/bvnDetails.svg';
 import Hand from '../../assets/homeDashboard/hand-with-coin.svg';
 import PersonalInfo from '../../assets/homeDashboard/freepik.svg';
 import VerifyEmail from '../../assets/homeDashboard/illustration.svg';
@@ -129,12 +131,65 @@ const Dashboard = () => {
         <h1 className="text-grey-slate text-left">Recent Transactions</h1>
       </div>
 
-      <Card className="ml-10 my-5 block p-6 rounded-2xl shadow-xl border-grey-beau border long-card">
-        <div className="flex">
-          <div className="border-none w-11 h-11 rounded-full bg-yellow bg-opacity-25">
-            <AIreceiptaddbol className="text-yellow mx-2.5 my-1.5" />
+      <Card className="ml-10 my-5 block p-6 rounded-2xl shadow-xl border-grey-beau border bg-opacity-50 long-card">
+        <section className="flex justify-between">
+          <div className="flex">
+            <div className="border-none w-12 h-12 rounded-full bg-yellow bg-opacity-25">
+              <AIreceiptaddbol className="text-yellow mx-3.5 my-2" />
+            </div>
+            <div className="md:text-base text-sm leading-tight mb-2 ml-5">
+              <h1>Dstv Subscription</h1>
+              <p className="md:text-sm text-xs text-grey-slate ml-5">24/02/2022 - 07:40 AM</p>
+            </div>
           </div>
-        </div>
+          <div className="">
+            <h1 className="text-red"> -₦5,000</h1>
+          </div>
+        </section>
+      </Card>
+      <Card className="ml-10 my-5 block p-6 rounded-2xl shadow-xl border-grey-beau border bg-opacity-50 long-card">
+        <section className="flex justify-between">
+          <div className="flex">
+              <Avatar image={Male} className="text-yellow ml-1.5 my-2" />
+            <div className="md:text-base text-sm leading-tight mb-2 ml-5">
+              <h1>Daniel Abayomi</h1>
+              <p className="md:text-sm text-xs text-grey-slate ml-5">24/02/2022 - 09:40 AM</p>
+            </div>
+          </div>
+          <div className="">
+            <h1 className="text-red"> -₦7,000</h1>
+          </div>
+        </section>
+      </Card>
+      <Card className="ml-10 my-5 block p-6 rounded-2xl shadow-xl border-grey-beau border bg-opacity-50 long-card">
+        <section className="flex justify-between">
+          <div className="flex">
+              <Avatar image={Female} className="text-yellow ml-1.5 my-2" />
+            <div className="md:text-base text-sm leading-tight mb-2 ml-10">
+              <h1 className="mr-12">Simi Ayodele</h1>
+              <p className="md:text-sm text-xs text-grey-slate float-left">29/05/2022 - 03:40 PM</p>
+            </div>
+          </div>
+          <div className="">
+            <h1 className="text-meador"> -₦2,500</h1>
+          </div>
+        </section>
+      </Card>
+      <Card className="ml-10 my-5 block p-6 rounded-2xl shadow-xl border-grey-beau border bg-opacity-50 long-card">
+        <section className="flex justify-between">
+          <div className="flex">
+            <div className="border-none w-12 h-12 rounded-full bg-bluetiful bg-opacity-25">
+            <AImobilebol className="text-bluetiful mx-auto md:mt-2.5" />
+            </div>
+            <div className="md:text-base text-sm leading-tight mb-2 ml-10">
+              <h1 className="">Airtime Top-up</h1>
+              <p className="md:text-sm text-xs text-grey-slate float-left">Sent</p>
+            </div>
+          </div>
+          <div className="">
+            <h1 className="text-red"> -₦20,000</h1>
+          </div>
+        </section>
       </Card>
     </>
   );
