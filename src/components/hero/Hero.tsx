@@ -6,7 +6,7 @@ const Button = ({ }: any) => null
 
 const Hero = () => {
     return (
-        <section className="px-5 grid lg:grid-flow-col place-items-center my-10 h-[60%] mx-auto max-w-[1200px]">
+        <section className="px-5 grid lg:grid-flow-col place-items-center my-10 h-[60%] mx-auto max-w-[1200px] overflow-hidden">
             {/* <div className='md:justify-self-start  text-start'> */}
             <div className='justify-selt-center md:justify-self-start  text-start'>
                 <h1 className='text-5xl my-3'>Get Loan in {'\n'}
