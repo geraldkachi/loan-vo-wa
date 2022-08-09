@@ -9,22 +9,22 @@ const Progress = () => {
 
                 <div className="grid md:grid-cols-4 grid-cols-2 gao-10 place-items center">
                     <div className="my-5">
-                        <h3 className="text-[#02C39A] text-[40px]">2</h3>
+                        <h3 className="text-[#02C39A] text-3xl md:text-[40px]">2</h3>
                         <p className="text-">Years in the industry</p>
                     </div>
 
                     <div className="my-5">
-                        <h3 className="text-[#02C39A] text-[40px]">2,000,000+</h3>
+                        <h3 className="text-[#02C39A] text-3xl md:text-[40px]">2,000,000+</h3>
                         <p className="text-">Trusted Customers</p>
                     </div>
 
                     <div className="my-5">
-                        <h3 className="text-[#02C39A] text-[40px]">5,000++</h3>
+                        <h3 className="text-[#02C39A] text-3xl md:text-[40px]">5,000++</h3>
                         <p className="text-">Transactions / day</p>
                     </div>
 
                     <div className="my-5">
-                        <h3 className="text-[#02C39A] text-[40px]">2,000+</h3>
+                        <h3 className="text-[#02C39A] text-3xl md:text-[40px]">2,000+</h3>
                         <p className="text-">Dispensed Loans / day</p>
                     </div>
                 </div>

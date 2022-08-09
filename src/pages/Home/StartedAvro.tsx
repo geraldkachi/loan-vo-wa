@@ -10,19 +10,28 @@ const StartedAvro = () => {
                 <div className="ml-3 md:ml-16 text-left md:order-last">
                     <div className='mb-5'>
                         <p className="text-xl lg:text-4xl font-semibold text-white md:text-xl mb-1 ">
-                            <span className='inline-flex mr-5'><img src={IMG} className="" alt="mii" /></span>
+                            <span className='inline-block mr-5'>
+                                <div>
+
+                                </div>
+                                <img src={IMG} className="inline-flex" alt="mii" /></span>
                             Download the Mobile Application</p>
                         <p className="text-white ml-14 opacity-60 text-base">Get & Install the Arvo mobile app from Google Play Store &<br /> App Store</p>
                     </div>
                     <div className='mb-5'>
                         <p className="text-xl lg:text-4xl font-semibold text-white md:text-xl mb-1 ">
-                            <span className='inline-flex mr-5'><img src={IMG} className="" alt="mii" /></span>
+                            <span className='inline-block mr-5'>
+                                <img src={IMG} className="inline-flex" alt="mii" /></span>
                             Register with your Details</p>
                         <p className="text-white ml-14 opacity-60 text-base">First & Last Name, Email Address, Phone Number and Password</p>
                     </div>
                     <div className='mb-5'>
                         <p className="text-xl lg:text-4xl font-semibold text-white md:text-xl mb-1 ">
-                            <span className='inline-flex mr-5'><img src={IMG} className="" alt="mii" /></span>
+                            <span className='inline-block mr-5'>
+                                <div>
+
+                                </div>
+                                <img src={IMG} className="inline-flex" alt="mii" /></span>
                             Bank with Arvo</p>
                         <p className="text-white ml-14 opacity-60 text-base">Make Financial Transaction on the Mobile App (Pay Bills, Send<br /> Money, Get Loans) and so much more</p>
                     </div>
