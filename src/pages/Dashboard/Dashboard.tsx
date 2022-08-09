@@ -1,8 +1,13 @@
-import { Button } from 'arvara';
-import Star from '../../assets/dashboard/Looper-2.svg';
-import Hand from '../../assets/dashboard/hand-with-coin.svg';
-import PersonalInfo from '../../assets/dashboard/freepik.svg';
-import VerifyEmail from '../../assets/dashboard/illustration.svg';
+import { Avatar, Button, Card } from 'arvara';
+import Male from '../../assets/homeDashboard/male.svg';
+import Female from '../../assets/homeDashboard/female.svg';
+import Star from '../../assets/homeDashboard/Looper-2.svg';
+import Bvn from '../../assets/homeDashboard/bvnDetails.svg';
+import Hand from '../../assets/homeDashboard/hand-with-coin.svg';
+import PersonalInfo from '../../assets/homeDashboard/freepik.svg';
+import VerifyEmail from '../../assets/homeDashboard/illustration.svg';
+import Transaction from '../../assets/homeDashboard/transactionPin.svg';
+import Employment from '../../assets/homeDashboard/employmentRecord.svg';
 import { AIwallet3Outlin, AIsend2Bol, AIreceiptaddbol, AImobilebol } from 'arvara-icons';
 
 const Dashboard = () => {
@@ -52,36 +57,140 @@ const Dashboard = () => {
         <div className="bg-white md:w-56 w-40 md:h-56 h-40 rounded-2xl shadow-2xl md:p-5 p-2 pt-8 md:mt-0 mt-5 md:ml-3 ml-24">
           <AIreceiptaddbol className="text-blue mx-auto md:mt-5" />
           <h1 className="mt-6 md:text-xl font-bold">Bills</h1>
-          <p className="text-grey-slate mt-3 md:text-sm text-xs">Take care of your essential bills</p>
+          <p className="text-grey-slate mt-3 md:text-sm text-xs">
+            Take care of your essential bills
+          </p>
         </div>
         <div className="bg-white md:w-56 w-40 md:h-56 h-40 rounded-2xl shadow-2xl md:p-5 p-2 pt-8 md:mt-0 mt-5 md:ml-5 ml-20">
           <AImobilebol className="text-blue mx-auto md:mt-5" />
           <h1 className="mt-6 md:text-xl font-bold">Airtime/Data</h1>
-          <p className="text-grey-slate mt-3 md:text-sm text-xs">Recharge any mobile phone easily</p>
+          <p className="text-grey-slate mt-3 md:text-sm text-xs">
+            Recharge any mobile phone easily
+          </p>
         </div>
       </div>
-      <div className="p-7 ml-3 flex">
-        <div className="block p-6 rounded-2xl bg-yellow long-card1">
-          <div className="flex">
+
+      <Card className="ml-10 my-5 long-card block p-6 rounded-2xl shadow-xl bg-yellow hover:bg-grey-beau">
+        <div className="flex">
           <img src={VerifyEmail} />
           <div className="text-left">
-          <h5 className="text-white md:text-base text-sm leading-tight mb-2 ml-5">Verify your email address</h5>
+            <h5 className="text-white md:text-base text-sm leading-tight mb-2 ml-5">
+              Verify your email address
+            </h5>
             <p className="text-white mr-2 md:text-sm text-xs ml-5">Click to get full access</p>
           </div>
-          </div>
         </div>
-      </div>
-      <div className="ml-10 flex">
-        <div className="block p-6 rounded-2xl shadow-xl border-grey-beau border bg-white long-card">
-          <div className="flex">
+      </Card>
+
+      <Card className="ml-10 my-5 long-card block p-6 rounded-2xl shadow-xl border-grey-beau border hover:bg-white-azure">
+        <div className="flex">
           <img src={PersonalInfo} />
           <div className="text-left">
-          <h5 className="md:text-base text-sm leading-tight mb-2 ml-10">Personal Info required</h5>
-          <p className="md:text-sm text-xs text-grey-slate ml-10">Gender, Date of Birth, marital status...</p>
-          </div>
+            <h5 className="md:text-base text-sm leading-tight mb-2 ml-10">
+              Personal Info required
+            </h5>
+            <p className="md:text-sm text-xs text-grey-slate ml-10">
+              Gender, Date of Birth, marital status...
+            </p>
           </div>
         </div>
+      </Card>
+      <Card className="ml-10 my-5 long-card block p-6 rounded-2xl shadow-xl border-grey-beau border hover:bg-white-azure">
+        <div className="flex">
+          <img src={Bvn} />
+          <div className="text-left">
+            <h5 className="md:text-base text-sm leading-tight mb-2 ml-10">BVN Details</h5>
+            <p className="md:text-sm text-xs text-grey-slate ml-10">Click to submit your BVN</p>
+          </div>
+        </div>
+      </Card>
+      <Card className="ml-10 my-5 long-card block p-6 rounded-2xl shadow-xl border-grey-beau border hover:bg-white-azure">
+        <div className="flex">
+          <img src={Transaction} className="-ml-3" />
+          <div className="text-left">
+            <h5 className="md:text-base text-sm leading-tight mb-2 ml-5">Transaction Pin </h5>
+            <p className="md:text-sm text-xs text-grey-slate ml-5">
+              Click to set your transaction pin
+            </p>
+          </div>
+        </div>
+      </Card>
+      <Card className="ml-10 my-5 long-card block p-6 rounded-2xl shadow-xl border-grey-beau border hover:bg-white-azure">
+        <div className="flex">
+          <img src={Employment} className="-ml-3" />
+          <div className="text-left">
+            <h5 className="md:text-base text-sm leading-tight mb-2 ml-5">Employment Records </h5>
+            <p className="md:text-sm text-xs text-grey-slate ml-5">
+              Click to update your employment records
+            </p>
+          </div>
+        </div>
+      </Card>
+
+      <div className="ml-10 mt-10">
+        <h1 className="text-grey-slate text-left">Recent Transactions</h1>
       </div>
+
+      <Card className="ml-10 my-5 block p-6 rounded-2xl shadow-xl border-grey-beau border bg-opacity-50 long-card">
+        <section className="flex justify-between">
+          <div className="flex">
+            <div className="border-none w-12 h-12 rounded-full bg-yellow bg-opacity-25">
+              <AIreceiptaddbol className="text-yellow mx-3.5 my-2" />
+            </div>
+            <div className="md:text-base text-sm leading-tight mb-2 ml-5">
+              <h1>Dstv Subscription</h1>
+              <p className="md:text-sm text-xs text-grey-slate ml-5">24/02/2022 - 07:40 AM</p>
+            </div>
+          </div>
+          <div className="">
+            <h1 className="text-red"> -₦5,000</h1>
+          </div>
+        </section>
+      </Card>
+      <Card className="ml-10 my-5 block p-6 rounded-2xl shadow-xl border-grey-beau border bg-opacity-50 long-card">
+        <section className="flex justify-between">
+          <div className="flex">
+              <Avatar image={Male} className="text-yellow ml-1.5 my-2" />
+            <div className="md:text-base text-sm leading-tight mb-2 ml-5">
+              <h1>Daniel Abayomi</h1>
+              <p className="md:text-sm text-xs text-grey-slate ml-5">24/02/2022 - 09:40 AM</p>
+            </div>
+          </div>
+          <div className="">
+            <h1 className="text-red"> -₦7,000</h1>
+          </div>
+        </section>
+      </Card>
+      <Card className="ml-10 my-5 block p-6 rounded-2xl shadow-xl border-grey-beau border bg-opacity-50 long-card">
+        <section className="flex justify-between">
+          <div className="flex">
+              <Avatar image={Female} className="text-yellow ml-1.5 my-2" />
+            <div className="md:text-base text-sm leading-tight mb-2 ml-10">
+              <h1 className="mr-12">Simi Ayodele</h1>
+              <p className="md:text-sm text-xs text-grey-slate float-left">29/05/2022 - 03:40 PM</p>
+            </div>
+          </div>
+          <div className="">
+            <h1 className="text-meador"> -₦2,500</h1>
+          </div>
+        </section>
+      </Card>
+      <Card className="ml-10 my-5 block p-6 rounded-2xl shadow-xl border-grey-beau border bg-opacity-50 long-card">
+        <section className="flex justify-between">
+          <div className="flex">
+            <div className="border-none w-12 h-12 rounded-full bg-bluetiful bg-opacity-25">
+            <AImobilebol className="text-bluetiful mx-auto md:mt-2.5" />
+            </div>
+            <div className="md:text-base text-sm leading-tight mb-2 ml-10">
+              <h1 className="">Airtime Top-up</h1>
+              <p className="md:text-sm text-xs text-grey-slate float-left">Sent</p>
+            </div>
+          </div>
+          <div className="">
+            <h1 className="text-red"> -₦20,000</h1>
+          </div>
+        </section>
+      </Card>
     </>
   );
 };
