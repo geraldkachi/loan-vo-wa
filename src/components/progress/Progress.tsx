@@ -7,7 +7,7 @@ const Progress = () => {
                     <p>Our achievement in the journey depicted in numbers</p>
                 </div>
 
-                <div className="grid md:grid-cols-4 gao-10 place-items center">
+                <div className="grid md:grid-cols-4 grid-cols-2 gao-10 place-items center">
                     <div className="my-5">
                         <h3 className="text-[#02C39A] text-[40px]">2</h3>
                         <p className="text-">Years in the industry</p>

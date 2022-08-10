@@ -1,4 +1,4 @@
-//import { ClickOutside } from "arvara";
+import { ClickOutside } from "arvara";
 import { AImoreoutlin } from 'arvara-icons';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -37,7 +37,7 @@ const Dropdown = (props: Props) => {
                       {item.onclick && (
                         <div onClick={item.onclick}>{item.name}</div>
                       )}
-                      
+
                     </div>
                   </div>
                 ))}

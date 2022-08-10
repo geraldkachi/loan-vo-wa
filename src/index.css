@@ -9,10 +9,10 @@
   background-color: black;
 }
 .small-card{
-  width: 41%;
+  width: 213px;
 }
 .long-card{
-  width: 780px
+  /* width: 780px */
 }
 .long-card1{
   width: 780px
@@ -23,20 +23,19 @@
     width: fit-content;
   }
 }
+@media screen and (max-width: 1024px) {
+	.hidelogin {
+		display: none;
+	}
+}
 
-/* :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-} */
+@media screen and (max-width:568px) {
+  .hideOnlyonNavMobile {
+    display: block;
+    }
+}
+.card {
+  padding: 20px;
+  box-shadow: var(--box-shadow);
+  border-radius: 15px;
+}

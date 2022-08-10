@@ -1,11 +1,11 @@
-import PayWithIcon from "../../assets/home/PayWithIcon"
+// import PayWithIcon from "../../assets/home/PayWithIcon"
 import { Button, Checkbox } from 'arvara';
-
+import Cardless from "./cardless.svg"
 
 const MakeCardless = () => {
     return (
         <section className="overflow-x-hidden px-5 py-10">
-            <div className="grid md:grid-cols-2 gap-10 py-10 max-w-[1300px] mx-auto">
+            <div className="grid md:grid-cols-2 gap-10 py-10 max-w-[1300px] mx-auto place-items-center">
                 <div className="text-base text-left self-center justify-items-center py-5 text-[#141C1F]">
                     <div className="">
                         <h1 className="font-bold text-[#065373] text-[40px]">Pay with Arvo Link</h1>
@@ -19,9 +19,10 @@ const MakeCardless = () => {
                         </div>
                     </div>
                 </div>
-                <div className="self-center justify-items-center">
+                <div className="flex items-center justify-center">
                     <div className="w-1/2">
-                        <PayWithIcon />
+                        {/* <PayWithIcon /> */}
+                        <img src={Cardless} alt="cardless" />
                     </div>
                 </div>
             </div>
