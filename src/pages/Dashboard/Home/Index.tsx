@@ -120,8 +120,11 @@ const Dashboard = () => {
 
 
         {/* cols 2 for adverts */}
-        <div className="col-span-1 bg-grey-slate">
+        <div className="col-span-1 bg-grey-slate h-max">
         Adverts
+
+
+        <p>this would take the max content</p>
         </div>
       </div>
       <section className="p-5">
