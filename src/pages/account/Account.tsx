@@ -69,7 +69,7 @@ const Account = () => {
             </div>
 
             <div className="flex flex-col items-start my-4 space-y-2">
-              <h1 className="font-bold text-[#141C1F] text-4xl">Gerald Oneyekachi</h1>
+              <h1 className="font-bold text-[#141C1F] text-4xl">Gerald Onyekachi</h1>
               <p>fitzgeraldkachi@gmail.com</p>
               <p>09039278115</p>
             </div>
