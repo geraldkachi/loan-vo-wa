@@ -40,8 +40,11 @@ const WhyArvo = ({ whyavro }: WhtAvroProps) => {
           <div className='grid md:grid-cols-'>
             {tabIndex === "Quick" && (<>
               <div className="bg-[#02C39A]  self-stretch flex items-center justify-center sm:py-5 -my-10 md:my-0">
-                <div className="bg-white shadow-xl self-center bg-blue-600 rounded-2xl w-52  h-52">
-                  <div className="absolute bg-red shadow-xl rounded-2xl w-20 h-10="></div>
+                <div className="bg-white relative shadow-xl self-center bg-blue-600 rounded-2xl w-52  h-52">
+                  <div className="absolute bg-white-azure shadow-xl rounded-2xl w-max p-4 h-max right-32 top-40">
+                    <p>Hello, Gerald Kachi!</p>
+                    <p className='text-#668A99 text-sm'>₦250,000 been disbursed to your wallet</p>
+                  </div>
                 </div>
               </div>
             </>)}
@@ -49,14 +52,14 @@ const WhyArvo = ({ whyavro }: WhtAvroProps) => {
 
               <div className="bg-[#065373]  self-stretch flex items-center justify-center sm:py-5 -my-10 md:my-0">
                 <div className="bg-white shadow-xl self-center bg-blue-600 rounded-2xl w-52  h-52">
-                  <div className="absolute bg-red shadow-xl rounded-2xl w-20 h-10="></div>
+                  <div className="absolute bg-red shadow-xl rounded-2xl w-20 h-10"></div>
                 </div>
               </div>
             </>)}
             {tabIndex === "Peer" && (<>
               <div className="bg-[#2E63EA]  self-stretch flex items-center justify-center sm:py-5 -my-10 md:my-0">
                 <div className="bg-white shadow-xl self- bg-blue-600 rounded-2xl w-52  h-52">
-                  <div className="absolute bg-red shadow-xl rounded-2xl w-20 h-10="></div>
+                  <div className="absolute bg-red shadow-xl rounded-2xl w-20 h-10"></div>
                 </div>
               </div>
             </>)}
@@ -65,7 +68,7 @@ const WhyArvo = ({ whyavro }: WhtAvroProps) => {
         {/*  */}
         {/* end of better approach */}
 
-{/*
+        {/*
         <div className="grid md:grid-cols-2 gap-10 my-10 h-[500px] max-w-[1200px] mx-auto">
           <div className="text-base text-left self-center">
             <div className="quick border-l-4 border-[#02C39A] pl-5 my-5">
@@ -83,7 +86,7 @@ const WhyArvo = ({ whyavro }: WhtAvroProps) => {
           </div>
           <div className="bg-green-600 self-stretch flex items-center justify-center bg-grey-slate  sm:py-5 my-4">
             <div className="bg-white shadow-xl self-center bg-blue-600 rounded-2xl w-52  h-52">
-              <div className="absolute bg-red shadow-xl rounded-2xl w-20 h-10="></div>
+              <div className="absolute bg-red shadow-xl rounded-2xl w-20 h-10"></div>
             </div>
           </div>
         </div> */}

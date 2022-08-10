@@ -25,7 +25,7 @@ const Navbar = ({ whyavro, scrollToSection, contact, product, faqs }: any) => {
           {/* <div className=' items-center hidden lg:flex'> */}
           <div className=' items-center hidelogin lg:flex'>
             <Link to="/" onClick={() => scrollToSection(whyavro)} className='px-4 text-sm flex cursor-pointer'>Why Arvo?</Link>
-            <Link to="" onClick={() => scrollToSection(product)} className='cursor-pointer px-4 text-sm flex'>Products &#8896;</Link>
+            <Link to="" onClick={() => scrollToSection(product)} className='cursor-pointer px-4 text-sm flex'>Products  {" "}  &nbsp;<span className="rotate-180 scale-75">&#8896;</span></Link>
             <Link to="" onClick={() => scrollToSection(faqs)} className='cursor-pointer px-4 text-sm flex'>FAQs</Link>
             <Link to="" onClick={() => scrollToSection(whyavro)} className='cursor-pointer px-4 text-sm flex'>Blog</Link>
             <Link to="" onClick={() => scrollToSection(contact)} className='cursor-pointer px-4 text-sm flex'>Contact Us</Link>
@@ -34,7 +34,7 @@ const Navbar = ({ whyavro, scrollToSection, contact, product, faqs }: any) => {
         <div className=' items-center flex gap-1'>
           {/* <div className='hidden lg:flex gap-4'> */}
           <div className='hidelogin lg:flex gap-4 text-base font-bold'>
-            <button onClick={() => navigate('login')} className='bg-white border-[#065373] border-2 p-3 px-12 rounded-xl text-[#065373]'>Sign In</button>
+            <button onClick={() => navigate('login')} className='bg-white border-[#065373] border-2 p-3 px-7 rounded-xl text-[#065373]'>Sign In</button>
             <button onClick={() => navigate('login')} className="bg-[#065373] p-3 px-12 rounded-xl text-white">Create Account</button>
           </div>
           {/* <div onClick={handleNav} className=' hidelogin text-black'> */}

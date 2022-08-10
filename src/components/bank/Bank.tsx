@@ -41,12 +41,12 @@ const Bank = ({ product }: any) => {
                 </div>
 
                 <div className="text-base text-left self-center justify-items-center py-5">
-                    <h1 className="text-[#065373] text-4xl md:text-[56px] md:pb-5">Bank in Style</h1>
+                    <h1 className="text-[#065373] font-bold text-4xl md:text-[56px] md:pb-5">Bank in Style</h1>
                     <p className="my-5">
                         Affords you the luxury of access to financial services and payments outside the brick-and-mortar approach of a traditional banking system.<br /> With just your smart phone, you bank-on-the-go and your funds are just within your fingertips.
                     </p>
 
-                    <div className="flex rounded-lg gap-5 text-white mt-9">
+                    <div className="flex items-center rounded-lg gap-5 text-white mt-9">
                         {/* <button className="bg-black px-3 py-3">Google Play</button> */}
                         <img src={BlackGoogleIcon} alt="BlackGoogleIcon" />
                         <img src={BlackAppPlay} alt="BlackAppPlay" />

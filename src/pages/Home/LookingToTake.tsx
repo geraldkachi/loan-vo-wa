@@ -21,36 +21,36 @@ const LookingToTake = () => {
 
                     <div className='flex items-center gap-4 text-[#FDFFFC]'>
                         <div>
-                            <div>
+                            <div className='pb-5'>
                                 <img className='inline-flex' src={Check} alt="checkicon" /> &nbsp;
-                                <p className='inline-block mb-3'>Competitive Interest Rate</p>
+                                <p className='inline sm:inline-flex text-sm sm:text-base mb-3'>Competitive Interest Rate</p>
                             </div>
-                            <div>
+                            <div className='pb-5'>
                                 <img className='inline-flex' src={Check} alt="checkicon" /> &nbsp;
-                                <p className='inline-block mb-3'>Fast and Secured</p>
+                                <p className='inline sm:inline-flex text-sm sm:text-base mb-3'>Fast and Secured</p>
                             </div>
-                            <div>
+                            <div className='pb-5'>
                                 <img className='inline-flex' src={Check} alt="checkicon" /> &nbsp;
-                                <p className='inline-block mb-3'>Flexible Repayment Plan</p>
+                                <p className='inline sm:inline-flex text-sm sm:text-base mb-3'>Flexible Repayment Plan</p>
                             </div>
                         </div>
                         <div>
-                            <div>
+                            <div className='pb-5'>
                                 <img className='inline-flex' src={Check} alt="checkicon" /> &nbsp;
-                                <p className='inline-block mb-3'>Tenure of 7-14 days</p>
+                                <p className='inline sm:inline-flex text-sm sm:text-base mb-3'>Tenure of 7-14 days</p>
                             </div>
-                            <div>
+                            <div className='pb-5'>
                                 <img className='inline-flex' src={Check} alt="checkicon" /> &nbsp;
-                                <p className='inline-block mb-3'>No Collateral </p>
+                                <p className='inline sm:inline-flex text-sm sm:text-base mb-3'>No Collateral </p>
                             </div>
-                            <div>
+                            <div className='pb-5'>
                                 <img className='inline-flex' src={Check} alt="checkicon" /> &nbsp;
-                                <p className='inline-block mb-3'>Higher amount</p>
+                                <p className='inline sm:inline-flex text-sm sm:text-base mb-3'>Higher amount</p>
                             </div>
                         </div>
 
                     </div>
-                    <Button type="submit" className=' md:w-auto p-3 mt-5 bg-white' style={{ background: 'white', color: '#065373' }} >Download the App</Button>
+                    <Button type="submit" className=' md:w-auto px-16 p-3 mt-5 bg-white' style={{ background: 'white', color: '#065373' }} >Learn more</Button>
                 </div>
                 <div className='self-center scale-95 overflow-hidden'>
                     <img className='' src={LookingToTakeIcon} alt="lookingtotake" />

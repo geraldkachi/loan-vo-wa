@@ -48,8 +48,8 @@ const FormDetails = ({ contact }: any) => {
 
     return (
         <div ref={contact} className="bg-[#F6F8F9] text-[#141C1F] px-5 py-10">
-            {/* <div className="grid lg:grid-flow-col mx-auto max-w-[1300px]"> */}
-            <div className="grid lg:grid-flow-col mx-auto max-w-[1300px]">
+            {/* <div className="grid lg:grid-flow-col mx-auto  max-w-[1300px]"> */}
+            <div className="grid lg:grid-flow-col mx-auto gap-10 max-w-[1300px]">
                 <div className="items-center self-center max-h-screen text-left basis-1/2">
                     <div className="mb-20">
                         <h1 className="text-lg md:text-[40px] font-bold ">Reach Out to Us</h1>
@@ -87,8 +87,8 @@ const FormDetails = ({ contact }: any) => {
                     </div>
                 </div>
 
-                <div className="flex  h-full my-16 w-full items-stretch">
-                    <Card className="p-5 max-w-2xl mx-auto rounded-3xl shadow-lg">
+                <div className="flex  h-full my-16 w-full ">
+                    <Card className="p-5 max-w-2xl mx-auto rounded-3xl shadow-lg w-full">
                         <form onSubmit={onFinish}>
                             <Input
                                 label="Full Name"
@@ -122,7 +122,7 @@ const FormDetails = ({ contact }: any) => {
 
                             <div>
                                 <label className="block text-left mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your message</label>
-                                <textarea id="message" placeholder="Type your message here..." className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></textarea>
+                                <textarea id="message" style={{height: "30%"}} placeholder="Type your message here..." className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border focus:border-white border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></textarea>
                             </div>
 
                             <div className="mt-8">
