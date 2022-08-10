@@ -1,28 +1,26 @@
-import React from 'react'
-import { Input,Button } from 'arvara';
-import AEDC from '../../assets/homeDashboard/AEDC.svg';
-import Ekedc from '../../assets/homeDashboard/EKEDC.svg';
-import Ibedc from '../../assets/homeDashboard/IBEDC.svg';
-import Ikeja from '../../assets/homeDashboard/IKEJA-ELECTRIC.svg';
-import { AIarrowdown1Outlin } from '@olivermead-investment-ltd/arvara-icons';
+import { Input, Button } from 'arvara'
+import Dstv from '../../assets/homeDashboard/dstv.svg';
+import Gotv from '../../assets/homeDashboard/gotv.svg';
+import Startime from '../../assets/homeDashboard/startimes.svg';
+import { AIarrowdown1Outlin } from 'arvara-icons';
 
-export const UtilityBillForms = () => {
+export const CableForm = () => {
   return (
     <>
     <section>
       <h1 className="font-bold">Select Provider</h1>
       <div className="flex justify-between">
         <div className="h-14 w-20 bg-white rounded-2xl shadow-xl">
-          <img src={Ikeja} className="mx-auto my-4"/>
+          <img src={Dstv} className="mx-auto my-4"/>
         </div>
         <div className="h-14 w-20 bg-white rounded-2xl shadow-xl">
-          <img src={AEDC} className="mx-auto my-4"/>
+          <img src={Gotv} className="mx-auto my-4"/>
         </div>
         <div className="h-14 w-20 bg-white rounded-2xl shadow-xl">
-          <img src={Ekedc} className="mx-auto my-7"/>
+          <img src={Startime} className="mx-auto my-4"/>
         </div>
         <div className="h-14 w-20 bg-white rounded-2xl shadow-xl">
-          <img src={Ibedc} className="mx-auto my-4"/>
+          <img src={Startime} className="mx-auto my-4"/>
         </div>
       </div>
       <form>
@@ -47,8 +45,8 @@ export const UtilityBillForms = () => {
               className="mt-5"
             />
             <Input
-              label="Meter Number"
-              placeholder="Enter Meter Number"
+              label="Smartcard/Decoder Number"
+              placeholder="Enter Smartcard/Decoder Number"
               value=""
               className="mt-5"
             />
