@@ -6,7 +6,7 @@ const Loan = () => {
     <section>
       I<TopNav title="Loan!" />
 
-      <div className="grid grid-col-4">
+      <div className="grid md:grid-cols-3 gap-10">
         <div className="col-span-2">
           <div className="bg-[#02AC88] rounded-3xl p-5 w-full">
             <Button className="w-full p-2 bg-white text-[#065373]">Make Next Repayment</Button>

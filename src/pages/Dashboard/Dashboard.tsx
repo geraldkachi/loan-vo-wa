@@ -4,14 +4,12 @@ import LoadPortfolio from "./LoadPortfolio";
 import TopNav from "../../components/topnav/Topnav";
 
 const Dashboard = () => {
-  const Ava = () => {
-    return <Avatar />;
-  };
+
   return (
     <section className="">
       <TopNav title="Welcome Back!" titleUser="Hello Lord Gerald Kachi Hello" />
 
-      <div className="grid grid-cols-3 gap-10">
+      <div className="grid md:grid-cols-3 gap-10">
         <div className=" col-span-2">
           <div className="card shadow-xl bg-blue-3 text-white">
             <div className=" justify-between">
@@ -37,39 +35,3 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
-
-// return (
-//   <>
-//     <div className="flex flex-row">
-//       <div>
-//         <h3 className="component_header">Dashboard</h3>
-//         <p className="component_subheader mb-5">
-//           Quick overview of all transactions
-//         </p>
-//       </div>
-//       <div className="button-side">
-//         <Button type="button">Get Data</Button>
-//       </div>
-//     </div>
-//     <Tab
-//       data={[
-//         {
-//           name: "Loan Portfolio",
-//           render: <LoadPortfolio />,
-//         },
-//         {
-//           name: "User Engagement",
-//           render: <Ava />,
-//         },
-//         {
-//           name: "Wallet",
-//           render: <Ava />,
-//         },
-//         {
-//           name: "Recovery",
-//           render: <Ava />,
-//         },
-//       ]}
-//     />
-//   </>
-// );
