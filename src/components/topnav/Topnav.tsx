@@ -99,7 +99,7 @@ const TopNav = ({ title, titleUser, icon }: TopNavProps) => {
                         </div>
                     </Dropdown>
 
-                    <Link to="/account">
+                    <Link to="/account" className="w-12">
                         <img src="https://mdbcdn.b-cdn.net/img/new/avatars/1.webp" alt="Avatar" className="rounded-full cursor-pointer w-12 shadow-lg" />
                     </Link>
                 </div>
