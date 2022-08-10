@@ -6,6 +6,7 @@ import ArvoIcon from '../../images/svg/ArvoIcon';
 // import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 // const IMG = require('../../images/logo.png');
 import { Button, Checkbox } from 'arvara';
+import NavIcon from "./navicons.svg"
 
 const Navbar = ({ whyavro, scrollToSection, contact, product, faqs }: any) => {
   const navigate = useNavigate()
@@ -25,7 +26,7 @@ const Navbar = ({ whyavro, scrollToSection, contact, product, faqs }: any) => {
           {/* <div className=' items-center hidden lg:flex'> */}
           <div className=' items-center hidelogin lg:flex'>
             <Link to="/" onClick={() => scrollToSection(whyavro)} className='px-4 text-sm flex cursor-pointer'>Why Arvo?</Link>
-            <Link to="" onClick={() => scrollToSection(product)} className='cursor-pointer px-4 text-sm flex'>Products &#8896;</Link>
+            <Link to="" onClick={() => scrollToSection(product)} className='cursor-pointer px-4 text-sm flex'>Products  {" "}  &nbsp;<span className="rotate-180 scale-75">&#8896;</span></Link>
             <Link to="" onClick={() => scrollToSection(faqs)} className='cursor-pointer px-4 text-sm flex'>FAQs</Link>
             <Link to="" onClick={() => scrollToSection(whyavro)} className='cursor-pointer px-4 text-sm flex'>Blog</Link>
             <Link to="" onClick={() => scrollToSection(contact)} className='cursor-pointer px-4 text-sm flex'>Contact Us</Link>
@@ -33,15 +34,17 @@ const Navbar = ({ whyavro, scrollToSection, contact, product, faqs }: any) => {
         </div>
         <div className=' items-center flex gap-1'>
           {/* <div className='hidden lg:flex gap-4'> */}
-          <div className='hidelogin lg:flex gap-4'>
-            <Button onClick={() => navigate('login')} className='bg-green-500'>Sign In</Button>
-            <Button onClick={() => navigate('login')} className='bg-green-500 text-sm'>Create Account</Button>
+          <div className='hidelogin lg:flex gap-4 text-base font-bold'>
+            <button onClick={() => navigate('login')} className='bg-white border-[#065373] border-2 p-3 px-7 rounded-xl text-[#065373]'>Sign In</button>
+            <button onClick={() => navigate('login')} className="bg-[#065373] p-3 px-12 rounded-xl text-white">Create Account</button>
           </div>
           {/* <div onClick={handleNav} className=' hidelogin text-black'> */}
           <div onClick={handleNav} className='block lg:hidden text-black'>
             {/* {nav ? <AiOutlineClose size={20}/> : <AiOutlineMenu size={20} />} */}
             {/* <div className='hideOnlyonNavMobile md:hidden'> */}
-            {nav ? "close" : "Press to open"}
+            {nav ? <img src={NavIcon} alt="NavIcon" /> : <img src={NavIcon} alt="NavIcon" />}
+
+            {/* {nav ? "close" : "Press to open"} */}
           </div>
           {/* </div> */}
         </div>
@@ -54,7 +57,7 @@ const Navbar = ({ whyavro, scrollToSection, contact, product, faqs }: any) => {
           <li className='p-4 border-b border-gray-600'><Link to="" onClick={() => scrollToSection(faqs)}>FAQs</Link></li>
           <li className='p-4 border-b border-gray-600'>Blog</li>
           <li className='p-4 border-b border-gray-600'>Contact Us</li>
-          <li className='p-4'>Contact</li>
+          <li className='p-4 border-b border-gray-600'>Contact</li>
           <li className='p-4' onClick={handleNav}>{nav ? "close" : "Press to open"}</li>
         </ul>
       </div>

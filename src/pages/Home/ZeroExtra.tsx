@@ -1,6 +1,8 @@
 import { Button } from "arvara"
-import PayWithIcon from "../../assets/home/PayWithIcon"
+// import PayWithIcon from "../../assets/home/PayWithIcon"
 import PayWithIconz from "./zeroextra.svg"
+import BlackGoogleIcon from "./BlackGoogleIcon.svg"
+import BlackAppPlay from "./BlackAppPlay.svg"
 
 const ZeroExtra = () => {
     return (
@@ -13,8 +15,10 @@ const ZeroExtra = () => {
                     </p>
 
                     <div className="flex rounded-lg gap-5 text-white mt-9">
-                        <Button variant="secondary" style={{background: "#000"}} className="bg-black text-white px-5 py-3">Google Play</Button>
-                        <Button variant="outline" className="bg-black text-white px-5 py-3">App Store</Button>
+                        {/* <Button variant="secondary" style={{background: "#000"}} className="bg-black text-white px-5 py-3">Google Play</Button>
+                        <Button variant="outline" className="bg-black text-white px-5 py-3">App Store</Button> */}
+                        <img src={BlackGoogleIcon} alt="BlackGoogleIcon" />
+                        <img src={BlackAppPlay} alt="BlackAppPlay" />
                     </div>
                 </div>
                 <div className="self-center justify-items-center">

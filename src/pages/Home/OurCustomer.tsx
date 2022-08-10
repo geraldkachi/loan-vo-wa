@@ -39,7 +39,7 @@ const OurCustomer = ({faqs}: any) => {
         <div ref={faqs} className="px-5 pt-10 pb-20 bg-[#043144]">
             <div className="max-w-7xl mx-auto mt-10 text-white">
                 <div className="my-5 text-center">
-                    <h1 className="text-[40px] my-5">What Our 2M+ Customers Are Saying</h1>
+                    <h1 className="text-3xl md:text-[40px] my-5">What Our 2M+ Customers Are Saying</h1>
                     <p>We always put our customers first at Arvo</p>
                 </div>
 

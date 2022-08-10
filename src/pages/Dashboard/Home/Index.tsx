@@ -5,13 +5,18 @@ import Drawer from '../../../components/Drawer';
 import RecentTransaction from './RecentTransaction';
 import TopNav from "../../../components/topnav/Topnav";
 import Star from '/src/assets/homeDashboard/Looper-2.svg';
-import Hand from '/src/assets/homeDashboard/hand-with-coin.svg';
-import { AIwallet3Outlin, AIsend2Bol, AIreceiptaddbol, AImobilebol } from 'arvara-icons';
-import { SendMoneyForm } from '../../../components/forms/SendMoneyForm';
 import { PinForm } from '../../../components/forms/PinForm';
+import { DataForms } from '../../../components/forms/DataForm';
+import Hand from '/src/assets/homeDashboard/hand-with-coin.svg';
+import { CableForm } from '../../../components/forms/CableForm';
+import { MobileForms } from '../../../components/forms/MobileForm';
+import { SendMoneyForm } from '../../../components/forms/SendMoneyForm';
+import { UtilityBillForms } from '../../../components/forms/UtilityBillForm';
+import { AIwallet3Outlin, AIsend2Bol, AIreceiptaddbol, AImobilebol } from 'arvara-icons';
 
 const Dashboard = () => {
   const [isBill, setIsBill] = useState(false)
+  const [isAirtel, setIsAirtel] = useState(false);
   const [isSendMoney, setIsSendMoney] = useState(false);
   const [step, setStep] = useState(0);
 
@@ -63,7 +68,7 @@ const Dashboard = () => {
       <section className="grid md:grid-cols-3 md:gap-3 grid-cols-2 mt-8 w-full">
         <div className="bg-white md:h-56 h-auto rounded-2xl shadow-2xl md:p-5 p-2 md:mt-0 mt-3 small-card cursor-pointer hover:bg-white-azure" onClick={() => setIsSendMoney(true)}>
           <div className="h-14 w-14 border border-grey-slate rounded-full mx-auto">
-          <AIsend2Bol className="text-blue mx-3.5 my-4 cursor-pointer" onClick={() => setIsSendMoney(true)}/>
+          <AIsend2Bol className="text-blue mx-3.5 my-4 cursor-pointer"/>
           </div>
           <h1 className="mt-6 md:text-xl font-bold text-black text-center">Send money</h1>
           <p className="text-grey-slate mt-3 md:text-sm text-xs text-center">
@@ -72,16 +77,16 @@ const Dashboard = () => {
         </div>
         <div className="bg-white md:h-56 h-auto rounded-2xl shadow-2xl md:p-5 p-2 md:mt-0 mt-3 small-card cursor-pointer hover:bg-white-azure" onClick={() => setIsBill(true)}>
           <div className="h-14 w-14 border border-grey-slate rounded-full mx-auto">
-          <AIreceiptaddbol className="text-blue mx-auto my-3.5 cursor-pointer" onClick={() => setIsSendMoney(true)}/>
+          <AIreceiptaddbol className="text-blue mx-auto my-3.5 cursor-pointer"/>
           </div>
           <h1 className="mt-6 md:text-xl font-bold text-black text-center">Bills</h1>
           <p className="text-grey-slate mt-3 md:text-sm text-xs text-center">
             Take care of your essential bills
           </p>
         </div>
-        <div className="bg-white md:h-56 h-auto rounded-2xl shadow-2xl md:p-5 p-2 md:mt-0 mt-3 small-card cursor-pointer hover:bg-white-azure" onClick={() => setIsSendMoney(true)}>
+        <div className="bg-white md:h-56 h-auto rounded-2xl shadow-2xl md:p-5 p-2 md:mt-0 mt-3 small-card cursor-pointer hover:bg-white-azure" onClick={() => setIsAirtel(true)}>
           <div className="h-14 w-14 border border-grey-slate rounded-full mx-auto">
-          <AImobilebol className="text-blue mx-auto my-3.5 cursor-pointer" onClick={() => setIsSendMoney(true)}/>
+          <AImobilebol className="text-blue mx-auto my-3.5 cursor-pointer"/>
           </div>
           <h1 className="mt-6 md:text-xl font-bold text-black text-center">Airtime/Data</h1>
           <p className="text-grey-slate mt-3 md:text-sm text-xs text-center">
@@ -124,59 +129,41 @@ const Dashboard = () => {
           {
             name: "Utility Bills",
             render: <>
-              <p className='text-grey-slate mt-7'>Total Completed Application</p>
-            <h1 className="font-bold text-2xl mt-4">13,700</h1>
-            <h3 className="text-grey-slate font-bold mt-5">Breakdown</h3>
-            <div className="flex justify-between mt-5">
-              <div className="">
-                <p className="text-grey-slate">Fedpay</p>
-                <h3 className="font-bold text-2xl mt-4">823</h3>
-              </div>
-              <div className="">
-                <p className="text-grey-slate">Fash Cash</p>
-                <h3 className="font-bold text-2xl mt-4">12,868</h3>
-              </div>
-            </div>
-            <div className="mt-7">
-            <p className="text-grey-slate">SME</p>
-            <h3 className="font-bold text-2xl mt-2">0</h3>
-            </div>
+              <UtilityBillForms />
             </>
           },
           {
             name: "Cable",
             render: 
             <>
-            <p className='text-grey-slate mt-7'>Inomplete Application</p>
-            <h1 className="font-bold text-2xl mt-4">4,286</h1>
-            <h3 className="text-grey-slate font-bold mt-5">Breakdown</h3>
-            <div className='bg-white-azure rounded-xl h-36 mt-5'>
-              <h1 className='text-grey-slate font-bold container p-3'>Admin Side</h1>
-            <div className="flex justify-between mt-2 container mx-auto p-3">
-              <div className="mb-5">
-                <p className="text-grey-slate">Interest</p>
-                <h3 className="font-bold text-2xl mt-2">₦ 26,653,588</h3>
-              </div>
-              <div className="">
-                <p className="text-grey-slate">Processing fee</p>
-                <h3 className="font-bold text-2xl mt-2">₦ 1,001,716.97</h3>
-              </div>
-            </div>
-            </div>
+            <CableForm />
+            </>
+          },
+        ]}
+        />
+      </Drawer>
 
-            <div className='bg-white-azure rounded-xl h-36 mt-5'>
-              <h1 className='text-grey-slate font-bold container p-3'>Client Side</h1>
-            <div className="flex justify-between mt-2 container mx-auto p-3">
-              <div className="mb-5">
-                <p className="text-grey-slate">Pending</p>
-                <h3 className="font-bold text-2xl mt-2">4,195</h3>
-              </div>
-              <div className="">
-                <p className="text-grey-slate">Accepted</p>
-                <h3 className="font-bold text-2xl mt-2">82</h3>
-              </div>
-            </div>
-            </div>
+      {/* Airtime/Data section */}
+      <Drawer
+        position="right"
+        header={"Mobile"}
+        open={isAirtel}
+        close={setIsAirtel}
+      >
+        <Tab
+      className=""
+        data={[
+          {
+            name: "Airtime",
+            render: <>
+              <MobileForms />
+            </>
+          },
+          {
+            name: "Data",
+            render: 
+            <>
+            <DataForms />
             </>
           },
         ]}

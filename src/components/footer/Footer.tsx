@@ -5,6 +5,8 @@ import FacebookIcon from '../../assets/home/Facebook.svg'
 import InstagramIcon from '../../assets/home/Instagram.svg'
 import TwitterIcon from '../../assets/home/Twitter.svg'
 import LinkedinIcon from '../../assets/home/Linkedin.svg'
+import Googleplay from "./googleplay.svg"
+import AppStore from "./AppStore.svg"
 
 const Footer = () => {
     return (
@@ -13,14 +15,18 @@ const Footer = () => {
                 <div className="flex items-center justify-center">
                     <ArvoIcon />
                 </div>
-                <div className="flex items-center justify-center my-8">
+                <div className="flex items-center justify-center my-8 text-[#9BADV4]">
                     <p>Arvo as a licensed fintech payment institution headquartered in Lagos is positioned to re-define and reposition digital banking infrastructure,<br /> payments & services for millennials and x-generation.</p>
                 </div>
 
                 <div className="flex items-center justify-center my-5 gap-5 mb-6">
                     <div className="flex gap-5 text-white mt-9">
-                        <Button className="bg-black px-3 py-3">Google Play</Button>
-                        <Button className="bg-black px-3 py-3">App Store</Button>
+                        <Link to="" className="cursor-pointer px-3 py-3">
+                            <img src={Googleplay} alt="Googleplay" />
+                        </Link>
+                        <Link to="" className="cursor-pointer px-3 py-3">
+                            <img src={AppStore} alt="AppStore" />
+                        </Link>
                     </div>
                 </div>
 

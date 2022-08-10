@@ -16,7 +16,10 @@ import ZeroExtra from './ZeroExtra';
 
 import ScrollToTop from '../../components/scrollToTop/ScrollToTop';
 import LookingToTake from './LookingToTake';
-import ScrollIcon from '../../components/scrollToTop/ScrollIcon';
+// import ScrollIcon from '../../components/scrollToTop/ScrollIcon';
+
+import ScrollIcon from './../../components/scrollToTop//scrollicon.svg';
+
 const Home = () => {
 
   const whyavro = useRef()
@@ -50,8 +53,9 @@ const Home = () => {
       <Footer />
 
 
-      <ScrollToTop>
-        i<ScrollIcon />
+      <ScrollToTop className='flex items-center justify-center'>
+        {/* i<ScrollIcon /> */}
+        <img src={ScrollIcon} alt="ScrollIcon" />
       </ScrollToTop>
     </section>
   )
