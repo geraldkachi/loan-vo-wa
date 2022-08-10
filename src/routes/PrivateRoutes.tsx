@@ -13,12 +13,9 @@ import Loan from "../pages/loan/Loan";
 import RequiredRoute from "./RequiredRoute";
 import Account from "../pages/account/Account";
 import Beneficiaries from "../pages/Beneficiaries";
-import Dashboard from "../pages/Dashboard/Dashboard";
+import Dashboard from "../pages/Dashboard/Home/Index";
 import DebitCard from "../pages/Debitcard/DebitCard";
 import Transactions from "../pages/transactions/Transactions";
-import LoadingScreen from "../components/shared/LoadingScreen";
-
-const Loading = () => <LoadingScreen />;
 
 interface Props {
   isAuthenticated: boolean;
@@ -30,7 +27,7 @@ const Register = lazy(() => import("../pages/AuthScreens/Register"));
 const PrivateRoutes = ({ isAuthenticated }: Props) => {
   return (
     <BrowserRouter>
-      <Suspense fallback={<Loading />}>
+      <Suspense>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
@@ -48,7 +45,6 @@ const PrivateRoutes = ({ isAuthenticated }: Props) => {
               <Route path="/beneficiaries" element={<Beneficiaries />} />
             </Route>
           </Route>
-
           {/* 404 page */}
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
