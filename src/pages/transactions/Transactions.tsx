@@ -5,7 +5,7 @@ const Transactions = () => {
   return (
     <div>
       <TopNav title="Transactions!" />
-
+    
     </div>
   )
 }

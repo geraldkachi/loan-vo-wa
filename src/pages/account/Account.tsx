@@ -54,11 +54,9 @@ const Account = () => {
       <div className="flex gap-16 ">
         {/* first col */}
         <div className="flex flex-col  gap-5 w-max px-4 text-[#141C1F]">
-          {listAccountDetail.map((item, i) => {
-            return (
+          {listAccountDetail.map((item, i) =>
               <span className="cursor-pointer flex items-center gap-3" key={i}> <img src={item.img} alt="icons" /> {item.title}</span>
-            )
-          })}
+            )}
         </div>
 
         {/* second col */}
