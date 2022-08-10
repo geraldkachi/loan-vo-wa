@@ -9,7 +9,7 @@ const Dashboard = () => {
   };
   return (
     <section className="">
-      <TopNav title="Welcome Back!" titleUser="Hello Lord Gerald Kachi"  />
+      <TopNav title="Welcome Back!" titleUser="Hello Lord Gerald Kachi Hello"  />
 
       <div className="flex flex-col items-center">
         <div className="grid md:grid-cols-4 gap-4">

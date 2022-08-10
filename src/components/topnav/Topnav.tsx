@@ -84,7 +84,7 @@ const TopNav = ({ title, titleUser, icon }: TopNavProps) => {
                 <div className="flex items-center gap-5">
                     <Dropdown
                         // badge="12"
-                        // customToggle={() => renderNotifyIcon(current_user)}
+                        // customToggle={() => renderNotifyIcon(current_user)} 
                         contentData={notifications}
                         renderItems={(item: any, index: number) => renderNotificationItem(item, index)}
                     // renderFooter={() => <Link to="#">View All</Link>}

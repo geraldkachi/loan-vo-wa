@@ -6,6 +6,7 @@ import ArvoIcon from '../../images/svg/ArvoIcon';
 // import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 // const IMG = require('../../images/logo.png');
 import { Button, Checkbox } from 'arvara';
+import NavIcon from "./navicons.svg"
 
 const Navbar = ({ whyavro, scrollToSection, contact, product, faqs }: any) => {
   const navigate = useNavigate()
@@ -41,7 +42,9 @@ const Navbar = ({ whyavro, scrollToSection, contact, product, faqs }: any) => {
           <div onClick={handleNav} className='block lg:hidden text-black'>
             {/* {nav ? <AiOutlineClose size={20}/> : <AiOutlineMenu size={20} />} */}
             {/* <div className='hideOnlyonNavMobile md:hidden'> */}
-            {nav ? "close" : "Press to open"}
+            {nav ? <img src={NavIcon} alt="NavIcon" /> : <img src={NavIcon} alt="NavIcon" />}
+
+            {/* {nav ? "close" : "Press to open"} */}
           </div>
           {/* </div> */}
         </div>
@@ -54,7 +57,7 @@ const Navbar = ({ whyavro, scrollToSection, contact, product, faqs }: any) => {
           <li className='p-4 border-b border-gray-600'><Link to="" onClick={() => scrollToSection(faqs)}>FAQs</Link></li>
           <li className='p-4 border-b border-gray-600'>Blog</li>
           <li className='p-4 border-b border-gray-600'>Contact Us</li>
-          <li className='p-4'>Contact</li>
+          <li className='p-4 border-b border-gray-600'>Contact</li>
           <li className='p-4' onClick={handleNav}>{nav ? "close" : "Press to open"}</li>
         </ul>
       </div>
