@@ -12,6 +12,10 @@ import LoginForm from '../../components/forms/LoginForm';
 import Card from '../../components/cards/Card';
 import { Link } from 'react-router-dom';
 
+import BlackGoogleIcon from "../Home/BlackGoogleIcon.svg"
+import BlackAppPlay from "../Home/BlackAppPlay.svg"
+
+
 const Login: FC = () => {
 	const mutation = useMutation(allowLogin);
 
@@ -27,26 +31,31 @@ const Login: FC = () => {
 							Get loans in minutes{' '}
 						</h1>
 						<p className="text-sm">Up to NGN 500,000 in your Arvo wallet</p>
-						<div className="grid grid-flow-col md:mt-5">
-							<Button type="button" className="bg-black" icon={PlayStore}>
+						{/* <div className="grid grid-flow-col md:mt-5"> */}
+						<div className="flex items-center rounded-lg pt-3 gap-5 md:mt-5">
+							{/* <Button type="button" className="bg-black" icon={PlayStore}>
 								Google Play
 							</Button>
 							&nbsp;
 							<Button type="button" className="bg-black">
 								Apple Store
-							</Button>
+							</Button> */}
+
+							<img src={BlackGoogleIcon} className="cursor-pointer" alt="BlackGoogleIcon" />
+							<img src={BlackAppPlay} className="cursor-pointer" alt="BlackAppPlay" />
 						</div>
+
 						<div className="flex md:mt-6 justify-center whitespace-nowrap">
-							Join <img src={Join1} className="image-style md:-mt-6 -ml-6" />
-							<img src={Join2} className="image-style md:-mt-6 -ml-20" />
-							<img src={Join3} className="image-style md:-mt-6 -ml-20" />
-							<p className="mr-10 -ml-6 text-base">
+							Join <img src={Join1} className="image-style md:-mt-12 -ml-12" />
+							<img src={Join2} className="image-style md:-mt-12 -ml-32" />
+							<img src={Join3} className="image-style md:-mt-12 -ml-32" />
+							<p className="mr-10 -ml-12 text-base">
 								and over 2,000,000 customers
 							</p>
 						</div>
 					</div>
 					<div className="bg-blue flex items-center px-2 h-screen">
-					{/* <div className="m-auto md:w-[456px] w-[400px] sm-[300px]"> */}
+						{/* <div className="m-auto md:w-[456px] w-[400px] sm-[300px]"> */}
 						<div className="m-auto :min-w-[456px] ">
 							<Card
 								title="Login"

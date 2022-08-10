@@ -11,6 +11,9 @@ import RegisterForm from '../../components/forms/RegisterForm';
 import Card from '../../components/cards/Card';
 import { Link } from 'react-router-dom';
 
+import BlackGoogleIcon from "../Home/BlackGoogleIcon.svg"
+import BlackAppPlay from "../Home/BlackAppPlay.svg"
+
 const Register: FC = () => {
 	const mutation = useMutation(allowLogin);
 	return (
@@ -24,20 +27,23 @@ const Register: FC = () => {
 							Get loans in minutes{' '}
 						</h1>
 						<p className="text-sm">Up to NGN 500,000 in your Arvo wallet</p>
-						<div className="grid lg:grid-flow-col md:mt-5">
-							<Button type="button" className="bg-black">
+						<div className="flex items-center rounded-lg pt-3 gap-5 md:mt-5">
+							{/* <Button type="button" className="bg-black">
 								Google Play
 							</Button>
 							&nbsp;
 							<Button type="button" className="bg-black">
 								Apple Store
-							</Button>
+							</Button> */}
+
+							<img src={BlackGoogleIcon} className="cursor-pointer" alt="BlackGoogleIcon" />
+							<img src={BlackAppPlay} className="cursor-pointer" alt="BlackAppPlay" />
 						</div>
 						<div className="flex md:mt-6 justify-center whitespace-nowrap">
-							Join <img src={Join1} className="image-style md:-mt-6 -ml-6" />
-							<img src={Join2} className="image-style md:-mt-6 -ml-20" />
-							<img src={Join3} className="image-style md:-mt-6 -ml-20" />
-							<p className="mr-10 -ml-6 text-base">
+							Join <img src={Join1} className="image-style md:-mt-12 -ml-12" />
+							<img src={Join2} className="image-style md:-mt-12 -ml-32" />
+							<img src={Join3} className="image-style md:-mt-12 -ml-32" />
+							<p className="mr-10 -ml-12 text-base">
 								and over 2,000,000 customers
 							</p>
 						</div>
@@ -52,7 +58,7 @@ const Register: FC = () => {
 								<RegisterForm />
 								<p className="flex justify-center md:p-2">
 									Have an account?{' '}
-									<Link to="/" className="text-blue text-base">
+									<Link to="/login" className="text-blue text-base">
 										{' '}
 										&nbsp; Login
 									</Link>

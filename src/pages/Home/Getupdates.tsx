@@ -9,7 +9,7 @@ export const Getupdates = () => {
 
                     <div className="text-center my-5 text-[#141C1F]">
                         <p className='my-4 text-sm md:text-base'>Don’t get left behind</p>
-                        <p className='text-lg md:text-4xl'>Get updates on our products & services</p>
+                        <p className='text-lg md:text-4xl font-semibold'>Get updates on our products & services</p>
                     </div>
                     <form action="" className='flex justify-center items-center"'>
                         <div className="flex-wrap flex justify-center items-center">
@@ -17,22 +17,21 @@ export const Getupdates = () => {
 
                             <div className="md:mb-6">
                                 <Input type="email"
-
                                     className="
-
-                text-[#668A99]
-                block
-                w-full
-                px-3
-
-                text-sm
-                rounded-lg
-                font-normal
-                text-gray-700
-                transition
-                ease-in-out
-                m-0
-                "
+                                    text-[#668A99]
+                                    block
+                                    w-full
+                                    px-1
+                                    sm:px-3
+                                    border-transparent
+                                    text-sm
+                                    rounded-lg
+                                    font-normal
+                                    text-gray-700
+                                    transition
+                                    ease-in-out
+                                    m-0
+                                    "
                                     placeholder="Enter your email address" />
                             </div>
 
