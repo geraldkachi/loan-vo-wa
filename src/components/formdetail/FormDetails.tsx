@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 // const Button = ({}: any) => null
 // const Checkbox = ({}: any) => null
 
-const FormDetails = () => {
+const FormDetails = ({ contact }: any) => {
 
     // const { mutation } = props;
     const [email, setEmail] = useState<string>('');
@@ -43,11 +43,11 @@ const FormDetails = () => {
     }
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        (event.target.value)
+        ((event.target as HTMLInputElement).value)
     }
 
     return (
-        <section className="bg-[#F6F8F9] text-[#141C1F] px-5 py-10">
+        <div ref={contact} className="bg-[#F6F8F9] text-[#141C1F] px-5 py-10">
             {/* <div className="grid lg:grid-flow-col mx-auto max-w-[1300px]"> */}
             <div className="grid lg:grid-flow-col mx-auto max-w-[1300px]">
                 <div className="items-center self-center max-h-screen text-left basis-1/2">
@@ -87,8 +87,8 @@ const FormDetails = () => {
                     </div>
                 </div>
 
-                <div className="flex  h-screen bg-blue">
-                    <Card className="p-5  rounded-3xl shadow-lg">
+                <div className="flex  h-full my-16 w-full items-stretch">
+                    <Card className="p-5 max-w-2xl mx-auto rounded-3xl shadow-lg">
                         <form onSubmit={onFinish}>
                             <Input
                                 label="Full Name"
@@ -132,7 +132,7 @@ const FormDetails = () => {
                     </Card>
                 </div>
             </div>
-        </section>
+        </div>
     )
 }
 

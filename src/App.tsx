@@ -1,7 +1,9 @@
 import { QueryClientProvider, QueryClient } from 'react-query';
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
-import './App.css'
+// import './App.css'
+import 'arvara/src/index.css';
+import 'arvara/lib/styles.css';
 
 import Routers from "./routes";
 
