@@ -17,6 +17,7 @@ import Profile from "./AccountItems/Profile"
 import Contacts from "./AccountItems/Contacts"
 import Bank from "./AccountItems/Bank"
 import Mobile from "./AccountItems/Mobile"
+import Terms from "./AccountItems/Terms"
 
 
 const Account = () => {
@@ -167,7 +168,7 @@ const Account = () => {
           close={() => setOpenDebit(!openDebit)}
           position="right"
         >
-          <p>Debite me</p>
+          {/* <p>Debite me</p> */}
         </Drawer>
         <Drawer
           header="Beneficiary"
@@ -201,7 +202,7 @@ const Account = () => {
           close={() => setOpenTerms(!openTerms)}
           position="right"
         >
-          <p>Terms</p>
+          <Terms />
         </Drawer>
         <Drawer
           header="Faqs"
