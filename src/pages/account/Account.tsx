@@ -1,5 +1,5 @@
 import TopNav from "../../components/topnav/Topnav"
-import { Drawer } from "arvara"
+import { Drawer, Tab } from "arvara"
 
 import ProfileIcon from "./profile icon.svg"
 import PasswordIcon from "./password icon.svg"
@@ -15,6 +15,8 @@ import Switch from "./Switch"
 import Password from "./AccountItems/Password"
 import Profile from "./AccountItems/Profile"
 import Contacts from "./AccountItems/Contacts"
+import Bank from "./AccountItems/Bank"
+import Mobile from "./AccountItems/Mobile"
 
 
 const Account = () => {
@@ -173,7 +175,24 @@ const Account = () => {
           close={() => setOpenBenificiary(!openBenificiary)}
           position="right"
         >
-          <p>Benificiary</p>
+          <Tab
+          className=""
+          data={[
+            {
+              name: "Bank",
+              render: <>
+                <Bank />
+              </>
+            },
+            {
+              name: "Mobile",
+              render:
+                <>
+                  <Mobile />
+                </>
+            },
+          ]}
+        />
         </Drawer>
 
         <Drawer
