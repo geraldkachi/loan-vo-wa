@@ -19,6 +19,7 @@ import Bank from "./AccountItems/Bank"
 import Mobile from "./AccountItems/Mobile"
 import Terms from "./AccountItems/Terms"
 import RateUs from "./AccountItems/RateUs"
+import Faqs from "./AccountItems/Faqs"
 
 
 const Account = () => {
@@ -211,7 +212,7 @@ const Account = () => {
           close={() => setOpenFaqs(!openFaqs)}
           position="right"
         >
-          <p>Faqs</p>
+          <Faqs />
         </Drawer>
         <Drawer
           header="Contacts"

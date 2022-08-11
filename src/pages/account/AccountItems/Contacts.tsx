@@ -10,23 +10,23 @@ import LinkedinIcon from '../../../assets/home/Linkedin.svg'
 const Contacts = () => {
     return (
         <section>
-            <div className="items-center self-center max-h-screen text-left basis-1/2">
+            <div className=" text-[#141C1F] items-center fixed">
                 <div className="mb-10">
                     {/* <h1 className="text-lg md:text-[40px] font-bold ">Contact Us</h1> */}
-                    <p className="my-2">Contact our customer support 24/7</p>
+                    <p className="text-sm">Contact our customer support 24/7</p>
                 </div>
 
 
                 <div className="flex items-center mb-10">
                     <div>
                         <p className="ftext-xl font-semibold mb-2">Switch Board</p>
-                        <p>(+234) 802 181 0034</p>
+                        <p className='text-base'>(+234) 802 181 0034</p>
                     </div>
                 </div>
 
                 <div className='mb-10'>
-                    <p className="text-xl font-semibold mb-2">Email</p>
-                    <p>hello@arvofinance.com</p>
+                    <p className="text-base-xl font-semibold mb-2">Email</p>
+                    <p className='text'>hello@arvofinance.com</p>
                 </div>
                 <div className='mb-10'>
                     <div></div>
