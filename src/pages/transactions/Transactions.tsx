@@ -5,13 +5,46 @@ import { Card, Avatar } from 'arvara';
 import Male from '../../assets/homeDashboard/male.svg';
 import Female from '../../assets/homeDashboard/female.svg';
 import { AIreceiptaddbol, AImobilebol } from 'arvara-icons';
+import { useState } from "react"
+import { DateRange } from "react-date-range"
+import { format } from "date-fns"
+import 'react-date-range/dist/styles.css'
+import 'react-date-range/dist/theme/default.css'
 
 
 const Transactions = () => {
+
+  const [openDate, setOpenDate] = useState(false)
+  const [date, setDate] = useState<any[]>([
+    {
+      startDate: new Date(),
+      endDate: new Date(),
+      key: "selection"
+    }
+  ])
   return (
     <div>
       <TopNav title="Transactions!" />
-      {/* <div className="flex items-center"></div> */}
+      <div className="flex items-center my-5 justify-between">
+        <div className="flex items-center" onClick={() => setOpenDate(prev => !prev)}>
+          <p>Start Date</p>
+          <span className="style">{`${format(date[0].startDate, "MM/dd/yyyy")} - ${format(date[0].endDate, "MM/dd/yyyy")}`}</span>
+          {openDate
+            &&
+            <DateRange
+              editableDateInputs
+              onChange={(i: any) => setDate([i.selection])}
+              moveRangeOnFirstSelection={false}
+              // range={date}
+              className="date"
+              ninDate={new Date()}
+            />
+          }
+        </div>
+        <div className="items-center flex">
+          <p>End Date</p>
+        </div>
+      </div>
 
       <div className="grid md:grid-cols-3 gap-10">
         <div className="col-span-2">
@@ -162,7 +195,7 @@ const Transactions = () => {
 
 
 
-        {/* NO Transactiosn */}
+      {/* NO Transactiosn */}
 
       <div className="flex  justify-center ">
         <img src={NoTransactionIcon} alt="NoTransactionIcon" />
