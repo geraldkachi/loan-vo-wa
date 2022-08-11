@@ -12,6 +12,8 @@ import RateUsIcon from "./Rate us icon.svg"
 import CameraIcon from "./camera.svg"
 import { useState } from "react"
 import Switch from "./Switch"
+import Password from "./AccountItems/Password"
+import Profile from "./AccountItems/Profile"
 
 
 
@@ -57,7 +59,7 @@ const Account = () => {
       onclick: handlePasswordDropdown
     }, {
       img: DebitCardIcon,
-      title: "Debit Cards",
+      title: "Debit Cards & Bank",
       onclick: handleDebitDropdown
     }, {
       img: BeneficiaryIcon,
@@ -149,7 +151,7 @@ const Account = () => {
           close={() => setOpen(!open)}
           position="right"
         >
-          <p>profile me</p>
+          <Profile />
 
         </Drawer>
 
@@ -159,7 +161,8 @@ const Account = () => {
           close={() => setOpenPassword(!openPassword)}
           position="right"
         >
-          <p>Password</p>
+          {/* <p>Password</p> */}
+          <Password />
         </Drawer>
         <Drawer
           header="Debit"
