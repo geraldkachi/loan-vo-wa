@@ -22,14 +22,29 @@ const transactionCard = [
 
 const Account = () => {
   const [open, setOpen] = useState<boolean>(false);
+  const [openPassword, setOpenPassword] = useState<boolean>(false);
+  const [openDebit, setOpenDebit] = useState<boolean>(false);
+  const [openBenificiary, setOpenBenificiary] = useState<boolean>(false);
+  const [openTerms, setOpenTerms] = useState<boolean>(false);
+  const [openFaqs, setOpenFaqs] = useState<boolean>(false);
+  const [openContacts, setOpenContacts] = useState<boolean>(false);
+  const [openRate, setOpenRate] = useState<boolean>(false);
 
   const handleProfileDropdown = () => setOpen(!open)
 
-  const handlePasswordDropdown = () => setOpen(!open)
+  const handlePasswordDropdown = () => setOpenPassword(!openPassword)
 
-  const handleDebitDropdown = () => setOpen(!open)
+  const handleDebitDropdown = () => setOpenDebit(!openDebit)
 
+  const handleBenificiaryDropdwon = () => setOpenBenificiary(!openBenificiary)
 
+  const TermsDropdwon = () => setOpenTerms(!openTerms)
+
+  const FaqsDropdwon = () => setOpenFaqs(!openFaqs)
+
+  const ContactDropdwon = () => setOpenContacts(!openContacts)
+
+  const RateDropdwon = () => setOpenRate(!openRate)
 
   const listAccountDetail = [
     {
@@ -47,18 +62,23 @@ const Account = () => {
     }, {
       img: BeneficiaryIcon,
       title: "Beneficiary",
+      onclick: handleBenificiaryDropdwon
     }, {
       img: TermsIcon,
-      title: "Term of UISe",
+      title: "Term of USe",
+      onclick: TermsDropdwon
     }, {
       img: FaqsIcon,
       title: "FAQs",
+      onclick: FaqsDropdwon
     }, {
       img: ContactIcon,
       title: "Contact Us",
+      onclick: ContactDropdwon
     }, {
       img: RateUsIcon,
-      title: "Rate Us"
+      title: "Rate Us",
+      onclick: RateDropdwon
     }]
 
   return (
@@ -124,37 +144,71 @@ const Account = () => {
 
         {/* stop here */}
         <Drawer
-          open={open}
-          close={() => setOpen(!open)}
-          position="right"
-        >
-          <p>profile me</p>
-
-        </Drawer>
-
-        <Drawer
           header="Profile"
           open={open}
           close={() => setOpen(!open)}
           position="right"
         >
           <p>profile me</p>
+
         </Drawer>
+
         <Drawer
           header="Password"
-          open={open}
-          close={() => setOpen(!open)}
+          open={openPassword}
+          close={() => setOpenPassword(!openPassword)}
           position="right"
         >
-          <p>Password me</p>
+          <p>Password</p>
         </Drawer>
         <Drawer
-          header="Debitw"
-          open={open}
-          close={() => setOpen(!open)}
+          header="Debit"
+          open={openDebit}
+          close={() => setOpenDebit(!openDebit)}
           position="right"
         >
-          <p>Debi Cradt</p>
+          <p>Debite me</p>
+        </Drawer>
+        <Drawer
+          header="Beneficiary"
+          open={openBenificiary}
+          close={() => setOpenBenificiary(!openBenificiary)}
+          position="right"
+        >
+          <p>Benificiary</p>
+        </Drawer>
+
+        <Drawer
+          header="Terms"
+          open={openTerms}
+          close={() => setOpenTerms(!openTerms)}
+          position="right"
+        >
+          <p>Terms</p>
+        </Drawer>
+        <Drawer
+          header="Faqs"
+          open={openFaqs}
+          close={() => setOpenFaqs(!openFaqs)}
+          position="right"
+        >
+          <p>Faqs</p>
+        </Drawer>
+        <Drawer
+          header="Contacts"
+          open={openContacts}
+          close={() => setOpenContacts(!openContacts)}
+          position="right"
+        >
+          <p>Contacts</p>
+        </Drawer>
+        <Drawer
+          header="Rate"
+          open={openRate}
+          close={() => setOpenRate(!openRate)}
+          position="right"
+        >
+          <p>Rate</p>
         </Drawer>
 
 
