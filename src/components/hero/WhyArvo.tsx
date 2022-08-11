@@ -38,7 +38,7 @@ const WhyArvo = ({ whyavro }: WhtAvroProps) => {
             {tabIndex === "Quick" && (<>
               <div className="bg-[#02C39A]  self-stretch flex items-center justify-center sm:py-5 -my-10 md:my-0">
                 <div className="bg-white relative shadow-xl self-center bg-blue-600 rounded-2xl w-52  h-52">
-                  <div className="absolute bg-white-azure shadow-xl rounded-2xl w-max p-4 h-max right-32 top-40">
+                  <div className="absolute bg-white-azure shadow-xl rounded-2xl w-max p-4 h-max md:right-32 top-10 right-10 md:top-40">
                     <p>Hello, Gerald Kachi!</p>
                     <p className='text-#668A99 text-sm'>₦250,000 been disbursed to your wallet</p>
                   </div>

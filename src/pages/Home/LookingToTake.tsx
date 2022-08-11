@@ -7,7 +7,7 @@ const LookingToTake = () => {
     return (
         <div className="bg-[#141C1F] px-5 py-20 text-white">
             <div className="text-center max-w-5xl mx-auto">
-                <h1 className='text-bold md:text-4xl text-2xl mb-4'>Looking to take charge of your Finances</h1>
+                <h1 className='text-bold md:text-4xl text-3xl mb-4'>Looking to take charge of your Finances</h1>
                 <p className="text-base md:text-lg">With the Arvo App, every customer has 100% control of their funds. This affords every user the luxury of<br />
                     diligent financial planning for every kobo earned and spent.
                 </p>
