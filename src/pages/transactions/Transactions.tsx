@@ -25,24 +25,47 @@ const Transactions = () => {
   return (
     <div>
       <TopNav title="Transactions!" />
-      <div className="flex items-center my-5 justify-between">
-        <div className="flex items-center" onClick={() => setOpenDate(prev => !prev)}>
-          <p>Start Date</p>
-          <span className="style">{`${format(date[0].startDate, "MM/dd/yyyy")} - ${format(date[0].endDate, "MM/dd/yyyy")}`}</span>
-          {openDate
-            &&
-            <DateRange
-              editableDateInputs
-              onChange={(i: any) => setDate([i.selection])}
-              moveRangeOnFirstSelection={false}
-              // range={date}
-              className="date"
-              ninDate={new Date()}
-            />
-          }
+      <div className="flex items-center my-2 justify-between">
+
+        <div className="flex items-center gap-3" onClick={() => setOpenDate(prev => !prev)}>
+          <div className="flex items-center border p-4 border-[#065373] cursor-pointer rounded-sm">
+            <p>Start Date</p>
+            <span className="gap-x-10 space-x-10">{`- ${format(date[0].startDate, "MM/dd/yyyy")}`}</span>
+            {openDate
+              &&
+              <DateRange
+                editableDateInputs
+                moveRangeOnFirstSelection={false}
+                onChange={(i: any) => setDate([i.selection])}
+                range={date}
+                className="date absolute top-48 z-10"
+                ninDate={new Date()}
+              />
+            }
+          </div>
+
+          <div className="flex items-center border p-4 border-[#065373] cursor-pointer rounded-sm" onClick={() => setOpenDate(prev => !prev)}>
+            <p >End Date</p>
+            <span>{`- ${format(date[0].endDate, "MM/dd/yyyy")}`}</span>
+            {openDate
+              &&
+              <DateRange
+                editableDateInputs
+                onChange={(i: any) => setDate([i.selection])}
+                moveRangeOnFirstSelection={false}
+                range={date}
+                className="date absolute top-48 z-10"
+                ninDate={new Date()}
+              />
+            }
+          </div>
+
         </div>
-        <div className="items-center flex">
-          <p>End Date</p>
+        <div className="items-center flex gap-10">
+          <p>1-10 of 100 Items</p>
+          <p className="px-3 rounded-md bg-[#065373] text-white">1</p>
+          <p>2</p>
+          <p>3</p>
         </div>
       </div>
 
