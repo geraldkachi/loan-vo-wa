@@ -23,12 +23,12 @@ const transactionCard = [
 const Account = () => {
   const [open, setOpen] = useState<boolean>(false);
 
-  const handleProfileDropdown = () => {
-    setOpen(!open)
-  }
-  const handlePasswordDropdown = () => {
-    setOpen(!open)
-  }
+  const handleProfileDropdown = () => setOpen(!open)
+
+  const handlePasswordDropdown = () => setOpen(!open)
+
+  const handleDebitDropdown = () => setOpen(!open)
+
 
 
   const listAccountDetail = [
@@ -43,6 +43,7 @@ const Account = () => {
     }, {
       img: DebitCardIcon,
       title: "Debit Cards",
+      onclick: handleDebitDropdown
     }, {
       img: BeneficiaryIcon,
       title: "Beneficiary",
@@ -83,15 +84,11 @@ const Account = () => {
           <div className="flex items-center gap-5">
             <Drawer position="right" close={() => setOpen(!open)} header="" ></Drawer>
 
-            <div className="relative w-20 md:w-40">
-              <img src="https://mdbcdn.b-cdn.net/img/new/avatars/1.webp" alt="Avatar" className="rounded-full cursor-pointer w-40 shadow-lg" />
-              <img src={CameraIcon} alt="CameraIcon" className="absolute bottom-0 -right-2 md:right-4 scale-75" />
-            </div>
 
             <div className="flex flex-col items-start my-4 space-y-2">
               <h1 className="font-bold text-[#141C1F] text-2xl md:text-4xl">Gerald Onyekachi</h1>
-              <p>fitzgeraldkachi@gmail.com</p>
-              <p>09039278115</p>
+              <p className="text-[#668A99]">fitzgeraldkachi@gmail.com</p>
+              <p className="text-[#668A99]">09039278115</p>
             </div>
 
           </div>
@@ -99,19 +96,19 @@ const Account = () => {
           <div>
 
             <div className="grid md:grid-cols-2 gap-6 my-10 flex-3">
-              <div className="border p-5 space-y-2 rounded-2xl">
+              <div className="border p-5 space-y-2 border-[#065373] text-[#065373] rounded-2xl">
                 <p>Wallet ID</p>
                 <p>09039278115</p>
               </div>
-              <div className="border rounded-2xl p-5 space-y-2">
+              <div className="border border-[#065373] text-[#065373] rounded-2xl p-5 space-y-2">
                 <p>Wallet ID</p>
                 <p>09039278115</p>
               </div>
-              <div className="border rounded-2xl p-5 space-y-2">
+              <div className="border border-[#065373] text-[#065373] rounded-2xl p-5 space-y-2">
                 <p>Wallet ID</p>
                 <p>09039278115</p>
               </div>
-              <div className="border rounded-2xl p-5 space-y-2">
+              <div className="border border-[#065373] text-[#065373] rounded-2xl p-5 space-y-2">
                 <p>Wallet ID</p>
                 <p>09039278115</p>
               </div>
@@ -132,6 +129,7 @@ const Account = () => {
           position="right"
         >
           <p>profile me</p>
+
         </Drawer>
 
         <Drawer
@@ -149,6 +147,14 @@ const Account = () => {
           position="right"
         >
           <p>Password me</p>
+        </Drawer>
+        <Drawer
+          header="Debitw"
+          open={open}
+          close={() => setOpen(!open)}
+          position="right"
+        >
+          <p>Debi Cradt</p>
         </Drawer>
 
 

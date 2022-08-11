@@ -33,7 +33,7 @@ const StartedAvro = () => {
                             Bank with Arvo</p>
                         <p className="text-white ml-14 opacity-60 text-base">Make Financial Transaction on the Mobile App (Pay Bills, Send<br /> Money, Get Loans) and so much more</p>
                     </div>
-                    <Button type="submit" className='w-full sm:w-auto p-3 mx-2 mt-10 bg-white' style={{ background: 'white', color: '#065373' }} >Download the App</Button>
+                    <Button type="submit" className='w-3/5 sm:w-auto p-3 mt-10 bg-white' style={{ background: 'white', color: '#065373' }} >Download the App</Button>
                 </div>
                 <div className="self-center scale-75 order-1">
                     <img src={GetStartIcon} alt="star" />

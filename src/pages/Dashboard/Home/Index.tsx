@@ -127,6 +127,8 @@ const Dashboard = () => {
         <p>this would take the max content</p>
         </div>
       </div>
+
+      {/* akan code down here */}
       <section className="p-5">
 
         <div className="md:flex md:flex-row">
