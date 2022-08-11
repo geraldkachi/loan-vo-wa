@@ -1,5 +1,6 @@
 import TopNav from "../../components/topnav/Topnav"
 import NoTransactionIcon from "./no-transaction-icon.svg"
+import SettingsIcon from "./settings.svg"
 
 import { Card, Avatar } from 'arvara';
 import Male from '../../assets/homeDashboard/male.svg';
@@ -29,9 +30,9 @@ const Transactions = () => {
       <div className="flex items-center my-2 justify-between">
 
         <div className="flex items-center gap-3" onClick={() => setOpenDate(prev => !prev)}>
-          <div className="flex items-center border p-4 border-[#C2D0D6] border-1 cursor-pointer rounded-xl">
+          <div className="flex items-center gap-x-5">
             <p>Start Date</p>
-            <span className="gap-x-10 space-x-10">{`- ${format(date[0].startDate, "MM/dd/yyyy")}`}</span>
+            <span className="border p-4 border-[#C2D0D6] text-[#065373] border-1 cursor-pointer rounded-lg">{`- ${format(date[0].startDate, "MM/dd/yyyy")}`}</span>
             {openDate
               &&
               <DateRange
@@ -45,9 +46,9 @@ const Transactions = () => {
             }
           </div>
 
-          <div className="flex items-center border p-4 border-[#C2D0D6] border-1 cursor-pointer rounded-xl" onClick={() => setOpenDateEnd(prev => !prev)}>
+          <div className="flex items-center gap-x-5">
             <p >End Date</p>
-            <span>{`- ${format(date[0].endDate, "MM/dd/yyyy")}`}</span>
+            <span className="border p-4 border-[#C2D0D6] text-[#065373] border-1  rounded-lg cursor-pointer " onClick={() => setOpenDateEnd(prev => !prev)}>{`- ${format(date[0].endDate, "MM/dd/yyyy")}`}</span>
             {openDateEnd
               &&
               <DateRange
@@ -59,6 +60,14 @@ const Transactions = () => {
                 ninDate={new Date()}
               />
             }
+          </div>
+
+          <div className="flex items-center gap-x-5">
+            <span className="border p-4 border-[#C2D0D6] text-[#065373] border-1  rounded-lg cursor-pointer">
+              <img className="inline-flex gap-x-3" src={SettingsIcon} alt="settings" />  &nbsp;
+              Transaction Type
+            </span>
+
           </div>
 
         </div>
@@ -222,7 +231,7 @@ const Transactions = () => {
       {/* NO Transactiosn */}
 
       <div className="flex  justify-center ">
-        <img src={NoTransactionIcon} alt="NoTransactionIcon" />
+        {/* <img src={NoTransactionIcon} alt="NoTransactionIcon" /> */}
       </div>
 
     </div>
