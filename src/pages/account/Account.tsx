@@ -14,12 +14,7 @@ import { useState } from "react"
 import Switch from "./Switch"
 import Password from "./AccountItems/Password"
 import Profile from "./AccountItems/Profile"
-
-
-
-const transactionCard = [
-  ""
-]
+import Contacts from "./AccountItems/Contacts"
 
 
 const Account = () => {
@@ -67,7 +62,7 @@ const Account = () => {
       onclick: handleBenificiaryDropdwon
     }, {
       img: TermsIcon,
-      title: "Term of USe",
+      title: "Term of Use",
       onclick: TermsDropdwon
     }, {
       img: FaqsIcon,
@@ -203,7 +198,7 @@ const Account = () => {
           close={() => setOpenContacts(!openContacts)}
           position="right"
         >
-          <p>Contacts</p>
+          <Contacts />
         </Drawer>
         <Drawer
           header="Rate"

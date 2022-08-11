@@ -6,6 +6,12 @@ const Profile = () => {
     const [newPassword, setNewPassword] = useState('');
     const [confirmNewPassword, setConfirmNewPassword] = useState('');
 
+    const [email, setEmail] = useState<string>('');
+    const [firstName, setFirstName] = useState<string>('');
+    const [lastName, setLastName] = useState<string>('');
+    const [phoneNumber, setPhoneNumber] = useState<string>('');
+    const [password, setPassword] = useState<string>('');
+    const [showPassword, setShowPassword] = useState<boolean>(false);
 
     const handleCuurent = (e: React.ChangeEvent<HTMLInputElement>) => setCurrentPassword(e.target.value);
     const handleNewPassword = (e: React.ChangeEvent<HTMLInputElement>) => setNewPassword(e.target.value);
@@ -13,12 +19,17 @@ const Profile = () => {
     const onFinish = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const values = {
-            currentPassword,
-            newPassword,
-            confirmNewPassword,
-        };
-        console.log(values);
-    };
+            phoneNumber,
+            firstName,
+            lastName,
+            password,
+            email,
+        }
+    }
+
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        ((event.target as HTMLInputElement).value)
+    }
     return (
         <section>
             <div className="p-2">
