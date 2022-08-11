@@ -13,7 +13,6 @@ const RateUs = () => {
             <form>
                 <textarea className='w-full
                 h-48
-
                 border-spacing-0
                 px-3
                 text-base
