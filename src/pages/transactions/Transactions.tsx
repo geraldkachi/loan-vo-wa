@@ -15,6 +15,7 @@ import 'react-date-range/dist/theme/default.css'
 const Transactions = () => {
 
   const [openDate, setOpenDate] = useState(false)
+  const [openDateEnd, setOpenDateEnd] = useState(false)
   const [date, setDate] = useState<any[]>([
     {
       startDate: new Date(),
@@ -44,10 +45,10 @@ const Transactions = () => {
             }
           </div>
 
-          <div className="flex items-center border p-4 border-[#065373] cursor-pointer rounded-sm" onClick={() => setOpenDate(prev => !prev)}>
+          <div className="flex items-center border p-4 border-[#065373] cursor-pointer rounded-sm" onClick={() => setOpenDateEnd(prev => !prev)}>
             <p >End Date</p>
             <span>{`- ${format(date[0].endDate, "MM/dd/yyyy")}`}</span>
-            {openDate
+            {openDateEnd
               &&
               <DateRange
                 editableDateInputs
