@@ -29,7 +29,7 @@ const Transactions = () => {
       <div className="flex items-center my-2 justify-between">
 
         <div className="flex items-center gap-3" onClick={() => setOpenDate(prev => !prev)}>
-          <div className="flex items-center border p-4 border-[#065373] cursor-pointer rounded-sm">
+          <div className="flex items-center border p-4 border-[#C2D0D6] border-1 cursor-pointer rounded-xl">
             <p>Start Date</p>
             <span className="gap-x-10 space-x-10">{`- ${format(date[0].startDate, "MM/dd/yyyy")}`}</span>
             {openDate
@@ -45,7 +45,7 @@ const Transactions = () => {
             }
           </div>
 
-          <div className="flex items-center border p-4 border-[#065373] cursor-pointer rounded-sm" onClick={() => setOpenDateEnd(prev => !prev)}>
+          <div className="flex items-center border p-4 border-[#C2D0D6] border-1 cursor-pointer rounded-xl" onClick={() => setOpenDateEnd(prev => !prev)}>
             <p >End Date</p>
             <span>{`- ${format(date[0].endDate, "MM/dd/yyyy")}`}</span>
             {openDateEnd
