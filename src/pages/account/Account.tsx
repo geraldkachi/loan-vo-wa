@@ -18,6 +18,7 @@ import Contacts from "./AccountItems/Contacts"
 import Bank from "./AccountItems/Bank"
 import Mobile from "./AccountItems/Mobile"
 import Terms from "./AccountItems/Terms"
+import RateUs from "./AccountItems/RateUs"
 
 
 const Account = () => {
@@ -226,7 +227,7 @@ const Account = () => {
           close={() => setOpenRate(!openRate)}
           position="right"
         >
-          <p>Rate</p>
+          <RateUs />
         </Drawer>
 
 
