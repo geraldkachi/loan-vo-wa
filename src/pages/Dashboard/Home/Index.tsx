@@ -23,7 +23,6 @@ const Dashboard = () => {
   const onFinishStep = () => {
     setStep(1);
   }
-  
   const closeDrawer = () => {
     setStep(0);
     setIsSendMoney(false)
