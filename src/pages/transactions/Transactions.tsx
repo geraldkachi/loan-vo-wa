@@ -2,7 +2,7 @@ import TopNav from "../../components/topnav/Topnav"
 import NoTransactionIcon from "./no-transaction-icon.svg"
 import SettingsIcon from "./settings.svg"
 
-import { Card, Avatar } from 'arvara';
+import { Card, Avatar, Drawer } from 'arvara';
 import Male from '../../assets/homeDashboard/male.svg';
 import Female from '../../assets/homeDashboard/female.svg';
 import { AIreceiptaddbol, AImobilebol } from 'arvara-icons';
@@ -11,9 +11,13 @@ import { DateRange } from "react-date-range"
 import { format } from "date-fns"
 import 'react-date-range/dist/styles.css'
 import 'react-date-range/dist/theme/default.css'
+import TransactionsItems from "./TransactionsItems/TransactionsItems";
 
 
 const Transactions = () => {
+  const [open, setOpen] = useState<boolean>(false);
+
+  const handleTransactionDetails = () => setOpen(!open)
 
   const [openDate, setOpenDate] = useState(false)
   const [openDateEnd, setOpenDateEnd] = useState(false)
@@ -87,66 +91,78 @@ const Transactions = () => {
               <h1 className="text-grey-slate text-left">TODAY</h1>
             </div>
 
-            <Card className="my-5 block p-6 rounded-2xl shadow-xl border-grey-beau border bg-opacity-50">
-              <section className="md:flex md:justify-between">
-                <div className="flex">
-                  <div className="border-none w-12 h-12 rounded-full bg-yellow bg-opacity-25">
-                    <AIreceiptaddbol className="text-yellow mx-3.5 my-2" />
+
+            <div onClick={handleTransactionDetails} className="cursor-pointer">
+              <Card className="my-5 block p-6 cursor-pointer rounded-2xl shadow-xl border-grey-beau border bg-opacity-50">
+                <section className="md:flex md:justify-between">
+                  <div className="flex">
+                    <div className="border-none w-12 h-12 rounded-full bg-yellow bg-opacity-25">
+                      <AIreceiptaddbol className="text-yellow mx-3.5 my-2" />
+                    </div>
+                    <div className="md:text-base text-sm leading-tight mb-2 ml-5 ">
+                      <h1 className="text-black font-bold">Dstv Subscription</h1>
+                      <p className="md:text-sm text-xs text-grey-slate md:float-left">24/02/2022 - 07:40 AM</p>
+                    </div>
                   </div>
-                  <div className="md:text-base text-sm leading-tight mb-2 ml-5 ">
-                    <h1 className="text-black font-bold">Dstv Subscription</h1>
-                    <p className="md:text-sm text-xs text-grey-slate md:float-left">24/02/2022 - 07:40 AM</p>
+                  <div className="">
+                    <h1 className="text-red text-center"> -₦5,000</h1>
                   </div>
-                </div>
-                <div className="">
-                  <h1 className="text-red text-center"> -₦5,000</h1>
-                </div>
-              </section>
-            </Card>
-            <Card className="my-5 block p-6 rounded-2xl shadow-xl border-grey-beau border bg-opacity-50">
-              <section className="md:flex md:justify-between">
-                <div className="flex">
-                  <Avatar image={Male} className="text-yellow ml-1.5 my-2" />
-                  <div className="md:text-base text-sm leading-tight mb-2 ml-5">
-                    <h1 className="text-black font-bold">Daniel Abayomi</h1>
-                    <p className="md:text-sm text-xs text-grey-slate float-left">24/02/2022 - 09:40 AM</p>
+                </section>
+              </Card>
+            </div>
+
+            <div onClick={handleTransactionDetails} className="cursor-pointer">
+              <Card className="my-5 block p-6 cursor-pointer rounded-2xl shadow-xl border-grey-beau border bg-opacity-50">
+                <section className="md:flex md:justify-between">
+                  <div className="flex">
+                    <Avatar image={Male} className="text-yellow ml-1.5 my-2" />
+                    <div className="md:text-base text-sm leading-tight mb-2 ml-5">
+                      <h1 className="text-black font-bold">Daniel Abayomi</h1>
+                      <p className="md:text-sm text-xs text-grey-slate float-left">24/02/2022 - 09:40 AM</p>
+                    </div>
                   </div>
-                </div>
-                <div className="">
-                  <h1 className="text-red text-center"> -₦7,000</h1>
-                </div>
-              </section>
-            </Card>
-            <Card className="my-5 block p-6 rounded-2xl shadow-xl border-grey-beau border bg-opacity-50 long-card">
-              <section className="md:flex md:justify-between">
-                <div className="flex">
-                  <Avatar image={Female} className="text-yellow" />
-                  <div className="md:text-base text-sm leading-tight mb-2 ml-5">
-                    <h1 className="text-black font-bold">Simi Ayodele</h1>
-                    <p className="md:text-sm text-xs text-grey-slate float-left">29/05/2022 - 03:40 PM</p>
+                  <div className="">
+                    <h1 className="text-red text-center"> -₦7,000</h1>
                   </div>
-                </div>
-                <div className="">
-                  <h1 className="text-meador text-center"> -₦2,500</h1>
-                </div>
-              </section>
-            </Card>
-            <Card className="my-5 block p-6 rounded-2xl shadow-xl border-grey-beau border bg-opacity-50 long-card">
-              <section className="md:flex md:justify-between">
-                <div className="flex">
-                  <div className="border-none md:w-12 md:h-12 rounded-full bg-bluetiful bg-opacity-25">
-                    <AImobilebol className="text-bluetiful mx-auto md:mt-2.5 mt-2.5" />
+                </section>
+              </Card>
+            </div>
+
+            <div onClick={handleTransactionDetails} className="cursor-pointer">
+              <Card className="my-5 block p-6 cursor-pointer rounded-2xl shadow-xl border-grey-beau border bg-opacity-50 long-card">
+                <section className="md:flex md:justify-between">
+                  <div className="flex">
+                    <Avatar image={Female} className="text-yellow" />
+                    <div className="md:text-base text-sm leading-tight mb-2 ml-5">
+                      <h1 className="text-black font-bold">Simi Ayodele</h1>
+                      <p className="md:text-sm text-xs text-grey-slate float-left">29/05/2022 - 03:40 PM</p>
+                    </div>
                   </div>
-                  <div className="md:text-base text-sm leading-tight mb-2 ml-5">
-                    <h1 className="text-black font-bold">Airtime Top-up</h1>
-                    <p className="md:text-sm text-xs text-grey-slate float-left">Sent</p>
+                  <div className="">
+                    <h1 className="text-meador text-center"> -₦2,500</h1>
                   </div>
-                </div>
-                <div className="">
-                  <h1 className="text-red text-center"> -₦20,000</h1>
-                </div>
-              </section>
-            </Card>
+                </section>
+              </Card>
+            </div>
+
+            <div onClick={handleTransactionDetails} className="cursor-pointer">
+              <Card className="my-5 block p-6 cursor-pointer rounded-2xl shadow-xl border-grey-beau border bg-opacity-50 long-card">
+                <section className="md:flex md:justify-between">
+                  <div className="flex">
+                    <div className="border-none md:w-12 md:h-12 rounded-full bg-bluetiful bg-opacity-25">
+                      <AImobilebol className="text-bluetiful mx-auto md:mt-2.5 mt-2.5" />
+                    </div>
+                    <div className="md:text-base text-sm leading-tight mb-2 ml-5">
+                      <h1 className="text-black font-bold">Airtime Top-up</h1>
+                      <p className="md:text-sm text-xs text-grey-slate float-left">Sent</p>
+                    </div>
+                  </div>
+                  <div className="">
+                    <h1 className="text-red text-center"> -₦20,000</h1>
+                  </div>
+                </section>
+              </Card>
+            </div>
           </>
 
 
@@ -158,66 +174,78 @@ const Transactions = () => {
               <h1 className="text-grey-slate text-left">YESTERDAY</h1>
             </div>
 
-            <Card className="my-5 block p-6 rounded-2xl shadow-xl border-grey-beau border bg-opacity-50">
-              <section className="md:flex md:justify-between">
-                <div className="flex">
-                  <div className="border-none w-12 h-12 rounded-full bg-yellow bg-opacity-25">
-                    <AIreceiptaddbol className="text-yellow mx-3.5 my-2" />
+
+            <div onClick={handleTransactionDetails} className="cursor-pointer">
+              <Card className="my-5 block p-6 cursor-pointer rounded-2xl shadow-xl border-grey-beau border bg-opacity-50">
+                <section className="md:flex md:justify-between">
+                  <div className="flex">
+                    <div className="border-none w-12 h-12 rounded-full bg-yellow bg-opacity-25">
+                      <AIreceiptaddbol className="text-yellow mx-3.5 my-2" />
+                    </div>
+                    <div className="md:text-base text-sm leading-tight mb-2 ml-5 ">
+                      <h1 className="text-black font-bold">Dstv Subscription</h1>
+                      <p className="md:text-sm text-xs text-grey-slate md:float-left">24/02/2022 - 07:40 AM</p>
+                    </div>
                   </div>
-                  <div className="md:text-base text-sm leading-tight mb-2 ml-5 ">
-                    <h1 className="text-black font-bold">Dstv Subscription</h1>
-                    <p className="md:text-sm text-xs text-grey-slate md:float-left">24/02/2022 - 07:40 AM</p>
+                  <div className="">
+                    <h1 className="text-red text-center"> -₦5,000</h1>
                   </div>
-                </div>
-                <div className="">
-                  <h1 className="text-red text-center"> -₦5,000</h1>
-                </div>
-              </section>
-            </Card>
-            <Card className="my-5 block p-6 rounded-2xl shadow-xl border-grey-beau border bg-opacity-50">
-              <section className="md:flex md:justify-between">
-                <div className="flex">
-                  <Avatar image={Male} className="text-yellow ml-1.5 my-2" />
-                  <div className="md:text-base text-sm leading-tight mb-2 ml-5">
-                    <h1 className="text-black font-bold">Daniel Abayomi</h1>
-                    <p className="md:text-sm text-xs text-grey-slate float-left">24/02/2022 - 09:40 AM</p>
+                </section>
+              </Card>
+            </div>
+            <div onClick={handleTransactionDetails} className="cursor-pointer">
+
+              <Card className="my-5 block p-6 cursor-pointer rounded-2xl shadow-xl border-grey-beau border bg-opacity-50">
+                <section className="md:flex md:justify-between">
+                  <div className="flex">
+                    <Avatar image={Male} className="text-yellow ml-1.5 my-2" />
+                    <div className="md:text-base text-sm leading-tight mb-2 ml-5">
+                      <h1 className="text-black font-bold">Daniel Abayomi</h1>
+                      <p className="md:text-sm text-xs text-grey-slate float-left">24/02/2022 - 09:40 AM</p>
+                    </div>
                   </div>
-                </div>
-                <div className="">
-                  <h1 className="text-red text-center"> -₦7,000</h1>
-                </div>
-              </section>
-            </Card>
-            <Card className="my-5 block p-6 rounded-2xl shadow-xl border-grey-beau border bg-opacity-50 long-card">
-              <section className="md:flex md:justify-between">
-                <div className="flex">
-                  <Avatar image={Female} className="text-yellow" />
-                  <div className="md:text-base text-sm leading-tight mb-2 ml-5">
-                    <h1 className="text-black font-bold">Simi Ayodele</h1>
-                    <p className="md:text-sm text-xs text-grey-slate float-left">29/05/2022 - 03:40 PM</p>
+                  <div className="">
+                    <h1 className="text-red text-center"> -₦7,000</h1>
                   </div>
-                </div>
-                <div className="">
-                  <h1 className="text-meador text-center"> -₦2,500</h1>
-                </div>
-              </section>
-            </Card>
-            <Card className="my-5 block p-6 rounded-2xl shadow-xl border-grey-beau border bg-opacity-50 long-card">
-              <section className="md:flex md:justify-between">
-                <div className="flex">
-                  <div className="border-none md:w-12 md:h-12 rounded-full bg-bluetiful bg-opacity-25">
-                    <AImobilebol className="text-bluetiful mx-auto md:mt-2.5 mt-2.5" />
+                </section>
+              </Card>
+            </div>
+            <div onClick={handleTransactionDetails} className="cursor-pointer">
+
+              <Card className="my-5 block p-6 cursor-pointer rounded-2xl shadow-xl border-grey-beau border bg-opacity-50 long-card">
+                <section className="md:flex md:justify-between">
+                  <div className="flex">
+                    <Avatar image={Female} className="text-yellow" />
+                    <div className="md:text-base text-sm leading-tight mb-2 ml-5">
+                      <h1 className="text-black font-bold">Simi Ayodele</h1>
+                      <p className="md:text-sm text-xs text-grey-slate float-left">29/05/2022 - 03:40 PM</p>
+                    </div>
                   </div>
-                  <div className="md:text-base text-sm leading-tight mb-2 ml-5">
-                    <h1 className="text-black font-bold">Airtime Top-up</h1>
-                    <p className="md:text-sm text-xs text-grey-slate float-left">Sent</p>
+                  <div className="">
+                    <h1 className="text-meador text-center"> -₦2,500</h1>
                   </div>
-                </div>
-                <div className="">
-                  <h1 className="text-red text-center"> -₦20,000</h1>
-                </div>
-              </section>
-            </Card>
+                </section>
+              </Card>
+            </div>
+            <div onClick={handleTransactionDetails} className="cursor-pointer">
+
+              <Card className="my-5 block p-6 cursor-pointer rounded-2xl shadow-xl border-grey-beau border bg-opacity-50 long-card">
+                <section className="md:flex md:justify-between">
+                  <div className="flex">
+                    <div className="border-none md:w-12 md:h-12 rounded-full bg-bluetiful bg-opacity-25">
+                      <AImobilebol className="text-bluetiful mx-auto md:mt-2.5 mt-2.5" />
+                    </div>
+                    <div className="md:text-base text-sm leading-tight mb-2 ml-5">
+                      <h1 className="text-black font-bold">Airtime Top-up</h1>
+                      <p className="md:text-sm text-xs text-grey-slate float-left">Sent</p>
+                    </div>
+                  </div>
+                  <div className="">
+                    <h1 className="text-red text-center"> -₦20,000</h1>
+                  </div>
+                </section>
+              </Card>
+            </div>
           </>
         </div>
 
@@ -233,6 +261,15 @@ const Transactions = () => {
         {/* <img src={NoTransactionIcon} alt="NoTransactionIcon" /> */}
       </div>
 
+      {/* Draweer */}
+      <Drawer
+        header="Transactions Details"
+        open={open}
+        close={() => setOpen(!open)}
+        position="right"
+      >
+        <TransactionsItems {...{ handleTransactionDetails }} />
+      </Drawer>
     </div>
   )
 }
