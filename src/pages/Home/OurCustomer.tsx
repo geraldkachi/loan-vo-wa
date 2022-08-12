@@ -32,6 +32,24 @@ export const clients = [
         star: "stars",
         review: "It's a really nice app with a quick disbursement process. I honestly recommend this app for urgent and quick loan applications."
     },
+    {
+        img: FaceCard1,
+        name: "Tobi Oluwaseyi",
+        star: "stars",
+        review: "It's a really nice app with a quick disbursement process. I honestly recommend this app for urgent and quick loan applications."
+    },
+    {
+        img: FaceCard1,
+        name: "Tobi Oluwaseyi",
+        star: "stars",
+        review: "It's a really nice app with a quick disbursement process. I honestly recommend this app for urgent and quick loan applications."
+    },
+    {
+        img: FaceCard1,
+        name: "Tobi Oluwaseyi",
+        star: "stars",
+        review: "It's a really nice app with a quick disbursement process. I honestly recommend this app for urgent and quick loan applications."
+    },
 ]
 
 const OurCustomer = ({ faqs }: any) => {
@@ -45,8 +63,21 @@ const OurCustomer = ({ faqs }: any) => {
                 <>
                     <Swiper
                         modules={[Pagination]}
-                        slidesPerView={1}
+                        spaceBetween={50}
+                        // slidesPerView={1}
                         pagination={{ clickable: true }}
+                        breakpoints={{
+                            // when window width is >= 640px
+                            640: {
+                              width: 640,
+                              slidesPerView: 1,
+                            },
+                            // when window width is >= 768px
+                            768: {
+                              width: 768,
+                              slidesPerView: 2,
+                            },
+                          }}
                     >
                         {clients.map((client, index) => {
                             return (

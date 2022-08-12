@@ -46,12 +46,12 @@ const Dashboard = () => {
               <div className="text-white text-2xl mt-1 absolute font-bold">NGN 150,000</div>
               <div className="grid grid-flow-row auto-rows-max">
                 <div className="md:mt-16 mt-8 ">
-                  <Button type="button" variant="outline" className="md:h-14 md:w-44 w-40">
+                  <Button type="button" variant="outline" onClick={() => setIsFundWallet(true)} className="md:h-14 md:w-44 w-40 z-50">
                     Fund Wallet
                   </Button>
                 </div>
-                <div className="absolute float-right">
-                  <img src={Star} className="justify-end" />
+                <div className="relative float-right">
+                  <img src={Star} className="absolute justify-end left-60 -bottom-7" />
                 </div>
               </div>
 

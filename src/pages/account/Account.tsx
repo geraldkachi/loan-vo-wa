@@ -96,7 +96,7 @@ const Account = () => {
         {/* first col */}
         <div className="flex flex-col gap-5 w-max px-4 text-[#141C1F]">
           {listAccountDetail.map((item, i) =>
-            <span className="cursor-pointer flex items-center gap-3" key={i}
+            <span className="mb-2 cursor-pointer flex items-center gap-3" key={i}
               onClick={item.onclick}
             > <img src={item.img} alt="icons" /> {item.title}</span>
           )}
