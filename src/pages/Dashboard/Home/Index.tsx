@@ -1,11 +1,10 @@
-import { AIsend2Bol, AImobilebol, AIreceiptaddbol, AIwallet3Outlin, AIwallet3Bol, AIcardbol } from 'arvara-icons';
 import { useState } from 'react';
 import TodoCard from './TodoCard';
 import { Button, Tab } from 'arvara';
 import Drawer from '../../../components/Drawer';
-import RecentTransaction from './RecentTransaction';
 import Modal from '../../../components/modal/Modal';
-import { FundWallet } from './FundWallet/FundWallet';
+import RecentTransaction from './RecentTransaction';
+import SuccessIcon from '../../../assets/homeDashboard/success.svg';
 import TopNav from '../../../components/topnav/Topnav';
 import Star from '/src/assets/homeDashboard/Looper-2.svg';
 import { PinForm } from '../../../components/forms/PinForm';
@@ -19,6 +18,7 @@ import { BankCardForm } from '../../../components/forms/BankCardForm';
 import { SendMoneyForm } from '../../../components/forms/SendMoneyForm';
 import { UtilityBillForms } from '../../../components/forms/UtilityBillForm';
 import { BankTransferForm } from '../../../components/forms/BankTransferForm';
+import { AIsend2Bol, AImobilebol, AIreceiptaddbol, AIwallet3Outlin, AIwallet3Bol, AIcardbol } from 'arvara-icons';
 
 const Dashboard = () => {
   const [step, setStep] = useState(0);
@@ -273,10 +273,14 @@ const Dashboard = () => {
         <Modal
           show={showConfirmingPaymentModal}
           closeModal={setShowConfirmingPaymentModal}
-          title="Code Sent"
-          subTitle="Check your email for one-time code to reset your password">
+          title="Successful"
+          subTitle="Your action has been carried out successfully"
+          icon={<img src={SuccessIcon} />}
+          >
           <>
-            <h1>hello</h1>
+            <div className="flex justify-center mb-5">
+              <Button type="button">Completed</Button>
+            </div>
           </>
         </Modal>
     </>
