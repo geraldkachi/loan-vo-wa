@@ -1,10 +1,18 @@
 import React from 'react'
-import { Input,Button } from 'arvara';
+import { Input,Button, DropDown } from 'arvara';
 import AEDC from '../../assets/homeDashboard/AEDC.svg';
 import Ekedc from '../../assets/homeDashboard/EKEDC.svg';
 import Ibedc from '../../assets/homeDashboard/IBEDC.svg';
 import Ikeja from '../../assets/homeDashboard/IKEJA-ELECTRIC.svg';
 import { AIarrowdown1Outlin } from '@olivermead-investment-ltd/arvara-icons';
+
+const BillProvider= [
+  {label: 'Ikeja Electric Distribution Company', value: 'Ikeja Electric Distribution Company'},
+  {label: 'Abuja Electric Distribution Company', value: 'Abuja Electric Distribution Company'},
+  {label: 'Eko Electric Distribution Company', value: 'Eko Electric Distribution Company'},
+  {label: 'Ibadan Electric Distribution Company', value: 'Ibadan Electric Distribution Company'},
+  {label: 'Ikeja Electric Distribution Company', value: 'Ikeja Electric Distribution Company'},
+]
 
 export const UtilityBillForms = () => {
   return (
@@ -26,14 +34,12 @@ export const UtilityBillForms = () => {
         </div>
       </div>
       <form>
-            <Input
-              placeholder="Select"
-              value=""
-              className="mt-5"
-              TrailingIcon={() => (
-                <AIarrowdown1Outlin/>
-              )}
-            />
+            <DropDown
+            placeholder="Select"
+						data={BillProvider}
+            className="mt-5"
+						getValue={v => v.value.toString()}
+					/>
             <Input
               label="Plan"
               placeholder="Select"
