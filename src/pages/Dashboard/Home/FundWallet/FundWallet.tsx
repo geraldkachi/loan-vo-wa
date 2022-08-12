@@ -7,17 +7,17 @@ import { NewCardForm } from '../../../../components/forms/NewBankForm';
 import { BankCardForm } from '../../../../components/forms/BankCardForm';
 import { BankTransferForm } from '../../../../components/forms/BankTransferForm';
 
-export const FundWallet = () => {
+interface Props {
+  onToggle: any;
+}
+export const FundWallet = (props: Props) => {
+  const { onToggle } = props;
   const [step, setStep] = useState(0);
   const [isNewCard, setIsNewCard] = useState(false);
   const [isUseBankCard, setIsUseBankCard] = useState(false);
   const [isBankTransfer, setIsBankTransfer] = useState(false);
   
   const [showModal, setShowModal] = useState(false);
-
-  // const toggleConfirmingModal = () => {
-  //   setShowConfirmingPaymentModal(false);
-  // };
 
   return (
     <>
@@ -47,18 +47,7 @@ export const FundWallet = () => {
           </div>
         </div>
       </div>
-
-      {/*  */}
-      {/* <Drawer
-        position="right"
-        header={`${step === 0 ? 'Use Bank Transfer' : 'Use Bank Transfer'}`}
-        open={isBankTransfer}
-        close={closeDrawer}>
-        <>
-          {step === 0 && <BankTransferForm />}
-          {step === 1 && <BankCardForm />}
-        </>
-      </Drawer> */}
+{/* Drawer section */}
       <Drawer
         position="right"
         header={'Use Bank Transfer'}
@@ -71,7 +60,7 @@ export const FundWallet = () => {
         header={'Use Bank Card'}
         open={isUseBankCard}
         close={setIsUseBankCard}>
-        <BankCardForm  />
+        {/* <BankCardForm toggle={onToggle}  /> */}
       </Drawer>
       <Drawer position="right" header={'Use New Card'} open={isNewCard} close={setIsNewCard}>
         <NewCardForm />

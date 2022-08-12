@@ -43,9 +43,9 @@ const Transactions = () => {
                 editableDateInputs
                 moveRangeOnFirstSelection={false}
                 onChange={(i: any) => setDate([i.selection])}
-                range={date}
+                ranges={date}
                 className="date absolute top-48 z-10"
-                ninDate={new Date()}
+                minDate={new Date()}
               />
             }
           </div>
@@ -59,9 +59,9 @@ const Transactions = () => {
                 editableDateInputs
                 onChange={(i: any) => setDate([i.selection])}
                 moveRangeOnFirstSelection={false}
-                range={date}
+                ranges={date}
                 className="date absolute top-48 z-10"
-                ninDate={new Date()}
+                minDate={new Date()}
               />
             }
           </div>

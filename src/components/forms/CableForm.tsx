@@ -1,4 +1,4 @@
-import { Input, Button } from 'arvara'
+import { Input, Button, DropDown } from 'arvara'
 import Dstv from '../../assets/homeDashboard/dstv.svg';
 import Gotv from '../../assets/homeDashboard/gotv.svg';
 import Startime from '../../assets/homeDashboard/startimes.svg';
@@ -24,14 +24,16 @@ export const CableForm = () => {
         </div>
       </div>
       <form>
-            <Input
-              placeholder="Select"
-              value=""
-              className="mt-5"
-              TrailingIcon={() => (
-                <AIarrowdown1Outlin/>
-              )}
-            />
+      <DropDown
+						label={'Searchable'}
+            className="mt-5"
+						data={[
+							{ label: 'label 1', value: 'result 1' },
+							{ label: 'label 2', value: 'result 2' },
+							{ label: 'label 3', value: 'result 3' }
+						]}
+						getValue={v => v.value.toString()}
+					/>
             <Input
               label="Plan"
               placeholder="Select"

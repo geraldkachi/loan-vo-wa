@@ -1,12 +1,14 @@
 import { Button, Input } from 'arvara';
+import { useState } from 'react';
 import BankLogo from '../../assets/homeDashboard/bankLogo.svg';
 import WebModal from '../modal/Modal';
 
 interface Props {
-  setShowConfirmingModal?: () => void;
+  openPaymentModal: () => void;
 }
 
-export const BankCardForm = (props: Props) => {
+export const BankCardForm = ({ openPaymentModal }: Props) => {
+  // const [showConfirmingModal, setShowConfirmingModal] = useState(false);
   return (
     <>
       <section className="mt-20">
@@ -14,31 +16,17 @@ export const BankCardForm = (props: Props) => {
           <Input
             value=""
             className="mt-5"
-            placeholder="Card Details"
+            placeholder="Pick a card"
             LeadingIcon={() => <img src={BankLogo} />}
           />
           <Input placeholder="Input Amount" value="" className="mt-5" />
           <Input placeholder="Input Card Pin" value="" className="mt-5" />
-          <div className="mt-20">
-            <Button type="button" className="w-full">
+          <div className="mt-80">
+            <Button type="button" className="w-full" onClick={openPaymentModal }>
               Fund Wallet
             </Button>
           </div>
         </form>
-        {/* <WebModal
-          show={showConfirmingPaymentModal}
-          closeModal={setShowConfirmingPaymentModal}
-          title="Code Sent"
-          subTitle="Check your email for one-time code to reset your password">
-            <>
-            <h1>hello</h1>
-          <div className="mt-8 px-8">
-            <Button type="button" className="w-full mt-10">
-              Confirm
-            </Button>
-          </div>
-          </>
-        </WebModal> */}
       </section>
     </>
   );
