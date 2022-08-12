@@ -29,10 +29,10 @@ const Transactions = () => {
       <TopNav title="Transactions!" />
       <div className="flex items-center my-2 justify-between">
 
-        <div className="flex items-center gap-3" onClick={() => setOpenDate(prev => !prev)}>
+        <div className="flex items-center gap-3">
           <div className="flex items-center gap-x-5">
             <p>Start Date</p>
-            <span className="border p-4 border-[#C2D0D6] text-[#065373] border-1 cursor-pointer rounded-lg">{`- ${format(date[0].startDate, "MM/dd/yyyy")}`}</span>
+            <span onClick={() => setOpenDate(prev => !prev)} className="border p-4 border-[#C2D0D6] text-[#065373] border-1 cursor-pointer rounded-lg">{`- ${format(date[0].startDate, "MM/dd/yyyy")}`}</span>
             {openDate
               &&
               <DateRange
@@ -67,7 +67,6 @@ const Transactions = () => {
               <img className="inline-flex gap-x-3" src={SettingsIcon} alt="settings" />  &nbsp;
               Transaction Type
             </span>
-
           </div>
 
         </div>

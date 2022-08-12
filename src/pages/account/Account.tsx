@@ -20,6 +20,7 @@ import Mobile from "./AccountItems/Mobile"
 import Terms from "./AccountItems/Terms"
 import RateUs from "./AccountItems/RateUs"
 import Faqs from "./AccountItems/Faqs"
+import DebitCards from "./AccountItems/DebitCards"
 
 
 const Account = () => {
@@ -86,10 +87,14 @@ const Account = () => {
   return (
     <section>
       <TopNav title="Account!" />
+      <div className="grid grid-cols-3">
 
-      <div className="flex gap-16 mt-4">
+        <div className="col-span-3"></div>
+        <div className="col-span-1"></div>
+      </div>
+      <div className="flex gap-16  mt-8">
         {/* first col */}
-        <div className="flex flex-col  gap-5 w-max px-4 text-[#141C1F]">
+        <div className="flex flex-col gap-5 w-max px-4 text-[#141C1F]">
           {listAccountDetail.map((item, i) =>
             <span className="cursor-pointer flex items-center gap-3" key={i}
               onClick={item.onclick}
@@ -100,7 +105,11 @@ const Account = () => {
         {/* second col */}
         <div className=" flex-1 xl:mr-60">
           <div className="flex items-center gap-5">
-            <Drawer position="right" close={() => setOpen(!open)} header="" ></Drawer>
+            {/* <Drawer position="right" close={() => setOpen(!open)} header="" ></Drawer> */}
+            <div className="relative w-32 md:w-40">
+              <img src="https://mdbcdn.b-cdn.net/img/new/avatars/1.webp" alt="Avatar" className="rounded-full cursor-pointer shadow-lg" />
+              <img src={CameraIcon} className="right-4 bottom-0 absolute" alt="CameraIcon" />
+            </div>
 
 
             <div className="flex flex-col items-start my-4 space-y-2">
@@ -115,20 +124,20 @@ const Account = () => {
 
             <div className="grid md:grid-cols-2 gap-6 my-10 flex-3">
               <div className="border p-5 space-y-2 border-[#065373] text-[#065373] rounded-2xl">
-                <p>Wallet ID</p>
-                <p>09039278115</p>
+                <p className="text-base">Wallet ID</p>
+                <p className="font-bold">09039278115</p>
               </div>
               <div className="border border-[#065373] text-[#065373] rounded-2xl p-5 space-y-2">
-                <p>Wallet ID</p>
-                <p>09039278115</p>
+                <p className="text-base">Loan Balance</p>
+                <p className="font-bold">₦ 250,000</p>
               </div>
               <div className="border border-[#065373] text-[#065373] rounded-2xl p-5 space-y-2">
-                <p>Wallet ID</p>
-                <p>09039278115</p>
+                <p className="text-base">Next Repayment</p>
+                <p className="font-bold">₦ 450,000</p>
               </div>
               <div className="border border-[#065373] text-[#065373] rounded-2xl p-5 space-y-2">
-                <p>Wallet ID</p>
-                <p>09039278115</p>
+                <p className="text-base">Default Charges</p>
+                <p className="font-bold">₦ 180</p>
               </div>
             </div>
 
@@ -161,12 +170,12 @@ const Account = () => {
           <Password />
         </Drawer>
         <Drawer
-          header="Debit"
+          header={`Manage Cards & Bank`}
           open={openDebit}
           close={() => setOpenDebit(!openDebit)}
           position="right"
         >
-          {/* <p>Debite me</p> */}
+          <DebitCards />
         </Drawer>
         <Drawer
           header="Beneficiary"
@@ -175,23 +184,23 @@ const Account = () => {
           position="right"
         >
           <Tab
-          className=""
-          data={[
-            {
-              name: "Bank",
-              render: <>
-                <Bank />
-              </>
-            },
-            {
-              name: "Mobile",
-              render:
-                <>
-                  <Mobile />
+            className=""
+            data={[
+              {
+                name: "Bank",
+                render: <>
+                  <Bank />
                 </>
-            },
-          ]}
-        />
+              },
+              {
+                name: "Mobile",
+                render:
+                  <>
+                    <Mobile />
+                  </>
+              },
+            ]}
+          />
         </Drawer>
 
         <Drawer

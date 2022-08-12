@@ -79,8 +79,8 @@ const TopNav = ({ title, titleUser, icon }: TopNavProps) => {
             <div className="flex items-center justify-between p-5">
 
                 <div>
-                    <div className="flex items-center gap-5">
-                        <span className="text-base">{titleUser} </span>
+                    <div className="flex items-center gap-x-1 mb-2">
+                        <span className="text-base text-[#668A99]">{titleUser} </span>
                         {icon && <HelloIcon className="inline-block ml-3" />}
                     </div>
                     <h1 className="text-3xl font-semibold text-[#000000]">{title}</h1>
