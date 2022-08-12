@@ -30,7 +30,7 @@ const Transactions = () => {
   ])
   return (
     <div>
-      <TopNav title="Transactions!" />
+      <TopNav title="Transactions" />
       <div className="flex items-center my-2 justify-between">
 
         <div className="flex items-center gap-3">
