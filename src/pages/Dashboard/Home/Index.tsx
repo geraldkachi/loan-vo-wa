@@ -1,28 +1,35 @@
-import { AIsend2Bol, AImobilebol, AIreceiptaddbol, AIwallet3Outlin } from 'arvara-icons';
+import { AIsend2Bol, AImobilebol, AIreceiptaddbol, AIwallet3Outlin, AIwallet3Bol, AIcardbol } from 'arvara-icons';
 import { useState } from 'react';
 import TodoCard from './TodoCard';
 import { Button, Tab } from 'arvara';
 import Drawer from '../../../components/Drawer';
 import RecentTransaction from './RecentTransaction';
+import Modal from '../../../components/modal/Modal';
 import { FundWallet } from './FundWallet/FundWallet';
 import TopNav from '../../../components/topnav/Topnav';
 import Star from '/src/assets/homeDashboard/Looper-2.svg';
 import { PinForm } from '../../../components/forms/PinForm';
+import Flutter from '/src/assets/homeDashboard/flutter.svg';
 import { DataForms } from '../../../components/forms/DataForm';
 import Hand from '/src/assets/homeDashboard/hand-with-coin.svg';
 import { CableForm } from '../../../components/forms/CableForm';
 import { MobileForms } from '../../../components/forms/MobileForm';
+import { NewCardForm } from '../../../components/forms/NewBankForm';
+import { BankCardForm } from '../../../components/forms/BankCardForm';
 import { SendMoneyForm } from '../../../components/forms/SendMoneyForm';
 import { UtilityBillForms } from '../../../components/forms/UtilityBillForm';
-import Modal from '../../../components/modal/Modal';
+import { BankTransferForm } from '../../../components/forms/BankTransferForm';
 
 const Dashboard = () => {
   const [step, setStep] = useState(0);
   const [isBill, setIsBill] = useState(false);
   const [isAirtime, setIsAirtime] = useState(false);
+  const [isNewCard, setIsNewCard] = useState(false);
   const [isSendMoney, setIsSendMoney] = useState(false);
   const [isFundWallet, setIsFundWallet] = useState(false);
-  const [showConfirmingPaymentModal, setShowConfirmingPaymentModal] = useState(true);
+  const [isUseBankCard, setIsUseBankCard] = useState(false);
+  const [isBankTransfer, setIsBankTransfer] = useState(false);
+  const [showConfirmingPaymentModal, setShowConfirmingPaymentModal] = useState(false);
 
   const onFinishStep = () => {
     setStep(1);
@@ -192,11 +199,77 @@ const Dashboard = () => {
         header={'Select Funding Option'}
         open={isFundWallet}
         close={setIsFundWallet}>
-        <FundWallet onToggle={true} />
+        <>
+        <div>
+          <div
+            className="w-full h-16 rounded-lg cursor-pointer fund-button"
+            onClick={() => {
+              setIsNewCard(false);
+              setIsBankTransfer(true);
+              setIsUseBankCard(false);
+              setIsFundWallet(false);
+              }}>
+            <div className="flex my-5 mx-5">
+              <AIwallet3Bol className="icon solid text-blue-2" />
+              <h1 className="text-base ml-2">Use bank transfer</h1>
+            </div>
+          </div>
+          <div
+            className="w-full h-16 rounded-lg mt-5 cursor-pointer fund-button"
+            onClick={() => {
+              setIsNewCard(false);
+              setIsBankTransfer(false);
+              setIsUseBankCard(true);
+              setIsFundWallet(false)
+              }}>
+            <div className="flex my-5 mx-5">
+              <img src={Flutter} />
+              <h1 className="text-base ml-2">Use Bank card ****5678</h1>
+            </div>
+          </div>
+          <div
+            className="w-full h-16 rounded-lg mt-5 cursor-pointer fund-button"
+            onClick={() => {
+              setIsNewCard(true);
+              setIsUseBankCard(false);
+              setIsBankTransfer(false);
+              setIsFundWallet(false)
+              }}>
+            <div className="flex my-5 mx-5">
+              <AIcardbol className="icon solid text-yellow" />
+              <h1 className="text-base ml-2">Pay with new card</h1>
+            </div>
+          </div>
+        </div>
+        </>
       </Drawer>
 
+      {/* Drawer section */}
+      <Drawer
+          position="right"
+          header={'Use Bank Transfer'}
+          open={isBankTransfer}
+          close={setIsBankTransfer}>
+          <BankTransferForm openPaymentModal={() => {
+            setShowConfirmingPaymentModal(true);
+           }} />
+        </Drawer>
+        <Drawer
+          position="right"
+          header={'Use Bank Card'}
+          open={isUseBankCard}
+          close={setIsUseBankCard}>
+          <BankCardForm openPaymentModal={() => {
+            setShowConfirmingPaymentModal(true);
+           }}  />
+        </Drawer>
+        <Drawer position="right" header={'Use New Card'} open={isNewCard} close={setIsNewCard}>
+          <NewCardForm openPaymentModal={() => {
+            setShowConfirmingPaymentModal(true);
+           }} />
+        </Drawer>
+
       {/* ******** Modal section ******** */}
-      {showConfirmingPaymentModal && (
         <Modal
           show={showConfirmingPaymentModal}
           closeModal={setShowConfirmingPaymentModal}
@@ -204,14 +277,8 @@ const Dashboard = () => {
           subTitle="Check your email for one-time code to reset your password">
           <>
             <h1>hello</h1>
-            <div className="mt-8 px-8">
-              <Button type="button" className="w-full mt-10">
-                Confirm
-              </Button>
-            </div>
           </>
         </Modal>
-      )}
     </>
   );
 };

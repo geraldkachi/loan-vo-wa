@@ -1,9 +1,23 @@
-import { Input, Button } from 'arvara';
+import { Input, Button, DropDown } from 'arvara';
 import Mtn from '../../assets/homeDashboard/mtn logo.svg';
 import Airtel from '../../assets/homeDashboard/airtel.svg';
 import mobile from '../../assets/homeDashboard/9mobile.svg';
 import glo from '../../assets/homeDashboard/glo.svg';
 import { AIarrowdown1Outlin, AIusersquarebol } from '@olivermead-investment-ltd/arvara-icons';
+
+const Network= [
+  {label: 'MTN-Nigeria', value: 'MTN-Nigeria'},
+  {label: 'Airtel', value: 'Airtel'},
+  {label: '9mobile', value: '9mobile'},
+  {label: 'Glo', value: 'Glo'},
+]
+const DataPlan = [
+  {label: '50', value: '40MB Daily Plan'},
+  {label: '100', value: '100MB Daily Plan'},
+  {label: '200', value: '1GB Daily Plan'},
+  {label: '500', value: '2.5GB 2-Days Plan'},
+  {label: '200', value: '200MB 3-Days Plan'},
+]
 
 export const DataForms = () => {
   return (
@@ -29,20 +43,20 @@ export const DataForms = () => {
           </div>
         </div>
         <form>
-          <Input
-            label="Network"
+          <DropDown
+						label={'Network'}
             placeholder="Select"
-            value=""
             className="mt-5"
-            TrailingIcon={() => <AIarrowdown1Outlin />}
-          />
-          <Input
-            label="Plan"
+						data={Network}
+						getValue={v => v.value.toString()}
+					/>
+          <DropDown
+						label={'Plan'}
             placeholder="Select"
-            value=""
             className="mt-5"
-            TrailingIcon={() => <AIarrowdown1Outlin className="icon solid text-blue-2"/>}
-          />
+						data={DataPlan}
+						getValue={v => v.value.toString()}
+					/>
           <Input label="Amount (NGN)" placeholder="0.00" value="" className="mt-5" />
           <Input
             label="Mobile Number"

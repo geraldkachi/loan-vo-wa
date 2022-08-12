@@ -1,24 +1,29 @@
 import { useState } from 'react';
-import { Button, Input } from 'arvara';
+import { Button, DropDown, Input } from 'arvara';
 import BankLogo from '../../assets/homeDashboard/bankLogo.svg';
 
-export const BankTransferForm = (props: Props) => {
-  const [showConfirmingModal, setShowConfirmingModal] = useState(false);
+interface Props {
+  openPaymentModal: () => void;
+}
 
-  const toggle = () => {
-    setForgetPassword(false);
-    setShowSendCodeModal(true);
-  };
+export const BankTransferForm = ({ openPaymentModal }: Props) => {
+  // const [showConfirmingModal, setShowConfirmingModal] = useState(false);
   return (
     <>
       <section className="mt-20">
         <form>
-          <Input
-            value=""
-            className="mt-5"
+          <DropDown
             placeholder="Bank Name"
-            LeadingIcon={() => <img src={BankLogo} />}
-          />
+            className="mt-5"
+						data={[
+							{ label: 'Access Bank', value: 'Access Bank' },
+							{ label: 'Citibank Nigeria Limited', value: 'Citibank Nigeria Limited' },
+							{ label: 'Ecobank Nigeria Plc', value: 'Ecobank Nigeria Plc' },
+							{ label: 'Fidelity Bank Plc', value: 'Fidelity Bank Plc' },
+							{ label: 'First Bank of Nigeria LTD', value: 'First Bank of Nigeria LTD' },
+						]}
+						getValue={v => v.value.toString()}
+					/>
           <Input placeholder="Account Number" value="" className="mt-5" />
           <Input placeholder="Account Name" value="" className="mt-5" />
           <Input
@@ -26,8 +31,13 @@ export const BankTransferForm = (props: Props) => {
             value=""
             className="mt-5"
           />
+          <Input
+            placeholder="Note"
+            value=""
+            className="mt-5"
+          />
           <div className="mt-80">
-            <Button type="button" className="w-full" onClick={() => setShowConfirmingModal(true) }>
+            <Button type="button" className="w-full" onClick={openPaymentModal}>
               Fund Wallet
             </Button>
           </div>

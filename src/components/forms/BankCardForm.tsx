@@ -1,13 +1,14 @@
 import { Button, Input } from 'arvara';
+import { useState } from 'react';
 import BankLogo from '../../assets/homeDashboard/bankLogo.svg';
 import WebModal from '../modal/Modal';
 
 interface Props {
-  toggle: any;
+  openPaymentModal: () => void;
 }
 
-export const BankCardForm = (props: Props) => {
-  const { toggle } = props;
+export const BankCardForm = ({ openPaymentModal }: Props) => {
+  // const [showConfirmingModal, setShowConfirmingModal] = useState(false);
   return (
     <>
       <section className="mt-20">
@@ -20,8 +21,8 @@ export const BankCardForm = (props: Props) => {
           />
           <Input placeholder="Input Amount" value="" className="mt-5" />
           <Input placeholder="Input Card Pin" value="" className="mt-5" />
-          <div className="mt-20">
-            <Button type="button" className="w-full" onClick={ () => toggle(true)}>
+          <div className="mt-80">
+            <Button type="button" className="w-full" onClick={openPaymentModal }>
               Fund Wallet
             </Button>
           </div>

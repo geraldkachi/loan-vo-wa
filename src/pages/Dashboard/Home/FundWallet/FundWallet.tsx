@@ -60,7 +60,7 @@ export const FundWallet = (props: Props) => {
         header={'Use Bank Card'}
         open={isUseBankCard}
         close={setIsUseBankCard}>
-        <BankCardForm toggle={onToggle}  />
+        {/* <BankCardForm toggle={onToggle}  /> */}
       </Drawer>
       <Drawer position="right" header={'Use New Card'} open={isNewCard} close={setIsNewCard}>
         <NewCardForm />

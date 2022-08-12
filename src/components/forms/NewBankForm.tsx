@@ -1,10 +1,12 @@
 import { Button, Input } from 'arvara';
+import { useState } from 'react';
 
 interface Props {
-  setShowConfirmingModal?: () => void;
+  openPaymentModal: () => void;
 }
 
-export const NewCardForm = (props: Props) => {
+export const NewCardForm = ({ openPaymentModal }: Props) => {
+  // const [showConfirmingModal, setShowConfirmingModal] = useState(false);
   return (
     <>
       <section className="mt-20">
@@ -19,8 +21,8 @@ export const NewCardForm = (props: Props) => {
           <Input label="CVV" placeholder="000" value="" className="mt-5" />
           </div>
           <Input label="OTP" placeholder="" value="" className="mt-5" />
-          <div className="mt-20">
-            <Button type="button" className="w-full">
+          <div className="mt-80">
+            <Button type="button" className="w-full" onClick={openPaymentModal }>
               Fund Wallet
             </Button>
           </div>
