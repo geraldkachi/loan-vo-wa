@@ -23,10 +23,12 @@ const Dashboard = () => {
   const onFinishStep = () => {
     setStep(1);
   }
+  
   const closeDrawer = () => {
     setStep(0);
     setIsSendMoney(false)
   }
+
   return (
     <>
       <TopNav title="Welcome Back!" titleUser="Hello Lord Gerald Kachi" icon />
