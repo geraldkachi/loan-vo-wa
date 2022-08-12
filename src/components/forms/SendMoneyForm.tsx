@@ -1,7 +1,16 @@
 import { useState } from 'react';
-import { Input, Button, Avatar } from 'arvara';
 import {AIarrowdown1Outlin} from 'arvara-icons';
+import { Input, Button, Avatar, DropDown } from 'arvara';
 import Female from '../../assets/homeDashboard/female.svg';
+
+const BankName = [
+  { label: 'Access Bank', value: 'Access Bank' },
+  { label: 'Citibank Nigeria Limited', value: 'Citibank Nigeria Limited' },
+  { label: 'Ecobank Nigeria Plc', value: 'Ecobank Nigeria Plc' },
+  { label: 'Fidelity Bank Plc', value: 'Fidelity Bank Plc' },
+  { label: 'First Bank of Nigeria LTD', value: 'First Bank of Nigeria LTD' },
+  { label: 'United Bank of Africa', value: 'United Bank of Africa' },
+]
 
 interface ISend {
   onFinishStep: () => void
@@ -65,16 +74,12 @@ export const SendMoneyForm = ({ onFinishStep }: ISend) => {
         </div>
         <div className="p-2">
           <form onSubmit={onFinish}>
-            <Input
-              label="Bank Name"
-              placeholder="Select Bank"
-              onChange={handleBankName}
-              value={bankName}
-              className="mt-5"
-              TrailingIcon={() => (
-                <AIarrowdown1Outlin/>
-              )}
-            />
+            <DropDown
+						label="Bank Name"
+            placeholder="Select Bank"
+						data={BankName}
+						getValue={v => v.value.toString()}
+					/>
             <Input
               label="Account Number"
               placeholder="Enter recipient account number"

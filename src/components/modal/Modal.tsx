@@ -54,11 +54,14 @@ const Modal = (props: Props) => {
             <div className="flex items-center justify-center m-auto mt-5 border-2 border-grey w-20 h-20">
             {icon}
           </div>
-            <div className="relative p-6 flex-auto">
-              <p className="my-4 text-slate-500 text-lg leading-relaxed">
-                Are you sure you want to delete this product?
-              </p>
-            </div>
+          <div className="flex items-center justify-center">
+          <h5 className="text-3xl text-700 mt-8 items-center justify-center">
+            {title}
+          </h5>
+        </div>
+        <p className="text-center container mt-5 text-grey-slate text-base px-8">
+          {subTitle}
+        </p>
             {/*footer*/}
             <div className="mx-auto p-6">
               <Button

@@ -1,11 +1,14 @@
+import { useState } from 'react';
 import { Button, Input } from 'arvara';
 import BankLogo from '../../assets/homeDashboard/bankLogo.svg';
 
-interface Props {
-  setShowConfirmingModal?: () => void;
-}
-
 export const BankTransferForm = (props: Props) => {
+  const [showConfirmingModal, setShowConfirmingModal] = useState(false);
+
+  const toggle = () => {
+    setForgetPassword(false);
+    setShowSendCodeModal(true);
+  };
   return (
     <>
       <section className="mt-20">
@@ -24,7 +27,7 @@ export const BankTransferForm = (props: Props) => {
             className="mt-5"
           />
           <div className="mt-80">
-            <Button type="button" className="w-full">
+            <Button type="button" className="w-full" onClick={() => setShowConfirmingModal(true) }>
               Fund Wallet
             </Button>
           </div>
