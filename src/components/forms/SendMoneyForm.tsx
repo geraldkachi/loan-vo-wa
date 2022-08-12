@@ -1,6 +1,7 @@
-import { Input, Button } from 'arvara';
+import { useState } from 'react';
+import { Input, Button, Avatar } from 'arvara';
 import {AIarrowdown1Outlin} from 'arvara-icons';
-import { Dispatch, SetStateAction, useState } from "react";
+import Female from '../../assets/homeDashboard/female.svg';
 
 interface ISend {
   onFinishStep: () => void
@@ -51,12 +52,14 @@ export const SendMoneyForm = ({ onFinishStep }: ISend) => {
           <p className="text-grey-slate">View All</p>
         </div>
         <div className="flex mt-5">
-          <div className="h-20 w-20 border border-grey-slate rounded-2xl text-sm p-2">
-            <div className="w-6 h-6 bg-orange rounded-full mx-auto">DA</div>
+          <div className="h-24 w-24 border border-grey-slate rounded-2xl text-sm p-2">
+            {/* <div className="w-6 h-6 bg-orange rounded-full mx-auto">DA</div> */}
+            <Avatar className="mx-auto" size="lg" name='DA' />
             <p className="text-center">Daniel Abayomi</p>
           </div>
-          <div className="h-20 w-20 border border-grey-slate rounded-2xl text-sm p-2 ml-3">
-            <div className="w-6 h-6 bg-orange rounded-full mx-auto">SA</div>
+          <div className="h-24 w-24 border border-grey-slate rounded-2xl text-sm p-2 ml-3">
+            {/* <div className="w-6 h-6 bg-orange rounded-full mx-auto">SA</div> */}
+            <Avatar className="mx-auto" size="lg" image={Female} />
             <p className="text-center">Simi Ayodele</p>
           </div>
         </div>

@@ -3,7 +3,7 @@ import Mtn from '../../assets/homeDashboard/mtn logo.svg';
 import Airtel from '../../assets/homeDashboard/airtel.svg';
 import mobile from '../../assets/homeDashboard/9mobile.svg';
 import glo from '../../assets/homeDashboard/glo.svg';
-import { AIarrowdown1Outlin, AIprofile2Userbol } from '@olivermead-investment-ltd/arvara-icons';
+import { AIarrowdown1Outlin, AIusersquarebol } from '@olivermead-investment-ltd/arvara-icons';
 
 export const DataForms = () => {
   return (
@@ -41,7 +41,7 @@ export const DataForms = () => {
             placeholder="Select"
             value=""
             className="mt-5"
-            TrailingIcon={() => <AIarrowdown1Outlin />}
+            TrailingIcon={() => <AIarrowdown1Outlin className="icon solid text-blue-2"/>}
           />
           <Input label="Amount (NGN)" placeholder="0.00" value="" className="mt-5" />
           <Input
@@ -49,7 +49,7 @@ export const DataForms = () => {
             placeholder="Enter Mobile Number"
             value=""
             className="mt-5"
-            TrailingIcon={() => <AIprofile2Userbol />}
+            TrailingIcon={() => <AIusersquarebol />}
           />
           <div className="mt-8">
             <Button type="button" className="w-full">
