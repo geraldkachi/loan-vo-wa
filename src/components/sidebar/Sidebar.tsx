@@ -11,15 +11,16 @@ import BeneficialIcon from '../../assets/sidebar/BeneficialIcon'
 import MenuIcon from '../../assets/sidebar/MenuIcon'
 import HomeLogoIcon from '../../assets/sidebar/HomeLogoIcon'
 import LogOutIcon from '../../assets/sidebar/LogOutIcon'
+import { routeList } from '../../assets/data/sidebarList'
 
-const Menus = [
-    { route: "/dashboard", title: "Home" },
-    { route: "/loan", title: "Loan" },
-    { route: "/transactions", title: "Transactions" },
-    { route: "/account", title: "Account" },
-    { route: "/debit-card", title: "Debit Card" },
-    { route: "/beneficiaries", title: "Beneficiaries" },
-];
+// const routeList = [
+//     { route: "/dashboard", title: "Home" },
+//     { route: "/loan", title: "Loan" },
+//     { route: "/transactions", title: "Transactions" },
+//     { route: "/account", title: "Account" },
+//     { route: "/debit-card", title: "Debit Card" },
+//     { route: "/beneficiaries", title: "Beneficiaries" },
+// ];
 
 interface SidebarProps {
     open: boolean
@@ -38,15 +39,17 @@ const Sidebar = ({ open, setOpen }: SidebarProps) => {
     //     navigate('/login')
     // }
 
+                    // ${item?.gap ? "mt-9" : "mt-2"} ${index === 0 && "bg-light-white"}
 
     // const [open, setOpen] = useState(true);
-    60
+    
     // const handleCollapse = (type: boolean) => setOpen(type)
 
     // ${width < 1200 ? "w-20" : "w-60"}
 
+
     return (
-        <section className={`sidebar`}>
+        <section className={`sidebar hidden sm:block`}>
             <div className={` ${open ? "w-60" : "w-max"} flex flex-col justify-between transition-all ease-in-out  top-0 left-0 bg-[#065373] text-white p-5 h-screen pt-8 relative duration-300`}>
 
                 <div className={`${open ? "pt-6 mx-auto" : "m-0"}`}>
@@ -55,7 +58,7 @@ const Sidebar = ({ open, setOpen }: SidebarProps) => {
                         <MenuIcon onClick={() => setOpen(!open)} className={`cursor-pointer duration-500 ${open && "rotate-[360deg]"}`} />
                         <HomeLogoIcon className={`${!open && "scale-0 hidden"}`} />
                     </div>
-                    {Menus.map((item, index) => {
+                    {routeList.map((item, index) => {
                         const activeItem = item.route.includes(location.pathname);
                         // .map((item: any) => location.pathname.includes(item.route) && item.route)[0]
                         // console.log(activeItem, 'ROUTE');

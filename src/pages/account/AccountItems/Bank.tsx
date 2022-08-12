@@ -1,12 +1,12 @@
-import React from 'react'
 import NoBeneficiaries from "./no-beneficiaries.svg"
 import PlusIcon from "./add.svg"
-import { Input } from 'arvara/lib'
+import { Input } from 'arvara'
+
+
 const Bank = () => {
     return (
         <div className='relative'>
-
-            <Input type={'text'} className="border-[]" placeholder='Search'/>
+            <Input type={'text'} className="border-[]" placeholder='Search' />
 
             <div className="flex mt-10 items-center justify-center">
                 <img src={NoBeneficiaries} alt="NoBeneficiaries" />

@@ -5,6 +5,7 @@ import Sidebar from "../sidebar/Sidebar"
 import NotificationFeature from "./NotificationFeature"
 import { useWindowDimensions } from "arvara/lib"
 import { useState } from "react"
+import BottomNav from "../bottomnav/BottomNav"
 
 
 
@@ -23,6 +24,7 @@ const Layout = () => {
           </div>
           {/* <NotificationFeature /> */}
         </div>
+        <BottomNav />
       </section>
     </>
   )
