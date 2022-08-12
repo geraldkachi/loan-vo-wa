@@ -2,8 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-.star{
-  /* width: 400px!important; */
+.fund-button{
+  background-color: transparent;
+  color: black;
+  border: 1px solid #C2D0D6;
+  float: left;
+}
+.fund-button:hover{
+  background-color: #F0FAFE;
+  color: black;
 }
 .btn{
   background-color: black;
@@ -11,18 +18,12 @@
 .small-card{
   width: 213px;
 }
-.long-card{
-  /* width: 780px */
-}
 .long-card1{
   width: 780px
 }
-
-@media only screen and (max-width: 600px) {
-  .long-card{
-    width: fit-content;
-  }
-}
+/* .section-width{
+  width: 100%;
+} */
 @media screen and (max-width: 1024px) {
 	.hidelogin {
 		display: none;

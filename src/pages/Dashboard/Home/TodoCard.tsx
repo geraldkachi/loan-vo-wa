@@ -12,7 +12,7 @@ const TodoCard = () => {
       <div className="">
         <h1 className="text-grey-slate text-left font-bold">To-Do Tasks</h1>
       </div>
-      <Card className="my-5 long-card block p-6 rounded-2xl shadow-xl bg-yellow hover:bg-grey-beau">
+      <Card className="my-5 long-card block p-6 rounded-2xl shadow-xl bg-yellow hover:bg-grey-beau cursor-pointer">
         <div className="flex">
           <img src={VerifyEmail} />
           <div className="text-left">
@@ -24,7 +24,7 @@ const TodoCard = () => {
         </div>
       </Card>
 
-      <Card className="my-5 long-card block p-6 rounded-2xl shadow-xl border-grey-beau border hover:bg-white-azure">
+      <Card className="my-5 long-card block p-6 rounded-2xl shadow-xl border-grey-beau border hover:bg-white-azure cursor-pointer">
         <div className="flex">
           <img src={PersonalInfo} />
           <div className="text-left">
@@ -37,7 +37,7 @@ const TodoCard = () => {
           </div>
         </div>
       </Card>
-      <Card className="my-5 long-card block p-6 rounded-2xl shadow-xl border-grey-beau border hover:bg-white-azure">
+      <Card className="my-5 long-card block p-6 rounded-2xl shadow-xl border-grey-beau border hover:bg-white-azure cursor-pointer">
         <div className="flex">
           <img src={Bvn} />
           <div className="text-left">
@@ -46,7 +46,7 @@ const TodoCard = () => {
           </div>
         </div>
       </Card>
-      <Card className="my-5 long-card block p-6 rounded-2xl shadow-xl border-grey-beau border hover:bg-white-azure">
+      <Card className="my-5 long-card block p-6 rounded-2xl shadow-xl border-grey-beau border hover:bg-white-azure cursor-pointer">
         <div className="flex">
           <img src={Transaction} className="-ml-3" />
           <div className="text-left">
@@ -57,7 +57,7 @@ const TodoCard = () => {
           </div>
         </div>
       </Card>
-      <Card className="my-5 long-card block p-6 rounded-2xl shadow-xl border-grey-beau border hover:bg-white-azure">
+      <Card className="my-5 long-card block p-6 rounded-2xl shadow-xl border-grey-beau border hover:bg-white-azure cursor-pointer">
         <div className="flex">
           <img src={Employment} className="-ml-3" />
           <div className="text-left">
