@@ -120,9 +120,9 @@ const FormDetails = ({ contact }: any) => {
                                 />
                             </div> */}
 
-                            <div>
-                                <label className="block text-left mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your message</label>
-                                <textarea id="message" style={{height: "30%"}} placeholder="Type your message here..." className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border focus:border-white border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></textarea>
+                            <div className="mt-5">
+                                <label className="block border-[#C2D0D6] text-left mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your message</label>
+                                <textarea id="message" placeholder="Type your message here..." className=" h-32 block border-[#C2D0D6] p-2.5 w-full text-sm rounded-lg border focus:border-[#C2D0D6]  placeholder:text-[#668A99]"></textarea>
                             </div>
 
                             <div className="mt-8">

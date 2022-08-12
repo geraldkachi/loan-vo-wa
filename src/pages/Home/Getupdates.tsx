@@ -36,7 +36,7 @@ export const Getupdates = () => {
                             </div>
 
                             <div className="md:mr-auto md:mb-6">
-                                <Button type="submit" className="inline-block rounded-lg px-6 py-3 border-2 border-white text-white font-medium text-xs leading-tight uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">
+                                <Button type="submit" size='' className="inline-block rounded-lg px-6 py-3 border-2 border-white text-white font-medium text-xs leading-tight uppercase hover:bg-[ #065373] hover:bg-opacity-1 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">
                                     Submit
                                 </Button>
                             </div>

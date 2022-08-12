@@ -13,7 +13,7 @@ const Paywith = () => {
                 </div>
                 <div className="text-base text-left self-center justify-items-center py-5 text-[#141C1F]">
                     <div className="">
-                        <h1 className="font-bold text-[32px]">Pay with Arvo Link</h1>
+                        <h1 className="font-bold text-3xl md:text-[32px]">Pay with Arvo Link</h1>
                         <p className="my-5">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet feugiat non tincidunt sed nibh amet. Rhoncus mi massa, ac erat sed donec. Sit dictum volutpat tellus pellentesque gravida sit donec egestas
                         </p>
