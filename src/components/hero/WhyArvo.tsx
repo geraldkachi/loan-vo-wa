@@ -6,7 +6,7 @@ const WhyArvo = ({ whyavro }: WhtAvroProps) => {
   const [tabIndex, setTabIndex] = useState<string>("Quick")
 
   return (
-    <div id='why-avro' ref={whyavro} className='bg-[#F6F8F9] px-5 py-10'>
+    <div id='why-avro' ref={whyavro} className='bg-[#F6F8F9] px-5 py-12 mb-8 sm:mb-auto'>
       <div className=' max-w-7xl mx-auto mt-10 py-10'>
 
         <div className="my-5 text-center">
