@@ -87,11 +87,11 @@ const Account = () => {
   return (
     <section>
       <TopNav title="Account!" />
-      <div className="grid grid-cols-3">
+      {/* <div className="grid grid-cols-3">
 
-        <div className="col-span-3"></div>
+        <div className="md:col-span-3"></div>
         <div className="col-span-1"></div>
-      </div>
+      </div> */}
       <div className="flex gap-16  mt-8">
         {/* first col */}
         <div className="flex flex-col gap-5 w-max px-4 text-[#141C1F]">

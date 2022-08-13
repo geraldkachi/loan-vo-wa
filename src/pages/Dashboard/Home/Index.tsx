@@ -45,7 +45,7 @@ const Dashboard = () => {
 
       <div className="grid md:grid-cols-3 gap-10">
         {/* cols one */}
-        <div className="col-span-2 ">
+        <div className="md:col-span-2 ">
           <div className='md:flex md:flex-row'>
             <div className="bg-blue md:h-56 rounded-2xl p-5 pt-8 md:shrink-0 basis-2/3 col-span-1">
               <div className="flex justify-between">
@@ -83,7 +83,7 @@ const Dashboard = () => {
 
           {/* for the three cards */}
 
-          <div className="md:flex md:flex-row">
+          <div className="">
 
             <section className="grid md:grid-cols-3 md:gap-3 grid-cols-2 mt-8 w-full">
               <div className="bg-white md:h-56 h-auto rounded-2xl shadow-2xl md:p-5 p-2 md:mt-0 mt-3 small-card cursor-pointer hover:bg-white-azure" onClick={() => setIsSendMoney(true)}>
@@ -146,7 +146,7 @@ const Dashboard = () => {
 
         </div>
 
-       
+
 
         {/* Todo section */}
         {/* <TodoCard /> */}
@@ -232,89 +232,89 @@ const Dashboard = () => {
         open={isFundWallet}
         close={setIsFundWallet}>
         <>
-        <div>
-          <div
-            className="w-full h-16 rounded-lg cursor-pointer fund-button"
-            onClick={() => {
-              setIsNewCard(false);
-              setIsBankTransfer(true);
-              setIsUseBankCard(false);
-              setIsFundWallet(false);
+          <div>
+            <div
+              className="w-full h-16 rounded-lg cursor-pointer fund-button"
+              onClick={() => {
+                setIsNewCard(false);
+                setIsBankTransfer(true);
+                setIsUseBankCard(false);
+                setIsFundWallet(false);
               }}>
-            <div className="flex my-5 mx-5">
-              <AIwallet3Bol className="icon solid text-blue-2" />
-              <h1 className="text-base ml-2">Use bank transfer</h1>
+              <div className="flex my-5 mx-5">
+                <AIwallet3Bol className="icon solid text-blue-2" />
+                <h1 className="text-base ml-2">Use bank transfer</h1>
+              </div>
+            </div>
+            <div
+              className="w-full h-16 rounded-lg mt-5 cursor-pointer fund-button"
+              onClick={() => {
+                setIsNewCard(false);
+                setIsBankTransfer(false);
+                setIsUseBankCard(true);
+                setIsFundWallet(false)
+              }}>
+              <div className="flex my-5 mx-5">
+                <img src={Flutter} />
+                <h1 className="text-base ml-2">Use Bank card ****5678</h1>
+              </div>
+            </div>
+            <div
+              className="w-full h-16 rounded-lg mt-5 cursor-pointer fund-button"
+              onClick={() => {
+                setIsNewCard(true);
+                setIsUseBankCard(false);
+                setIsBankTransfer(false);
+                setIsFundWallet(false)
+              }}>
+              <div className="flex my-5 mx-5">
+                <AIcardbol className="icon solid text-yellow" />
+                <h1 className="text-base ml-2">Pay with new card</h1>
+              </div>
             </div>
           </div>
-          <div
-            className="w-full h-16 rounded-lg mt-5 cursor-pointer fund-button"
-            onClick={() => {
-              setIsNewCard(false);
-              setIsBankTransfer(false);
-              setIsUseBankCard(true);
-              setIsFundWallet(false)
-              }}>
-            <div className="flex my-5 mx-5">
-              <img src={Flutter} />
-              <h1 className="text-base ml-2">Use Bank card ****5678</h1>
-            </div>
-          </div>
-          <div
-            className="w-full h-16 rounded-lg mt-5 cursor-pointer fund-button"
-            onClick={() => {
-              setIsNewCard(true);
-              setIsUseBankCard(false);
-              setIsBankTransfer(false);
-              setIsFundWallet(false)
-              }}>
-            <div className="flex my-5 mx-5">
-              <AIcardbol className="icon solid text-yellow" />
-              <h1 className="text-base ml-2">Pay with new card</h1>
-            </div>
-          </div>
-        </div>
         </>
       </Drawer>
 
       {/* Drawer section */}
       <Drawer
-          position="right"
-          header={'Use Bank Transfer'}
-          open={isBankTransfer}
-          close={setIsBankTransfer}>
-          <BankTransferForm openPaymentModal={() => {
-            setShowConfirmingPaymentModal(true);
-           }} />
-        </Drawer>
-        <Drawer
-          position="right"
-          header={'Use Bank Card'}
-          open={isUseBankCard}
-          close={setIsUseBankCard}>
-          <BankCardForm openPaymentModal={() => {
-            setShowConfirmingPaymentModal(true);
-           }}  />
-        </Drawer>
-        <Drawer position="right" header={'Use New Card'} open={isNewCard} close={setIsNewCard}>
-          <NewCardForm openPaymentModal={() => {
-            setShowConfirmingPaymentModal(true);
-           }} />
-        </Drawer>
+        position="right"
+        header={'Use Bank Transfer'}
+        open={isBankTransfer}
+        close={setIsBankTransfer}>
+        <BankTransferForm openPaymentModal={() => {
+          setShowConfirmingPaymentModal(true);
+        }} />
+      </Drawer>
+      <Drawer
+        position="right"
+        header={'Use Bank Card'}
+        open={isUseBankCard}
+        close={setIsUseBankCard}>
+        <BankCardForm openPaymentModal={() => {
+          setShowConfirmingPaymentModal(true);
+        }} />
+      </Drawer>
+      <Drawer position="right" header={'Use New Card'} open={isNewCard} close={setIsNewCard}>
+        <NewCardForm openPaymentModal={() => {
+          setShowConfirmingPaymentModal(true);
+        }} />
+      </Drawer>
 
       {/* ******** Modal section ******** */}
-        <Modal
-          show={showConfirmingPaymentModal}
-          closeModal={setShowConfirmingPaymentModal}
-          title="Successful"
-          subTitle="Your action has been carried out successfully"
-          icon={<img src={SuccessIcon} />}
-          >
-          <>
-            <div className="flex justify-center mb-5">
-              <Button type="button">Completed</Button>
-            </div>
-          </>
-        </Modal>
+      <Modal
+        show={showConfirmingPaymentModal}
+        closeModal={setShowConfirmingPaymentModal}
+        title="Successful"
+        subTitle="Your action has been carried out successfully"
+        icon={<img src={SuccessIcon} />}
+      >
+        <>
+          <div className="flex justify-center mb-5">
+            <Button type="button">Completed</Button>
+          </div>
+        </>
+      </Modal>
     </>
   );
 };

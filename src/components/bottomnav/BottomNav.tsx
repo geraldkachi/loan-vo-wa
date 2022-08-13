@@ -14,7 +14,7 @@ const BottomNav = () => {
     const [open, setOpen] = useState(true);
 
     return (
-        <section className="sm:hidden bottomnav fixed bottom-0 bg-white w-full shadow-xl flex items-center justify-center overflow-x-scroll">
+        <section className="sm:hidden bottomnav px-2 fixed bottom-0 bg-white w-full shadow-xl flex items-center justify-center overflow-x-scroll">
             {routeList.slice(0, 4).map((item, index) => {
                 const activeItem = item.route.includes(location.pathname);
                 const iconArr = [
@@ -27,7 +27,7 @@ const BottomNav = () => {
                 ]
                 return (
                     <Link to={item.route} key={index}
-                        className={`${activeItem && "text-white rounded-2xl bg-[#065373]"} flex items-center rounded-md p-2 cursor-pointer my-4  text-sm space-x-3`}>
+                        className={`${activeItem && "text-white rounded-2xl bg-[#065373]"} flex items-center rounded-md p-2 cursor-pointer my-4  text-sm space-x-2`}>
                         <div> {iconArr[index]}</div>
 
                         <span className={`${!open &&  "scale(0) hidden"} origin-left duration-200`}>

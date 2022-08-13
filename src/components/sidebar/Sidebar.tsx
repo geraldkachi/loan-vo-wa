@@ -1,4 +1,4 @@
-import { useState } from 'react'
+// import { useState } from 'react'
 import './sidebar.css'
 import { Link, Route, useLocation, useNavigate } from 'react-router-dom'
 import { useWindowDimensions } from 'arvara'
@@ -39,20 +39,20 @@ const Sidebar = ({ open, setOpen }: SidebarProps) => {
     //     navigate('/login')
     // }
 
-                    // ${item?.gap ? "mt-9" : "mt-2"} ${index === 0 && "bg-light-white"}
+    // ${item?.gap ? "mt-9" : "mt-2"} ${index === 0 && "bg-light-white"}
 
     // const [open, setOpen] = useState(true);
-    
+
     // const handleCollapse = (type: boolean) => setOpen(type)
 
     // ${width < 1200 ? "w-20" : "w-60"}
 
 
     return (
-        <section className={`sidebar hidden sm:block`}>
-            <div className={` ${open ? "w-60" : "w-max"} flex flex-col justify-between transition-all ease-in-out  top-0 left-0 bg-[#065373] text-white p-5 h-screen pt-8 relative duration-300`}>
+        <section className={`sidebar hidden sm:block  ${open &&  'hidden'}`}>
+            <div className={` ${open ? "sm:w-60" : "w-max"} flex flex-col justify-between transition-all ease-in-out  top-0 left-0 bg-[#065373] text-white p-5 h-screen pt-8 relative duration-300`}>
 
-                <div className={`${open ? "pt-6 mx-auto" : "m-0"}`}>
+                <div className={`pt-6 ${open && " mx-auto" }`}>
                     {/* <div className={`${open ? "pt-6 mx-auto" : "m-0"}`}> */}
                     <div className="inline-flex items-center pb-10 gap-4">
                         <MenuIcon onClick={() => setOpen(!open)} className={`cursor-pointer duration-500 ${open && "rotate-[360deg]"}`} />
@@ -76,7 +76,7 @@ const Sidebar = ({ open, setOpen }: SidebarProps) => {
                                 `}
                             // ${item?.gap ? "mt-9" : "mt-2"} ${index === 0 && "bg-light-white"}
                             >
-                                <div> {iconArr[index]}</div>
+                                <div key={index}> {iconArr[index]}</div>
 
                                 <span className={`${!open && "hidden"} ${width < 1200 ? "" : ""} origin-left duration-200`}>
                                     {item.title}

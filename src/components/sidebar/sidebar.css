@@ -8,7 +8,7 @@
     top: 0;
     transition: all 0.3s ease;
     /* background: #ffffff; */
-    /* display: flex; */
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
