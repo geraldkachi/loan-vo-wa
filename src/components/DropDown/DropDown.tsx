@@ -1,4 +1,4 @@
-import { Children, useRef } from 'react'
+import { useRef } from 'react'
 import "./dropdown.css"
 
 const clickOutSideRef = (content_ref: any, toggle_ref: any) => {
@@ -28,7 +28,7 @@ const Dropdown = ({icon, badge, customToggle, contentData, renderItems, renderFo
             {icon && <i className={icon}></i>}
             {badge && <span className="dropdown__toggle-badge">{badge}</span> }
             {customToggle && customToggle()}
-            {children && Children.only(children)}
+            {children && (children)}
         </button>
         <div ref={dropdown_content_el} className="dropdown__content">
             {contentData &&  renderItems && contentData.map((item: any, index: number) => renderItems(item,index))}

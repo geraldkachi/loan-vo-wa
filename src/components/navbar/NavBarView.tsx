@@ -36,7 +36,7 @@ const Navbar = ({ whyavro, scrollToSection, contact, product, faqs }: any) => {
           {/* <div className='hidden lg:flex gap-4'> */}
           <div className='hidelogin lg:flex gap-4 text-base font-bold'>
             <button onClick={() => navigate('login')} className='bg-white border-[#065373] border-2 p-3 px-7 rounded-xl text-[#065373]'>Sign In</button>
-            <button onClick={() => navigate('login')} className="bg-[#065373] p-3 px-12 rounded-xl text-white">Create Account</button>
+            <button onClick={() => navigate('register')} className="bg-[#065373] p-3 px-12 rounded-xl text-white">Create Account</button>
           </div>
           {/* <div onClick={handleNav} className=' hidelogin text-black'> */}
           <div onClick={handleNav} className='block lg:hidden text-black'>

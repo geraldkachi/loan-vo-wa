@@ -87,16 +87,16 @@ const Account = () => {
   return (
     <section>
       <TopNav title="Account!" />
-      <div className="grid grid-cols-3">
+      {/* <div className="grid grid-cols-3">
 
-        <div className="col-span-3"></div>
+        <div className="md:col-span-3"></div>
         <div className="col-span-1"></div>
-      </div>
-      <div className="flex gap-16  mt-8">
+      </div> */}
+      <div className="flex flex-col sm:flex-row gap-16  mt-8">
         {/* first col */}
         <div className="flex flex-col gap-5 w-max px-4 text-[#141C1F]">
           {listAccountDetail.map((item, i) =>
-            <span className="cursor-pointer flex items-center gap-3" key={i}
+            <span className="mb-2 cursor-pointer flex items-center gap-3" key={i}
               onClick={item.onclick}
             > <img src={item.img} alt="icons" /> {item.title}</span>
           )}

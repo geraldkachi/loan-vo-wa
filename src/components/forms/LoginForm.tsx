@@ -1,12 +1,15 @@
 import { useState } from "react";
 import { Input, Button } from "arvara";
 import PasswordMe from "../shared/Password";
+import { Navigate, useNavigate } from "react-router-dom";
 
 interface Props {
   mutation: any;
 }
 
 const LoginForm = (props: Props) => {
+
+  const navigate = useNavigate()
   const { mutation } = props;
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -33,7 +36,7 @@ const LoginForm = (props: Props) => {
     <>
     {mutation.error && <p>{mutation.error.message}</p>}
     <form onSubmit={onFinish}>
-      <Input 
+      <Input
         label="Email Address"
         onChange={handleEmail}
         value={email}
@@ -60,6 +63,7 @@ const LoginForm = (props: Props) => {
           type="submit"
           className="w-full"
           loading={mutation.isLoading}
+          onClick={() => navigate('/dashboard')}
         >
           Log In
         </Button>
