@@ -1,7 +1,7 @@
 
 .dropdown {
     position: relative;
-    z-index: 2;
+    z-index: 4;
 }
 
 .dropdown__toggle {
@@ -40,7 +40,7 @@
     max-width: 335px;
     background-color: #FFFFFF;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    border-radius: 1gpx;
+    border-radius: 14px;
     overflow: hidden;
     padding: 10px;
     transform-origin: top right;
@@ -56,4 +56,11 @@
 .dropdown__footer {
     padding: 20px;
     text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+    .dropdown__content {
+        max-width: 300px;
+        right: -100%;
+    }
 }

@@ -15,7 +15,7 @@ const clickOutSideRef = (content_ref: any, toggle_ref: any) => {
   })
 }
 
-const Dropdown = ({icon, badge, customToggle, contentData, renderItems, renderFooter, children}: any) => {
+const Dropdown = ({icon, badge, customToggle, contentData, renderItems, renderFooter, children, className}: any) => {
 
   const dropdown_toggle_el = useRef(null)
   const dropdown_content_el = useRef(null)
@@ -23,7 +23,7 @@ const Dropdown = ({icon, badge, customToggle, contentData, renderItems, renderFo
   clickOutSideRef(dropdown_content_el, dropdown_toggle_el)
 
   return (
-    <div className="dropdown">
+    <div className={`dropdown ${className}`}>
         <button ref={dropdown_toggle_el} className="dropdown__toggle">
             {icon && <i className={icon}></i>}
             {badge && <span className="dropdown__toggle-badge">{badge}</span> }

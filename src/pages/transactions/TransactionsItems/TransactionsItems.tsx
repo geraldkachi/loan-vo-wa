@@ -1,6 +1,6 @@
 import { Button } from 'arvara/lib'
 import React from 'react'
-
+import BaclBtn from "../arrow-left.svg"
 
 interface TransactionsItemsProps {
     handleTransactionDetails: any
@@ -8,6 +8,7 @@ interface TransactionsItemsProps {
 const TransactionsItems = ({ handleTransactionDetails }: TransactionsItemsProps) => {
     return (
         <section>
+            {/* <img src={BaclBtn} alt="BaclBtn" className='mb-10' onClick={() => {}} /> */}
             <div className='text-sm text-[#668A99] mb-10'>
                 <p className='my-2'>Recipient Name</p>
                 <p className=' text-base font-bold text-[#141C1F]'>Daniel Abayomi</p>
