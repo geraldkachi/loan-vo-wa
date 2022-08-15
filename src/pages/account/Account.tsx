@@ -92,7 +92,7 @@ const Account = () => {
         <div className="md:col-span-3"></div>
         <div className="col-span-1"></div>
       </div> */}
-      <div className="flex gap-16  mt-8">
+      <div className="flex flex-col sm:flex-row gap-16  mt-8">
         {/* first col */}
         <div className="flex flex-col gap-5 w-max px-4 text-[#141C1F]">
           {listAccountDetail.map((item, i) =>
