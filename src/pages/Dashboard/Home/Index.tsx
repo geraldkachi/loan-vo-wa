@@ -4,7 +4,6 @@ import { Button, Tab } from 'arvara';
 import Drawer from '../../../components/Drawer';
 import Modal from '../../../components/modal/Modal';
 import RecentTransaction from './RecentTransaction';
-import SuccessIcon from '../../../assets/homeDashboard/success.svg';
 import TopNav from '../../../components/topnav/Topnav';
 import Star from '/src/assets/homeDashboard/Looper-2.svg';
 import { PinForm } from '../../../components/forms/PinForm';
@@ -14,6 +13,7 @@ import Hand from '/src/assets/homeDashboard/hand-with-coin.svg';
 import { CableForm } from '../../../components/forms/CableForm';
 import { MobileForms } from '../../../components/forms/MobileForm';
 import { NewCardForm } from '../../../components/forms/NewBankForm';
+import SuccessIcon from '../../../assets/homeDashboard/success.svg';
 import { BankCardForm } from '../../../components/forms/BankCardForm';
 import { SendMoneyForm } from '../../../components/forms/SendMoneyForm';
 import { UtilityBillForms } from '../../../components/forms/UtilityBillForm';
@@ -311,7 +311,7 @@ const Dashboard = () => {
       >
         <>
           <div className="flex justify-center mb-5">
-            <Button type="button">Completed</Button>
+            <Button type="button" onClick={() => setShowConfirmingPaymentModal(false)}>Completed</Button>
           </div>
         </>
       </Modal>
