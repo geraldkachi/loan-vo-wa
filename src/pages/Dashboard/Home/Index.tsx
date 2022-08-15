@@ -62,8 +62,10 @@ const Dashboard = () => {
                     Fund Wallet
                   </Button>
                 </div>
-                <div className="relative float-right">
-                  <img src={Star} className="absolute justify-end left-60 -bottom-7" />
+                <div className="mr-auto">
+                  <div className="relative">
+                    <img src={Star} className="absolute -bottom-6" />
+                  </div>
                 </div>
               </div>
             </div>

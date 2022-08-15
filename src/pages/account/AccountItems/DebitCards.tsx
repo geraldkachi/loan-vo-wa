@@ -17,13 +17,12 @@ const DebitCards = () => {
                 </div>
                 <div className="flex gap-3 cursor-pointer items-center border border-[#C2D0D6] hover:bg-[#F0FAFE] rounded-xl p-4 mb-3">
                     <img src={BankHouse} alt="House Cards" />
-                    <p className="text">Debit Cards</p>
+                    <p className="text">Bank Cards</p>
                 </div>
             </div>
 
             <Button className=' w-full justify-items-end'>Update Card</Button>
         </div>
-
     )
 }
 
