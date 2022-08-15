@@ -301,7 +301,7 @@ const Transactions = () => {
         subheader={"Transactions Details"}
 
       >
-        <TransactionsItems {...{ handleTransactionDetails }} />
+        <TransactionsItems {...{ handleTransactionDetails }} {...{open}} {...{setOpen}} />
       </Drawer>
     </div>
   )
